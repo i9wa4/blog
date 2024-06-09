@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>i9wa4&#39;s blog</title>
+<link>https://i9wa4.github.io/blog/</link>
+<atom:link href="https://i9wa4.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.4.555</generator>
+<lastBuildDate>Sun, 31 Dec 2023 18:28:12 GMT</lastBuildDate>
+<item>
+  <title>Initial Post</title>
+  <link>https://i9wa4.github.io/blog/posts/2024-01-01-init.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- # h1 -->
+<p>こんにちは。i9wa4 です。</p>
+<p>初投稿になります。</p>
+<section id="i9wa4-とは" class="level2">
+<h2 class="anchored" data-anchor-id="i9wa4-とは">1. i9wa4 とは</h2>
+<ul>
+<li>読み：いくわよ</li>
+<li>仕事：データエンジニア・MLOpsエンジニア
+<ul>
+<li>業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。</li>
+</ul></li>
+</ul>
+</section>
+<section id="このブログの運用方針" class="level2">
+<h2 class="anchored" data-anchor-id="このブログの運用方針">2. このブログの運用方針</h2>
+<ul>
+<li>他サービスに流用するかもしれないけど記事の元データはここで一元管理したい</li>
+<li>これまで色々書いてきた記事もここに集約していきたい</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>blog</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-01-01-init.html</guid>
+  <pubDate>Sun, 31 Dec 2023 18:28:12 GMT</pubDate>
+</item>
+</channel>
+</rss>

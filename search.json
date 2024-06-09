@@ -1,16 +1,44 @@
 [
   {
+    "objectID": "posts/2024-01-01-init.html",
+    "href": "posts/2024-01-01-init.html",
+    "title": "Initial Post",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\n初投稿になります。"
+  },
+  {
+    "objectID": "posts/2024-01-01-init.html#i9wa4-とは",
+    "href": "posts/2024-01-01-init.html#i9wa4-とは",
+    "title": "Initial Post",
+    "section": "1. i9wa4 とは",
+    "text": "1. i9wa4 とは\n\n読み：いくわよ\n仕事：データエンジニア・MLOpsエンジニア\n\n業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。"
+  },
+  {
+    "objectID": "posts/2024-01-01-init.html#このブログの運用方針",
+    "href": "posts/2024-01-01-init.html#このブログの運用方針",
+    "title": "Initial Post",
+    "section": "2. このブログの運用方針",
+    "text": "2. このブログの運用方針\n\n他サービスに流用するかもしれないけど記事の元データはここで一元管理したい\nこれまで色々書いてきた記事もここに集約していきたい"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "about",
     "section": "",
-    "text": "i9wa4 (いくわよ)"
+    "text": "自己紹介記事\n\nInitial Post\n\nブログのリポジトリ\n\nhttps://github.com/i9wa4/i9wa4.github.io"
   },
   {
-    "objectID": "about.html#name",
-    "href": "about.html#name",
+    "objectID": "about.html#リンク集",
+    "href": "about.html#リンク集",
     "title": "about",
     "section": "",
-    "text": "i9wa4 (いくわよ)"
+    "text": "自己紹介記事\n\nInitial Post\n\nブログのリポジトリ\n\nhttps://github.com/i9wa4/i9wa4.github.io"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "i9wa4’s blog",
+    "section": "",
+    "text": "Initial Post\n\n\n\n\n\n\n\n\n2023-12-31\n\n\n\n\n\n\nNo matching items"
   }
 ]
