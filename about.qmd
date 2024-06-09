@@ -3,17 +3,11 @@ lang: en
 title: about
 author: i9wa4
 date: 2024-06-10
-date-format: iso
-format:
-  html:
-    theme: cosmo
-    embed-resources: true
-    toc: true
-    toc-depth: 2
-    toc-title: TOC
-    toc-location: right
 ---
 
-## 1. name
+## 1. リンク集
 
-i9wa4 (いくわよ)
+- 自己紹介記事
+    - [Initial Post](./posts/2024-01-01-init.md)
+- ブログのリポジトリ
+    - <https://github.com/i9wa4/i9wa4.github.io>
