@@ -1,13 +1,10 @@
 ---
-lang: en
-title: about
+title: About
 author: i9wa4
-date: 2024-06-10
+date: last-modified
 ---
 
 ## 1. リンク集
 
 - 自己紹介記事
-    - [Initial Post](./posts/2024-01-01-init.md)
-- ブログのリポジトリ
-    - <https://github.com/i9wa4/i9wa4.github.io>
+    - [Initial Post](./posts/2024-01-01-init.qmd)

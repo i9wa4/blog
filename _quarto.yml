@@ -9,7 +9,8 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
   page-footer:
     left: "Built with [Quarto](https://quarto.org/)"
     center: "&copy;2024, i9wa4"
@@ -27,5 +28,5 @@ format:
     toc-title: TOC
     toc-location: right
 
-author: i9wa4
+lang: en
 date-format: iso
