@@ -22,7 +22,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: slate
     toc: true
     toc-depth: 2
     toc-title: TOC
