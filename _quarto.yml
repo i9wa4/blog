@@ -22,7 +22,6 @@ website:
 
 format:
   html:
-    theme: slate
     toc: true
     toc-depth: 2
     toc-title: TOC
@@ -30,3 +29,4 @@ format:
 
 lang: en
 date-format: iso
+theme: flatly
