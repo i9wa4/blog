@@ -1,5 +1,5 @@
 ---
-title: "i9wa4's blog"
+title: "Blog"
 listing:
   contents: posts
   sort:
