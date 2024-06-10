@@ -8,7 +8,7 @@ website:
   navbar:
     left:
       - href: "https://i9wa4.github.io"
-        text: "i9wa4's page"
+        text: Top
       - href: about.qmd
         text: About
   page-footer:
