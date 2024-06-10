@@ -10,7 +10,1070 @@
 <atom:link href="https://i9wa4.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.555</generator>
-<lastBuildDate>Sun, 31 Dec 2023 18:28:12 GMT</lastBuildDate>
+<lastBuildDate>Sat, 04 May 2024 18:23:09 GMT</lastBuildDate>
+<item>
+  <title>Quarto で作ったスライドを GitHub Pages にデプロイする</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-05-05-deploy-quarto.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<section id="前提" class="level2">
+<h2 class="anchored" data-anchor-id="前提">1. 前提</h2>
+<p>スライドをできるだけ Git で管理したいので Markdown をスライドに変換する方向性で色々なツールを比較検討していて、 Quarto (<a href="https://quarto.org/" class="uri">https://quarto.org/</a>) に決めました。</p>
+<p>.qmd ファイルという見慣れないファイルを利用しますが、利点としては以下ですね。 - 環境構築が pip で完了する - VS Code で開くと Jupyter Notebook っぽくセルを実行できる</p>
+</section>
+<section id="やったこと" class="level2">
+<h2 class="anchored" data-anchor-id="やったこと">2. やったこと</h2>
+<p>下記リポジトリを整備しました。</p>
+<p><a href="https://github.com/i9wa4/slides" class="uri">https://github.com/i9wa4/slides</a></p>
+<p>README.md にも書いてますが</p>
+<p><a href="https://qiita.com/cm-ayf/items/512728ebea65467ba874">Quartoでスライドを作ってGitHub Pagesで公開する #GitHubActions - Qiita</a></p>
+<p>を参考にしてます。</p>
+</section>
+<section id="感想" class="level2">
+<h2 class="anchored" data-anchor-id="感想">3. 感想</h2>
+<p>GitHub Actions はまだよく分かってないままなのですが、一旦動くようになってよかったです。</p>
+<p>スライド一覧に関しては Gemini も意外とやるじゃんと思いました。質問しながらコードの不備を指摘すると正しいコードを書いてくれますね。</p>
+
+
+</section>
+
+ ]]></description>
+  <category>dev</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-05-05-deploy-quarto.html</guid>
+  <pubDate>Sat, 04 May 2024 18:23:09 GMT</pubDate>
+</item>
+<item>
+  <title>Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-05-04-get-git-branch-name.vim.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<section id="経緯" class="level2">
+<h2 class="anchored" data-anchor-id="経緯">1. 経緯</h2>
+<p>私の Vim 設定では操作中のリポジトリのブランチ名を tabline に表示させていて、これは bash-completion に依存した実装となっています。この依存をなくし、ついでに依存をゼロにしようと思ったので Vim script でプラグインを書いてみようと思いました。</p>
+<p>.git ディレクトリを覗けば現在のブランチ名が分かるらしいことは知っていて、以下のリポジトリが自分のやりたいことであるということも知っている状態です。</p>
+<p><a href="https://github.com/itchyny/vim-gitbranch" class="uri">https://github.com/itchyny/vim-gitbranch</a></p>
+<p>Gemini がどれくらい使えるか試してみたくて、上記リポジトリは見ずに進めてみます。</p>
+</section>
+<section id="gemini-との開発過程" class="level2">
+<h2 class="anchored" data-anchor-id="gemini-との開発過程">2. Gemini との開発過程</h2>
+<p>Gemini とのやりとりを書き残しておきます。</p>
+<section id="git-探索関数作成" class="level3">
+<h3 class="anchored" data-anchor-id="git-探索関数作成">2.1. .git 探索関数作成</h3>
+<section id="質問" class="level4">
+<h4 class="anchored" data-anchor-id="質問">2.1.1. 質問</h4>
+<pre class="plaintext"><code>Vim script で以下の関数を作成してほしいです。
+- あるディレクトリのパスを引数にとり、そこから順に上の階層をたどって、.git ディレクトリがあればそこで探索をやめて.gitディレクトリのパスを戻り値とする。見つからなければ空文字列を返す。</code></pre>
+</section>
+<section id="回答" class="level4">
+<h4 class="anchored" data-anchor-id="回答">2.1.2. 回答</h4>
+<pre class="plaintext"><code>Vim script で .git ディレクトリを探す関数
+
+以下の Vim script は、引数として渡されたディレクトリパスから順に上の階層をたどり、.git ディレクトリを見つけたらそのパスを返します。見つからなければ空文字列を返します。
+
+function! FindGitDir(dir)
+  " 引数がない場合はカレントディレクトリを代入 "
+  if (empty(a:dir))
+    let dir = expand('%:p')
+  endif
+
+  " ループフラグを初期化 "
+  let found = 0
+
+  " 順に上の階層をたどる "
+  while (!found &amp;&amp; !empty(dir) &amp;&amp; dir != '/')
+    " .git ディレクトリが存在するか確認 "
+    if (isdirectory(dir . '/.git'))
+      let found = 1
+      let gitdir = dir . '/.git'
+    endif
+
+    " 上の階層へ移動 "
+    let dir = expand(dirname(dir))
+  endwhile
+
+  " 結果を返す "
+  if (found)
+    return gitdir
+  else
+    return ''
+  endif
+endfunction</code></pre>
+</section>
+</section>
+<section id="ブランチ名取得関数作成" class="level3">
+<h3 class="anchored" data-anchor-id="ブランチ名取得関数作成">2.2. ブランチ名取得関数作成</h3>
+<section id="質問-1" class="level4">
+<h4 class="anchored" data-anchor-id="質問-1">2.2.1. 質問</h4>
+<pre class="plaintext"><code>Vim script で以下の関数を作成してほしいです。
+- .gitディレクトリのパスを引数にとり、.gitディレクトリを除いて現在のブランチ名を取得し、それを戻り値とする。</code></pre>
+</section>
+<section id="回答-1" class="level4">
+<h4 class="anchored" data-anchor-id="回答-1">2.2.2. 回答</h4>
+<pre class="plaintext"><code>以下の Vim script は、.git ディレクトリのパスを引数にとり、.git ディレクトリを除いた現在のブランチ名を取得し、それを戻り値とします。
+
+function! GetCurrentBranch(gitdir)
+  " 引数が空の場合、エラーを返す "
+  if (empty(a:gitdir))
+    error('引数が空です')
+  endif
+
+  " カレントブランチ名の取得 "
+  let branch = system('git --git-dir="' . a:gitdir . '" rev-parse --abbrev-ref HEAD')
+
+  " .git ディレクトリを除いたブランチ名を返す "
+  return substitute(branch, a:gitdir . '/', '', 'g')
+endfunction</code></pre>
+</section>
+<section id="質問-2" class="level4">
+<h4 class="anchored" data-anchor-id="質問-2">2.2.3. 質問</h4>
+<pre class="plaintext"><code>system() を使わず、gitコマンドを使わずに実現させてほしいです。</code></pre>
+</section>
+<section id="回答-2" class="level4">
+<h4 class="anchored" data-anchor-id="回答-2">2.2.4. 回答</h4>
+<pre class="plaintext"><code>Vim script で system() や git コマンドを使わずに現在のブランチ名を取得するには、以下の方法があります。
+
+
+1. :echo %b コマンドを使用する
+
+この方法は、最も簡単でシンプルな方法です。%b 変数は、現在選択されているバッファのブランチ名を表します。
+
+" 現在のブランチ名をエコーする "
+:echo %b
+
+
+2. expand('%:p:h') を使って .git/HEAD ファイルを読み込む
+
+この方法は、より汎用的で、カレントバッファ以外のブランチ名を取得する場合にも使用できます。.git/HEAD ファイルには、現在のブランチ名が格納されています。
+
+" .git/HEAD ファイルのパスを取得 "
+let headfile = expand('%:p:h') . '/.git/HEAD'
+
+" HEAD ファイルの内容を読み込む "
+let headcontent = readfile(headfile)
+
+" ブランチ名を抽出する "
+let branch = match(headcontent, 'ref: refs/heads/(.+)')
+
+" 結果を確認 "
+echo "現在のブランチ: " . branch
+
+
+3. git log の出力を解析する
+
+この方法は、より詳細なブランチ情報 (コミットハッシュなど) を取得する場合に役立ちます。
+Vim Script
+
+" git log の出力をバッファに読み込む "
+:redir &gt; /dev/null git log -1
+
+" ブランチ名を抽出する "
+let branch = match(v:buffer['[0]'], 'ref: refs/heads/(.+)')
+
+" 結果を確認 "
+echo "現在のブランチ: " . branch</code></pre>
+<p>回答1が嘘すぎてびっくり。今回は回答2がよさそう。</p>
+<p>この時点で下記リポジトリを確認してみたところ回答2と同様の手法でブランチ名を取得しているようでした。</p>
+<p><a href="https://github.com/itchyny/vim-gitbranch" class="uri">https://github.com/itchyny/vim-gitbranch</a></p>
+<p>ここまで分かればあとは動作を確認しながら書けそうです。</p>
+</section>
+</section>
+</section>
+<section id="完成品" class="level2">
+<h2 class="anchored" data-anchor-id="完成品">3. 完成品</h2>
+<p>Gemini と考えたコードが跡形もなくなっている。。なぜ。。</p>
+<p>TODO: 繰り返し呼ばれることを念頭に処理を軽くしたい</p>
+<p><a href="https://github.com/i9wa4/get-git-branch-name.vim" class="uri">https://github.com/i9wa4/get-git-branch-name.vim</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>dev</category>
+  <category>vim</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-05-04-get-git-branch-name.vim.html</guid>
+  <pubDate>Fri, 03 May 2024 19:07:04 GMT</pubDate>
+</item>
+<item>
+  <title>データサイエンス100本ノックの実行環境構築 (WSL2)</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-03-26-setup-ds100knock.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>下記リポジトリを見てください。以上。</p>
+<p><a href="https://github.com/i9wa4/wsl2-100knocks-preprocess" class="uri">https://github.com/i9wa4/wsl2-100knocks-preprocess</a></p>
+
+
+
+ ]]></description>
+  <category>wsl2</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-03-26-setup-ds100knock.html</guid>
+  <pubDate>Mon, 25 Mar 2024 15:19:36 GMT</pubDate>
+</item>
+<item>
+  <title>WSL2 のセットアップ</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-03-25-setup-wsl2.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>{% include tag.html %}</p>
+<p>Table of Content: - Table of Content {:toc}</p>
+<!-- # h1 -->
+<p>こんにちは。i9wa4 です。</p>
+<p>Windows マシンを新調する度に WSL2 をインストールしているので手順を書き残しておきます。</p>
+<section id="wsl-コマンドのインストール" class="level2">
+<h2 class="anchored" data-anchor-id="wsl-コマンドのインストール">1. WSL コマンドのインストール</h2>
+<p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/install#install-wsl-command">WSL のインストール | Microsoft Learn</a> に従います。</p>
+<ol type="1">
+<li>管理者権限で PowerShell or コマンドプロンプトを開きます。</li>
+<li><code>wsl --install</code> を実行します。 <img src="https://i9wa4.github.io/blog/assets/20240325/20240325-setup-wsl2-01.png" class="img-fluid" alt="20240325-setup-wsl2-01"></li>
+<li>以下のように表示されるのでマシンを再起動します。 <img src="https://i9wa4.github.io/blog/assets/20240325/20240325-setup-wsl2-02.png" class="img-fluid" alt="20240325-setup-wsl2-02"></li>
+</ol>
+</section>
+<section id="ディストリビューションのインストール" class="level2">
+<h2 class="anchored" data-anchor-id="ディストリビューションのインストール">2. ディストリビューションのインストール</h2>
+<ol type="1">
+<li><p>PowerShell or コマンドプロンプトを開きます。</p></li>
+<li><p>インストール可能なディストリビューションを表示します。</p>
+<pre class="dosbatch"><code>wsl --list --oneline</code></pre></li>
+<li><p>Ubuntu 22.04 LTS をインストールする場合は以下のように入力します。</p>
+<pre class="dosbatch"><code>wsl --install -d Ubuntu-22.04</code></pre></li>
+<li><p>画面表示に従ってユーザー名とパスワードを入力します。</p></li>
+<li><p>Ubuntu を終了します。</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">exit</span></span></code></pre></div></li>
+<li><p>(必要に応じて) 既定のディストリビューションを設定します。</p>
+<pre class="dosbatch"><code>wsl --set-default Ubuntu-22.04</code></pre></li>
+</ol>
+</section>
+<section id="ディストリビューションのアンインストール" class="level2">
+<h2 class="anchored" data-anchor-id="ディストリビューションのアンインストール">3. ディストリビューションのアンインストール</h2>
+<ol type="1">
+<li><p>PowerShell or コマンドプロンプトを開きます。</p></li>
+<li><p>インストール済みのディストリビューションを表示します。</p>
+<pre class="dosbatch"><code>wsl --list</code></pre></li>
+<li><p>不要なディストリビューションをアンインストールします。</p>
+<pre class="dosbatch"><code>wsl --unregister Ubuntu-22.04</code></pre></li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <category>wsl2</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-03-25-setup-wsl2.html</guid>
+  <pubDate>Mon, 25 Mar 2024 14:00:48 GMT</pubDate>
+</item>
+<item>
+  <title>転職活動終了！</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-03-24-resignation.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p><a href="../posts/2024-01-28-looking-for-a-new-job.html">先日転職活動を開始</a> しておりましたが、2/29に転職活動を終えて、3/31退職、4/1入社のスケジュールで動いてます。</p>
+<p>近況を簡単に報告できればと思います。</p>
+<section id="転職活動結果" class="level2">
+<h2 class="anchored" data-anchor-id="転職活動結果">1. 転職活動結果</h2>
+<p>5社受けて1社は書類選考落ち、4社から内定を頂きました。</p>
+<p>自分はそこまでスキルも経験値もありませんが、データエンジニアは不足しているので結構引く手が多かったのかなと思いますね。</p>
+</section>
+<section id="退職について" class="level2">
+<h2 class="anchored" data-anchor-id="退職について">2. 退職について</h2>
+<p>今の時代当たり前だと思いますが特に引き留めもなくスムーズに進みました。</p>
+<p>SESの形で勤務していたので自社での引き継ぎ作業はほとんどなく、客先での引き継ぎ中心に3月末まで作業を行います。</p>
+<p>客先の社員さんと仲良くなって連絡先を交換できたのが嬉しかったですね。</p>
+<p>この先も付き合いが続けられるといいなぁ。</p>
+</section>
+<section id="転職先について" class="level2">
+<h2 class="anchored" data-anchor-id="転職先について">3. 転職先について</h2>
+<p>様々な点を考慮し今の自分が得られる経験を最大化できる会社に決めることができたかなと思います。</p>
+<p>数年後にデータエンジニア (サブ的に MLOps エンジニア) としての存在感を高めつつマネジメント経験もそれなりに積めれば嬉しいです。</p>
+
+
+</section>
+
+ ]]></description>
+  <category>diary</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-03-24-resignation.html</guid>
+  <pubDate>Sun, 24 Mar 2024 13:21:08 GMT</pubDate>
+</item>
+<item>
+  <title>PostgreSQL 向け Tips</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-02-04-posgresql-tips.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>自分用に PostgreSQL 向けの Tips を書き残しておきます。</p>
+<section id="postgresql-起動データベースへのアクセス" class="level2">
+<h2 class="anchored" data-anchor-id="postgresql-起動データベースへのアクセス">1. PostgreSQL 起動～データベースへのアクセス</h2>
+<p>いつも忘れるので取っかかりとしてコマンドを書いておきます。</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">pg_ctl</span> restart</span>
+<span id="cb1-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">psql</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-U</span> postgres <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-d</span> db_name</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">pg_ctl</span> restart</span>
+<span id="cb1-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">psql</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-U</span> postgres</span>
+<span id="cb1-6"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">CREATE</span> DATABASE db_name<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb1-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">\c</span> db_name</span>
+<span id="cb1-8"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">CREATE</span> SCHEMA sc_name<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">;</span></span></code></pre></div>
+
+
+</section>
+
+ ]]></description>
+  <category>tips</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-02-04-posgresql-tips.html</guid>
+  <pubDate>Sun, 04 Feb 2024 06:50:10 GMT</pubDate>
+</item>
+<item>
+  <title>Google Chrome 向け Tips</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-02-04-chrome-tips.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>自分用に Google Chrome 向けの Tips を書き残しておきます。</p>
+<section id="検索エンジン設定" class="level2">
+<h2 class="anchored" data-anchor-id="検索エンジン設定">1. 検索エンジン設定</h2>
+<ul>
+<li>Google 日本語検索
+<ul>
+<li><code>https://www.google.com/search?q=%s</code></li>
+</ul></li>
+<li>Google 英語検索
+<ul>
+<li><code>https://www.google.com/search?q=%s&amp;gl=us&amp;hl=en&amp;gws_rd=cr&amp;pws=0</code></li>
+</ul></li>
+<li>DuckDuckGo 日本語検索
+<ul>
+<li><code>https://duckduckgo.com/?q=%s&amp;kl=jp-jp&amp;kz=-1&amp;kav=1&amp;kaf=1&amp;k1=-1&amp;ia=web</code></li>
+</ul></li>
+<li>DuckDuckGo 英語検索
+<ul>
+<li><code>https://duckduckgo.com/?q=%s&amp;kl=us-en&amp;kz=-1&amp;kav=1&amp;kaf=1&amp;k1=-1&amp;ia=web</code></li>
+</ul></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>tips</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-02-04-chrome-tips.html</guid>
+  <pubDate>Sun, 04 Feb 2024 06:47:43 GMT</pubDate>
+</item>
+<item>
+  <title>Git 向け Tips</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-01-28-git-tips.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>自分用に Git 向けの Tips を書き残しておきます。</p>
+<section id="よく使うコマンド" class="level2">
+<h2 class="anchored" data-anchor-id="よく使うコマンド">1. よく使うコマンド</h2>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> add <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-n</span> .</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> log <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--graph</span></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> diff <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--name-only</span> HEAD HEAD~2</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> diff ID1 ID2 filename</span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> difftool ID1 ID2</span>
+<span id="cb1-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> show ID</span>
+<span id="cb1-7"></span>
+<span id="cb1-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> reflog</span>
+<span id="cb1-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> rebase</span></code></pre></div>
+</section>
+<section id="リモートリポジトリ作成" class="level2">
+<h2 class="anchored" data-anchor-id="リモートリポジトリ作成">2. リモートリポジトリ作成</h2>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> init <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--bare</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--shared</span></span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> remote add origin url</span>
+<span id="cb2-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> clone url</span></code></pre></div>
+
+
+</section>
+
+ ]]></description>
+  <category>tips</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-01-28-git-tips.html</guid>
+  <pubDate>Sun, 28 Jan 2024 14:50:31 GMT</pubDate>
+</item>
+<item>
+  <title>Microsoft Office 向け Tips</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-01-28-microsoft-office-tips.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>自分用に Microsoft Office 向けの Tips を書き残しておきます。</p>
+<section id="excel" class="level2">
+<h2 class="anchored" data-anchor-id="excel">1. Excel</h2>
+<section id="excel-vba" class="level3">
+<h3 class="anchored" data-anchor-id="excel-vba">1.1. Excel VBA</h3>
+<ul>
+<li>アドイン追加先
+<ul>
+<li><code>%USERPROFILE%\AppData\Roaming\Microsoft\AddIns</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="excel-関数" class="level3">
+<h3 class="anchored" data-anchor-id="excel-関数">1.2. Excel 関数</h3>
+<ul>
+<li>シート名を記載したセルB2を利用したハイパーリンク作成
+<ul>
+<li><code>=HYPERLINK("#'"&amp;B2&amp;"'!$A$1",B2)</code></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="word" class="level2">
+<h2 class="anchored" data-anchor-id="word">2. Word</h2>
+<section id="normal.dotm-作成" class="level3">
+<h3 class="anchored" data-anchor-id="normal.dotm-作成">2.1. Normal.dotm 作成</h3>
+<ol type="1">
+<li><code>%APPDATA%\Microsoft\Templates\Normal.dotm</code> 削除</li>
+<li>デザインを作成し既定に設定する
+<ul>
+<li>テーマ設定
+<ul>
+<li>見出し: 游ゴシック Arial</li>
+<li>本文: 游ゴシック Medium Arial</li>
+</ul></li>
+<li>アウトライン –&gt; 新しいアウトラインの定義 –&gt; オプション –&gt; レベルと対応付ける見出しスタイル</li>
+<li>本文: 10.5pt</li>
+<li>見出し 1: 18pt Bold</li>
+</ul></li>
+</ol>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>tips</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-01-28-microsoft-office-tips.html</guid>
+  <pubDate>Sun, 28 Jan 2024 14:49:28 GMT</pubDate>
+</item>
+<item>
+  <title>転職活動を始めました</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-01-28-looking-for-a-new-job.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>今年 (2024年) 1月中旬から転職活動を始めたので今の気持ちを書き残しておきます。</p>
+<section id="転職活動を始めた理由" class="level2">
+<h2 class="anchored" data-anchor-id="転職活動を始めた理由">1. 転職活動を始めた理由</h2>
+<p>転職活動に至った理由は以下です。</p>
+<ol type="1">
+<li>今の働き方を評価されずモチベーションを維持できない</li>
+<li>成長できる環境を選びたい</li>
+</ol>
+<section id="今の働き方を評価されずモチベーションを維持できない" class="level3">
+<h3 class="anchored" data-anchor-id="今の働き方を評価されずモチベーションを維持できない">1.1. 今の働き方を評価されずモチベーションを維持できない</h3>
+<p>私は機械学習基盤での業務経験が社内では一番長くなりました。会社の方針として機械学習基盤を含めた一気通貫のデータ分析ソリューション提供を目指しているので一定の評価を期待していましたが、実際は未経験で入社した当初と2年後の現在で給与は変わらず据え置きです。</p>
+<p>というのも会社の歴史的経緯から評価制度が営業マン・リーダー経験豊富な人材優遇なものとなっているためです。技術面での経験蓄積や社内還元は相対的に加点が小さいんですね。これではモチベーション維持が難しいです。</p>
+<p>安易に退職したくはなかったので評価制度の問題点を上長や社長に直接伝えてましたが、変える気はないようでした。 <del>せっかくたくさん採用した中堅エンジニアの退職者が増えている最大の要因がこの評価制度だと個人的に思っています。しかも評価制度に迎合した働き方をして昇進したとて昇給幅が小さいです。これでは割に合わないですね。</del></p>
+</section>
+<section id="成長できる環境を選びたい" class="level3">
+<h3 class="anchored" data-anchor-id="成長できる環境を選びたい">1.2. 成長できる環境を選びたい</h3>
+<p>もう一つの理由としては、成長できる環境を選ぶ重要性を痛感したことです。</p>
+<p>vim-jp というエンジニアコミュニティで優秀な方々が日々議論している様子を見て、たまには自分も参加して、という関わりを楽しむようになって2年近く経ちました。たったそれだけで自分の技術力はグンと引き上げられています。やはりエンジニアにとって環境は大事ですね。</p>
+<p>これだけ聞くと優秀な人材の多い会社に対するテイカーではないかと勘違いされてしまいそうですが、 <strong>自分のことを良いと思って採用してくれた会社にとっても伸び代が大きい方が嬉しい</strong> のではないでしょうか。</p>
+</section>
+</section>
+<section id="今後の予定" class="level2">
+<h2 class="anchored" data-anchor-id="今後の予定">2. 今後の予定</h2>
+<p>人生はあまりにも短いので迷っている場合ではありません。即断即決の精神で、今年 (2024年) 4月からは新しい会社で笑って過ごしたいと思っています。ただ、選考や退職交渉があるので延びるかもしれませんね。</p>
+
+
+</section>
+
+ ]]></description>
+  <category>diary</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-01-28-looking-for-a-new-job.html</guid>
+  <pubDate>Sat, 27 Jan 2024 15:34:12 GMT</pubDate>
+</item>
+<item>
+  <title>efm-langserver を Vim/Neovim で利用する</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-01-27-setup-efm-langserver.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>最近 Vim と Neovim に efm-langserver を導入したので手順を説明していきます。</p>
+<section id="efm-langserver-とは" class="level2">
+<h2 class="anchored" data-anchor-id="efm-langserver-とは">1. efm-langserver とは</h2>
+<p>mattn さんの記事を見るのが最良ですね。</p>
+<p><a href="https://mattn.kaoriya.net/software/lang/go/20190205190203.htm">Big Sky :: Lint ツールを Language Server に対応させるコマンド efm-langserver 作った。</a></p>
+<blockquote class="blockquote">
+<p>どんな言語であろうとも Lint ツールが grep と同様の形式で結果を出力してくれさえすれば Language Server にしてしまうコマンド</p>
+</blockquote>
+<p>Linter をインストールした後 Vim/Neovim で Info や Error を画面内に表示させたいときに efm-langserver が活用できると思えばよいです。</p>
+</section>
+<section id="efm-langserver-のインストール" class="level2">
+<h2 class="anchored" data-anchor-id="efm-langserver-のインストール">2. efm-langserver のインストール</h2>
+<p>Ubuntu 22.04 (WSL2) でのインストール手順を記載しておきます。</p>
+<p>Go 言語を <a href="https://go.dev/wiki/Ubuntu">Go Wiki: Ubuntu - The Go Programming Language</a> に従ってインストールします。</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> add-apt-repository <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span> ppa:longsleep/golang-backports</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt update</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sudo</span> apt install <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span> golang-go</span></code></pre></div>
+<p>efm-langserver を <a href="https://github.com/mattn/efm-langserver#installation">GitHub - mattn/efm-langserver: General purpose Language Server</a> に従ってインストールします。</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">go</span> install github.com/mattn/efm-langserver@latest</span></code></pre></div>
+<p><code>~/.profile</code> などに以下を追記して PATH を通しておきます。</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">export</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">PATH</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">${HOME}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>/go/bin:<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">${PATH}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span></span></code></pre></div>
+</section>
+<section id="config.yaml-の作成" class="level2">
+<h2 class="anchored" data-anchor-id="config.yaml-の作成">3. config.yaml の作成</h2>
+<p>efm-langserver 用設定ファイル <code>$XDG_CONFIG_HOME/efm-langserver/config.yaml</code> に必要な設定を記述していきます。</p>
+<p><a href="https://github.com/mattn/efm-langserver#example-for-configyaml">README</a> を参考に shellcheck を使うための設定のみ抽出したものが以下です。</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">version</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb4-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">root-markers</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb4-3"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> .git/</span></span>
+<span id="cb4-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lint-debounce</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> 1s</span></span>
+<span id="cb4-5"></span>
+<span id="cb4-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">tools</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb4-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sh-shellcheck</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&amp;sh-shellcheck</span></span>
+<span id="cb4-8"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lint-command</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'shellcheck -f gcc -x'</span></span>
+<span id="cb4-9"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lint-source</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'shellcheck'</span></span>
+<span id="cb4-10"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lint-formats</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb4-11"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'%f:%l:%c: %trror: %m'</span></span>
+<span id="cb4-12"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'%f:%l:%c: %tarning: %m'</span></span>
+<span id="cb4-13"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'%f:%l:%c: %tote: %m'</span></span>
+<span id="cb4-14"></span>
+<span id="cb4-15"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">languages</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb4-16"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sh</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span></span>
+<span id="cb4-17"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">    </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">-</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">&lt;&lt;</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">*sh-shellcheck</span></span></code></pre></div>
+</section>
+<section id="vim-の設定" class="level2">
+<h2 class="anchored" data-anchor-id="vim-の設定">4. Vim の設定</h2>
+<p>プラグインマネージャー <a href="https://github.com/Shougo/dein.vim">dein.vim</a> や <a href="https://github.com/Shougo/dpp.vim">dpp.vim</a> などで採用されている TOML ファイルでのプラグイン設定箇所を抽出しました。遅延起動設定はお好みで。</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb5-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[[plugins]]</span></span>
+<span id="cb5-2"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">repo</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">prabirshrestha/vim-lsp</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span></span>
+<span id="cb5-3"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">on_event</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">VimEnter</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb5-4"></span>
+<span id="cb5-5"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[[plugins]]</span></span>
+<span id="cb5-6"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">repo</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">mattn/vim-lsp-settings</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span></span>
+<span id="cb5-7"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">on_source</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">vim-lsp</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb5-8"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">hook_source</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'''</span></span>
+<span id="cb5-9"><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">let g:lsp_auto_enable = 1</span></span>
+<span id="cb5-10"><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">let g:lsp_log_file = ''</span></span>
+<span id="cb5-11"><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">let g:lsp_settings = {</span></span>
+<span id="cb5-12"><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">  \   'efm-langserver': {</span></span>
+<span id="cb5-13"><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">  \     'disabled': v:false,</span></span>
+<span id="cb5-14"><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">  \     'allowlist': ['sh'],</span></span>
+<span id="cb5-15"><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">  \   }</span></span>
+<span id="cb5-16"><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">  \ }</span></span>
+<span id="cb5-17"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'''</span></span></code></pre></div>
+</section>
+<section id="neovim-の設定" class="level2">
+<h2 class="anchored" data-anchor-id="neovim-の設定">5. Neovim の設定</h2>
+<p>Vim 同様に TOML ファイルの記述を抽出しました。こちらも遅延起動設定はお好みで。</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb6-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[[plugins]]</span></span>
+<span id="cb6-2"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">repo</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">neovim/nvim-lspconfig</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span></span>
+<span id="cb6-3"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">on_event</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">VimEnter</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb6-4"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">lua_source</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'''</span></span>
+<span id="cb6-5"><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">local lspconfig = require('lspconfig')</span></span>
+<span id="cb6-6"><span class="vs" style="color: #20794D;
+background-color: null;
+font-style: inherit;">lspconfig.efm.setup{}</span></span>
+<span id="cb6-7"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'''</span></span></code></pre></div>
+</section>
+<section id="感想" class="level2">
+<h2 class="anchored" data-anchor-id="感想">6. 感想</h2>
+<p>Linter をインストールできていれば出力形式を見て自力で Language Server として組み込める……素晴らしいですね！</p>
+<p>Linter は手動でインストールして設定ファイルを管理しておくのが結局一番分かりやすいなと実感しているのですが、その状態で簡単に Vim/Neovim に反映できる efm-langserver はかなり有り難いです。</p>
+
+
+</section>
+
+ ]]></description>
+  <category>vim</category>
+  <category>dev</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-01-27-setup-efm-langserver.html</guid>
+  <pubDate>Sat, 27 Jan 2024 13:37:39 GMT</pubDate>
+</item>
+<item>
+  <title>自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-01-02-vim-plugin-mnh.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>少し前に作った Vim/Neovim プラグインの紹介記事となります。</p>
+<section id="プラグイン概要" class="level2">
+<h2 class="anchored" data-anchor-id="プラグイン概要">1. プラグイン概要</h2>
+<ul>
+<li><a href="https://github.com/i9wa4/markdown-number-header.vim" class="uri">https://github.com/i9wa4/markdown-number-header.vim</a>
+<ul>
+<li>Markdown の見出し番号を付ける or 更新するプラグインです。</li>
+<li>Deno と Denops に依存しています。</li>
+</ul></li>
+</ul>
+</section>
+<section id="プラグインを作ることになったきっかけ" class="level2">
+<h2 class="anchored" data-anchor-id="プラグインを作ることになったきっかけ">2. プラグインを作ることになったきっかけ</h2>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a> という VSCode 拡張の Markdown 見出し番号を付ける機能を Vim でも使いたかったのですが、CLI アプリケーション (Formatter) や Vim プラグインを探しても見つからなかったので自作しようと思い至りました。</p>
+</section>
+<section id="denops-プラグインとして作ろうと思った理由" class="level2">
+<h2 class="anchored" data-anchor-id="denops-プラグインとして作ろうと思った理由">3. Denops プラグインとして作ろうと思った理由</h2>
+<p>まず、自分が Vim 上でしか使わないため CLI アプリケーションとしてではなく Vim プラグインとして作ろうとは思ってました。<br>
+そして私は Vim 使いなので Vim script で書くか Denops プラグインとして TypeScript で書くかの二択で、楽しそうなので後者を選びました。</p>
+</section>
+<section id="denops-プラグイン開発体験について" class="level2">
+<h2 class="anchored" data-anchor-id="denops-プラグイン開発体験について">4. Denops プラグイン開発体験について</h2>
+<p>初めて Denops プラグインを作ったし、しかも TypeScript にも触れたことがなかったのですが意外と困ることは少なかったです。<br>
+核となる見出し番号を振る処理は TypeScript の本領発揮という感じで楽に書けましたね。<br>
+まず以下のドキュメントに従ってチュートリアルを終えて、あとは先人の Denops プラグインのリポジトリを覗いてお作法を学びつつプラグインを完成させました。</p>
+<p>参考ページ: - <a href="https://zenn.dev/lambdalisue/articles/b4a31fba0b1ce95104c9">Deno で Vim/Neovim のプラグインを書く (denops.vim) | Zenn</a> - 英語版: <a href="https://vim-denops.github.io/denops-documentation/">Introduction - Denops Documentation</a></p>
+</section>
+<section id="感想" class="level2">
+<h2 class="anchored" data-anchor-id="感想">5. 感想</h2>
+<p>今も毎日使っているプラグインなので「無いんだったら作ればいい」精神でフッ軽に作れたことを嬉しく思ってます。<br>
+今後も必要なものは自分で作っていたいですね。</p>
+
+
+</section>
+
+ ]]></description>
+  <category>vim</category>
+  <category>dev</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-01-02-vim-plugin-mnh.html</guid>
+  <pubDate>Tue, 02 Jan 2024 12:47:46 GMT</pubDate>
+</item>
+<item>
+  <title>GitHub Pages (Jekyll) blog のタグ追加対応</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-01-02-jelyll-adjust.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>ブログを作ったので少しだけ機能と見た目を手入れしてみました。</p>
+<section id="調整前" class="level2">
+<h2 class="anchored" data-anchor-id="調整前">1. 調整前</h2>
+<ul>
+<li>現在 Jekyll (GitHub Pages) の Minima (<a href="https://github.com/jekyll/minima">jekyll/minima: Minima is a one-size-fits-all Jekyll theme for writers.</a>) が適用されている状態
+<ul>
+<li>HTML ファイルが必要になったらここから持ってくる！</li>
+</ul></li>
+</ul>
+</section>
+<section id="やりたいこと" class="level2">
+<h2 class="anchored" data-anchor-id="やりたいこと">2. やりたいこと</h2>
+<ul>
+<li>タグ対応
+<ul>
+<li>タグ毎の一覧ページの追加</li>
+<li>トップページに各タグの一覧ページへのリンク追加</li>
+<li>各記事にて付与したタグの一覧ページリンクの追加</li>
+</ul></li>
+<li>リポジトリルートの Markdown ファイルへのリンクがヘッダに追加されてしまうためヘッダの記述の簡素化</li>
+</ul>
+</section>
+<section id="タグ対応" class="level2">
+<h2 class="anchored" data-anchor-id="タグ対応">3. タグ対応</h2>
+<ul>
+<li>syudead さんの記事とリポジトリを参考に実装しました。私は HTML ではなく Markdown 中心の構成としたかったのであくまで参考という感じです。
+<ul>
+<li><a href="https://rainyflow.net/2016/03/13/jekyll-tags.html">Jekyllのブログでタグ機能を実装する</a>
+<ul>
+<li>各記事へのタグ付け方法</li>
+<li>一覧ページの html 記述</li>
+</ul></li>
+<li><a href="https://github.com/syudead/syudead.github.io">syudead/syudead.github.io</a>
+<ul>
+<li>ページ一覧の作成方法
+<ul>
+<li><code>./_inclides/tag.html</code> を <code>./blog.html</code> などの一覧ページ内にて include する</li>
+</ul></li>
+<li>各記述でのタグ一覧ページリンク表示
+<ul>
+<li><code>./_layouts/post.html</code> 参照</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>トップページに各タグの一覧ページへのリンクを追加する対応については <code>./index.md</code> に地道にリンクを追加する方法を取ることとしました。</li>
+</ul>
+</section>
+<section id="ヘッダ簡素化" class="level2">
+<h2 class="anchored" data-anchor-id="ヘッダ簡素化">4. ヘッダ簡素化</h2>
+<ul>
+<li>Minima の HTML ファイル (<a href="https://github.com/jekyll/minima/blob/master/_includes/header.html">minima/_includes/header.html at master · jekyll/minima</a>) をリポジトリに追加して対象箇所を削除すれば OK。
+<ul>
+<li>(2024/01/28 追記) スマホ版のハンバーガーメニューが寂しかったのでヘッダ簡素化は取りやめました。</li>
+</ul></li>
+</ul>
+</section>
+<section id="感想" class="level2">
+<h2 class="anchored" data-anchor-id="感想">5. 感想</h2>
+<ul>
+<li>必要最低限の機能は実装できたので割と満足です。</li>
+<li>見た目をちゃんと調整しようとすると HTML や CSS の調整が必要になってきますが、あんまりやりたくないので当面このままでいきます。</li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>jekyll</category>
+  <category>dev</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-01-02-jelyll-adjust.html</guid>
+  <pubDate>Tue, 02 Jan 2024 08:34:55 GMT</pubDate>
+</item>
 <item>
   <title>Initial Post</title>
   <dc:creator>i9wa4 </dc:creator>
@@ -44,7 +1107,7 @@
 </section>
 
  ]]></description>
-  <category>blog</category>
+  <category>diary</category>
   <guid>https://i9wa4.github.io/blog/posts/2024-01-01-init.html</guid>
   <pubDate>Sun, 31 Dec 2023 18:28:12 GMT</pubDate>
 </item>

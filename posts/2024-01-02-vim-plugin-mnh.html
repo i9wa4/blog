@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="i9wa4">
-<meta name="dcterms.date" content="2023-12-31">
+<meta name="dcterms.date" content="2024-01-02">
 
-<title>i9wa4’s blog - Initial Post</title>
+<title>i9wa4’s blog - 自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,8 +113,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">TOC</h2>
    
   <ul class="collapse">
-  <li><a href="#i9wa4-とは" id="toc-i9wa4-とは" class="nav-link active" data-scroll-target="#i9wa4-とは">1. i9wa4 とは</a></li>
-  <li><a href="#このブログの運用方針" id="toc-このブログの運用方針" class="nav-link" data-scroll-target="#このブログの運用方針">2. このブログの運用方針</a></li>
+  <li><a href="#プラグイン概要" id="toc-プラグイン概要" class="nav-link active" data-scroll-target="#プラグイン概要">1. プラグイン概要</a></li>
+  <li><a href="#プラグインを作ることになったきっかけ" id="toc-プラグインを作ることになったきっかけ" class="nav-link" data-scroll-target="#プラグインを作ることになったきっかけ">2. プラグインを作ることになったきっかけ</a></li>
+  <li><a href="#denops-プラグインとして作ろうと思った理由" id="toc-denops-プラグインとして作ろうと思った理由" class="nav-link" data-scroll-target="#denops-プラグインとして作ろうと思った理由">3. Denops プラグインとして作ろうと思った理由</a></li>
+  <li><a href="#denops-プラグイン開発体験について" id="toc-denops-プラグイン開発体験について" class="nav-link" data-scroll-target="#denops-プラグイン開発体験について">4. Denops プラグイン開発体験について</a></li>
+  <li><a href="#感想" id="toc-感想" class="nav-link" data-scroll-target="#感想">5. 感想</a></li>
   </ul>
 </nav>
     </div>
@@ -123,9 +126,10 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Initial Post</h1>
+<h1 class="title">自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">diary</div>
+    <div class="quarto-category">vim</div>
+    <div class="quarto-category">dev</div>
   </div>
   </div>
 
@@ -143,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-12-31</p>
+      <p class="date">2024-01-02</p>
     </div>
   </div>
   
@@ -155,25 +159,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- # h1 -->
 <p>こんにちは。i9wa4 です。</p>
-<p>初投稿になります。</p>
-<section id="i9wa4-とは" class="level2">
-<h2 class="anchored" data-anchor-id="i9wa4-とは">1. i9wa4 とは</h2>
+<p>少し前に作った Vim/Neovim プラグインの紹介記事となります。</p>
+<section id="プラグイン概要" class="level2">
+<h2 class="anchored" data-anchor-id="プラグイン概要">1. プラグイン概要</h2>
 <ul>
-<li>読み：いくわよ</li>
-<li>仕事：データエンジニア・MLOpsエンジニア
+<li><a href="https://github.com/i9wa4/markdown-number-header.vim" class="uri">https://github.com/i9wa4/markdown-number-header.vim</a>
 <ul>
-<li>業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。</li>
+<li>Markdown の見出し番号を付ける or 更新するプラグインです。</li>
+<li>Deno と Denops に依存しています。</li>
 </ul></li>
 </ul>
 </section>
-<section id="このブログの運用方針" class="level2">
-<h2 class="anchored" data-anchor-id="このブログの運用方針">2. このブログの運用方針</h2>
-<ul>
-<li>他サービスに流用するかもしれないけど記事の元データはここで一元管理したい</li>
-<li>これまで色々書いてきた記事もここに集約していきたい</li>
-</ul>
+<section id="プラグインを作ることになったきっかけ" class="level2">
+<h2 class="anchored" data-anchor-id="プラグインを作ることになったきっかけ">2. プラグインを作ることになったきっかけ</h2>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a> という VSCode 拡張の Markdown 見出し番号を付ける機能を Vim でも使いたかったのですが、CLI アプリケーション (Formatter) や Vim プラグインを探しても見つからなかったので自作しようと思い至りました。</p>
+</section>
+<section id="denops-プラグインとして作ろうと思った理由" class="level2">
+<h2 class="anchored" data-anchor-id="denops-プラグインとして作ろうと思った理由">3. Denops プラグインとして作ろうと思った理由</h2>
+<p>まず、自分が Vim 上でしか使わないため CLI アプリケーションとしてではなく Vim プラグインとして作ろうとは思ってました。<br>
+そして私は Vim 使いなので Vim script で書くか Denops プラグインとして TypeScript で書くかの二択で、楽しそうなので後者を選びました。</p>
+</section>
+<section id="denops-プラグイン開発体験について" class="level2">
+<h2 class="anchored" data-anchor-id="denops-プラグイン開発体験について">4. Denops プラグイン開発体験について</h2>
+<p>初めて Denops プラグインを作ったし、しかも TypeScript にも触れたことがなかったのですが意外と困ることは少なかったです。<br>
+核となる見出し番号を振る処理は TypeScript の本領発揮という感じで楽に書けましたね。<br>
+まず以下のドキュメントに従ってチュートリアルを終えて、あとは先人の Denops プラグインのリポジトリを覗いてお作法を学びつつプラグインを完成させました。</p>
+<p>参考ページ: - <a href="https://zenn.dev/lambdalisue/articles/b4a31fba0b1ce95104c9">Deno で Vim/Neovim のプラグインを書く (denops.vim) | Zenn</a> - 英語版: <a href="https://vim-denops.github.io/denops-documentation/">Introduction - Denops Documentation</a></p>
+</section>
+<section id="感想" class="level2">
+<h2 class="anchored" data-anchor-id="感想">5. 感想</h2>
+<p>今も毎日使っているプラグインなので「無いんだったら作ればいい」精神でフッ軽に作れたことを嬉しく思ってます。<br>
+今後も必要なものは自分で作っていたいですね。</p>
 
 
 </section>

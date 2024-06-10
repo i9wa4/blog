@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="i9wa4">
-<meta name="dcterms.date" content="2023-12-31">
+<meta name="dcterms.date" content="2024-05-04">
 
-<title>i9wa4’s blog - Initial Post</title>
+<title>i9wa4’s blog - Quarto で作ったスライドを GitHub Pages にデプロイする</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,8 +113,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">TOC</h2>
    
   <ul class="collapse">
-  <li><a href="#i9wa4-とは" id="toc-i9wa4-とは" class="nav-link active" data-scroll-target="#i9wa4-とは">1. i9wa4 とは</a></li>
-  <li><a href="#このブログの運用方針" id="toc-このブログの運用方針" class="nav-link" data-scroll-target="#このブログの運用方針">2. このブログの運用方針</a></li>
+  <li><a href="#前提" id="toc-前提" class="nav-link active" data-scroll-target="#前提">1. 前提</a></li>
+  <li><a href="#やったこと" id="toc-やったこと" class="nav-link" data-scroll-target="#やったこと">2. やったこと</a></li>
+  <li><a href="#感想" id="toc-感想" class="nav-link" data-scroll-target="#感想">3. 感想</a></li>
   </ul>
 </nav>
     </div>
@@ -123,9 +124,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Initial Post</h1>
+<h1 class="title">Quarto で作ったスライドを GitHub Pages にデプロイする</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">diary</div>
+    <div class="quarto-category">dev</div>
   </div>
   </div>
 
@@ -143,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-12-31</p>
+      <p class="date">2024-05-04</p>
     </div>
   </div>
   
@@ -155,25 +156,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- # h1 -->
 <p>こんにちは。i9wa4 です。</p>
-<p>初投稿になります。</p>
-<section id="i9wa4-とは" class="level2">
-<h2 class="anchored" data-anchor-id="i9wa4-とは">1. i9wa4 とは</h2>
-<ul>
-<li>読み：いくわよ</li>
-<li>仕事：データエンジニア・MLOpsエンジニア
-<ul>
-<li>業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。</li>
-</ul></li>
-</ul>
+<section id="前提" class="level2">
+<h2 class="anchored" data-anchor-id="前提">1. 前提</h2>
+<p>スライドをできるだけ Git で管理したいので Markdown をスライドに変換する方向性で色々なツールを比較検討していて、 Quarto (<a href="https://quarto.org/" class="uri">https://quarto.org/</a>) に決めました。</p>
+<p>.qmd ファイルという見慣れないファイルを利用しますが、利点としては以下ですね。 - 環境構築が pip で完了する - VS Code で開くと Jupyter Notebook っぽくセルを実行できる</p>
 </section>
-<section id="このブログの運用方針" class="level2">
-<h2 class="anchored" data-anchor-id="このブログの運用方針">2. このブログの運用方針</h2>
-<ul>
-<li>他サービスに流用するかもしれないけど記事の元データはここで一元管理したい</li>
-<li>これまで色々書いてきた記事もここに集約していきたい</li>
-</ul>
+<section id="やったこと" class="level2">
+<h2 class="anchored" data-anchor-id="やったこと">2. やったこと</h2>
+<p>下記リポジトリを整備しました。</p>
+<p><a href="https://github.com/i9wa4/slides" class="uri">https://github.com/i9wa4/slides</a></p>
+<p>README.md にも書いてますが</p>
+<p><a href="https://qiita.com/cm-ayf/items/512728ebea65467ba874">Quartoでスライドを作ってGitHub Pagesで公開する #GitHubActions - Qiita</a></p>
+<p>を参考にしてます。</p>
+</section>
+<section id="感想" class="level2">
+<h2 class="anchored" data-anchor-id="感想">3. 感想</h2>
+<p>GitHub Actions はまだよく分かってないままなのですが、一旦動くようになってよかったです。</p>
+<p>スライド一覧に関しては Gemini も意外とやるじゃんと思いました。質問しながらコードの不備を指摘すると正しいコードを書いてくれますね。</p>
 
 
 </section>

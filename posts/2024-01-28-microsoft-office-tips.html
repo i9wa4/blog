@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="i9wa4">
-<meta name="dcterms.date" content="2023-12-31">
+<meta name="dcterms.date" content="2024-01-28">
 
-<title>i9wa4’s blog - Initial Post</title>
+<title>i9wa4’s blog - Microsoft Office 向け Tips</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,8 +113,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">TOC</h2>
    
   <ul class="collapse">
-  <li><a href="#i9wa4-とは" id="toc-i9wa4-とは" class="nav-link active" data-scroll-target="#i9wa4-とは">1. i9wa4 とは</a></li>
-  <li><a href="#このブログの運用方針" id="toc-このブログの運用方針" class="nav-link" data-scroll-target="#このブログの運用方針">2. このブログの運用方針</a></li>
+  <li><a href="#excel" id="toc-excel" class="nav-link active" data-scroll-target="#excel">1. Excel</a></li>
+  <li><a href="#word" id="toc-word" class="nav-link" data-scroll-target="#word">2. Word</a></li>
   </ul>
 </nav>
     </div>
@@ -123,9 +123,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Initial Post</h1>
+<h1 class="title">Microsoft Office 向け Tips</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">diary</div>
+    <div class="quarto-category">tips</div>
   </div>
   </div>
 
@@ -143,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-12-31</p>
+      <p class="date">2024-01-28</p>
     </div>
   </div>
   
@@ -155,27 +155,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- # h1 -->
 <p>こんにちは。i9wa4 です。</p>
-<p>初投稿になります。</p>
-<section id="i9wa4-とは" class="level2">
-<h2 class="anchored" data-anchor-id="i9wa4-とは">1. i9wa4 とは</h2>
+<p>自分用に Microsoft Office 向けの Tips を書き残しておきます。</p>
+<section id="excel" class="level2">
+<h2 class="anchored" data-anchor-id="excel">1. Excel</h2>
+<section id="excel-vba" class="level3">
+<h3 class="anchored" data-anchor-id="excel-vba">1.1. Excel VBA</h3>
 <ul>
-<li>読み：いくわよ</li>
-<li>仕事：データエンジニア・MLOpsエンジニア
+<li>アドイン追加先
 <ul>
-<li>業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。</li>
+<li><code>%USERPROFILE%\AppData\Roaming\Microsoft\AddIns</code></li>
 </ul></li>
 </ul>
 </section>
-<section id="このブログの運用方針" class="level2">
-<h2 class="anchored" data-anchor-id="このブログの運用方針">2. このブログの運用方針</h2>
+<section id="excel-関数" class="level3">
+<h3 class="anchored" data-anchor-id="excel-関数">1.2. Excel 関数</h3>
 <ul>
-<li>他サービスに流用するかもしれないけど記事の元データはここで一元管理したい</li>
-<li>これまで色々書いてきた記事もここに集約していきたい</li>
+<li>シート名を記載したセルB2を利用したハイパーリンク作成
+<ul>
+<li><code>=HYPERLINK("#'"&amp;B2&amp;"'!$A$1",B2)</code></li>
+</ul></li>
 </ul>
+</section>
+</section>
+<section id="word" class="level2">
+<h2 class="anchored" data-anchor-id="word">2. Word</h2>
+<section id="normal.dotm-作成" class="level3">
+<h3 class="anchored" data-anchor-id="normal.dotm-作成">2.1. Normal.dotm 作成</h3>
+<ol type="1">
+<li><code>%APPDATA%\Microsoft\Templates\Normal.dotm</code> 削除</li>
+<li>デザインを作成し既定に設定する
+<ul>
+<li>テーマ設定
+<ul>
+<li>見出し: 游ゴシック Arial</li>
+<li>本文: 游ゴシック Medium Arial</li>
+</ul></li>
+<li>アウトライン –&gt; 新しいアウトラインの定義 –&gt; オプション –&gt; レベルと対応付ける見出しスタイル</li>
+<li>本文: 10.5pt</li>
+<li>見出し 1: 18pt Bold</li>
+</ul></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

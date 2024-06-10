@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="i9wa4">
-<meta name="dcterms.date" content="2023-12-31">
+<meta name="dcterms.date" content="2024-02-04">
 
-<title>i9wa4’s blog - Initial Post</title>
+<title>i9wa4’s blog - PostgreSQL 向け Tips</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,8 +147,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">TOC</h2>
    
   <ul class="collapse">
-  <li><a href="#i9wa4-とは" id="toc-i9wa4-とは" class="nav-link active" data-scroll-target="#i9wa4-とは">1. i9wa4 とは</a></li>
-  <li><a href="#このブログの運用方針" id="toc-このブログの運用方針" class="nav-link" data-scroll-target="#このブログの運用方針">2. このブログの運用方針</a></li>
+  <li><a href="#postgresql-起動データベースへのアクセス" id="toc-postgresql-起動データベースへのアクセス" class="nav-link active" data-scroll-target="#postgresql-起動データベースへのアクセス">1. PostgreSQL 起動～データベースへのアクセス</a></li>
   </ul>
 </nav>
     </div>
@@ -123,9 +156,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Initial Post</h1>
+<h1 class="title">PostgreSQL 向け Tips</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">diary</div>
+    <div class="quarto-category">tips</div>
   </div>
   </div>
 
@@ -143,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-12-31</p>
+      <p class="date">2024-02-04</p>
     </div>
   </div>
   
@@ -155,25 +188,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- # h1 -->
 <p>こんにちは。i9wa4 です。</p>
-<p>初投稿になります。</p>
-<section id="i9wa4-とは" class="level2">
-<h2 class="anchored" data-anchor-id="i9wa4-とは">1. i9wa4 とは</h2>
-<ul>
-<li>読み：いくわよ</li>
-<li>仕事：データエンジニア・MLOpsエンジニア
-<ul>
-<li>業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。</li>
-</ul></li>
-</ul>
-</section>
-<section id="このブログの運用方針" class="level2">
-<h2 class="anchored" data-anchor-id="このブログの運用方針">2. このブログの運用方針</h2>
-<ul>
-<li>他サービスに流用するかもしれないけど記事の元データはここで一元管理したい</li>
-<li>これまで色々書いてきた記事もここに集約していきたい</li>
-</ul>
+<p>自分用に PostgreSQL 向けの Tips を書き残しておきます。</p>
+<section id="postgresql-起動データベースへのアクセス" class="level2">
+<h2 class="anchored" data-anchor-id="postgresql-起動データベースへのアクセス">1. PostgreSQL 起動～データベースへのアクセス</h2>
+<p>いつも忘れるので取っかかりとしてコマンドを書いておきます。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pg_ctl</span> restart</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-U</span> postgres <span class="at">-d</span> db_name</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pg_ctl</span> restart</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-U</span> postgres</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">CREATE</span> DATABASE db_name<span class="kw">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">\c</span> db_name</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">CREATE</span> SCHEMA sc_name<span class="kw">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>

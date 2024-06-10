@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="i9wa4">
-<meta name="dcterms.date" content="2023-12-31">
+<meta name="dcterms.date" content="2024-03-25">
 
-<title>i9wa4’s blog - Initial Post</title>
+<title>i9wa4’s blog - WSL2 のセットアップ</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,8 +147,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">TOC</h2>
    
   <ul class="collapse">
-  <li><a href="#i9wa4-とは" id="toc-i9wa4-とは" class="nav-link active" data-scroll-target="#i9wa4-とは">1. i9wa4 とは</a></li>
-  <li><a href="#このブログの運用方針" id="toc-このブログの運用方針" class="nav-link" data-scroll-target="#このブログの運用方針">2. このブログの運用方針</a></li>
+  <li><a href="#wsl-コマンドのインストール" id="toc-wsl-コマンドのインストール" class="nav-link active" data-scroll-target="#wsl-コマンドのインストール">1. WSL コマンドのインストール</a></li>
+  <li><a href="#ディストリビューションのインストール" id="toc-ディストリビューションのインストール" class="nav-link" data-scroll-target="#ディストリビューションのインストール">2. ディストリビューションのインストール</a></li>
+  <li><a href="#ディストリビューションのアンインストール" id="toc-ディストリビューションのアンインストール" class="nav-link" data-scroll-target="#ディストリビューションのアンインストール">3. ディストリビューションのアンインストール</a></li>
   </ul>
 </nav>
     </div>
@@ -123,9 +158,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Initial Post</h1>
+<h1 class="title">WSL2 のセットアップ</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">diary</div>
+    <div class="quarto-category">wsl2</div>
   </div>
   </div>
 
@@ -143,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-12-31</p>
+      <p class="date">2024-03-25</p>
     </div>
   </div>
   
@@ -155,25 +190,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>{% include tag.html %}</p>
+<p>Table of Content: - Table of Content {:toc}</p>
 <!-- # h1 -->
 <p>こんにちは。i9wa4 です。</p>
-<p>初投稿になります。</p>
-<section id="i9wa4-とは" class="level2">
-<h2 class="anchored" data-anchor-id="i9wa4-とは">1. i9wa4 とは</h2>
-<ul>
-<li>読み：いくわよ</li>
-<li>仕事：データエンジニア・MLOpsエンジニア
-<ul>
-<li>業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。</li>
-</ul></li>
-</ul>
+<p>Windows マシンを新調する度に WSL2 をインストールしているので手順を書き残しておきます。</p>
+<section id="wsl-コマンドのインストール" class="level2">
+<h2 class="anchored" data-anchor-id="wsl-コマンドのインストール">1. WSL コマンドのインストール</h2>
+<p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/install#install-wsl-command">WSL のインストール | Microsoft Learn</a> に従います。</p>
+<ol type="1">
+<li>管理者権限で PowerShell or コマンドプロンプトを開きます。</li>
+<li><code>wsl --install</code> を実行します。 <img src="../assets/20240325/20240325-setup-wsl2-01.png" class="img-fluid" alt="20240325-setup-wsl2-01"></li>
+<li>以下のように表示されるのでマシンを再起動します。 <img src="../assets/20240325/20240325-setup-wsl2-02.png" class="img-fluid" alt="20240325-setup-wsl2-02"></li>
+</ol>
 </section>
-<section id="このブログの運用方針" class="level2">
-<h2 class="anchored" data-anchor-id="このブログの運用方針">2. このブログの運用方針</h2>
-<ul>
-<li>他サービスに流用するかもしれないけど記事の元データはここで一元管理したい</li>
-<li>これまで色々書いてきた記事もここに集約していきたい</li>
-</ul>
+<section id="ディストリビューションのインストール" class="level2">
+<h2 class="anchored" data-anchor-id="ディストリビューションのインストール">2. ディストリビューションのインストール</h2>
+<ol type="1">
+<li><p>PowerShell or コマンドプロンプトを開きます。</p></li>
+<li><p>インストール可能なディストリビューションを表示します。</p>
+<pre class="dosbatch"><code>wsl --list --oneline</code></pre></li>
+<li><p>Ubuntu 22.04 LTS をインストールする場合は以下のように入力します。</p>
+<pre class="dosbatch"><code>wsl --install -d Ubuntu-22.04</code></pre></li>
+<li><p>画面表示に従ってユーザー名とパスワードを入力します。</p></li>
+<li><p>Ubuntu を終了します。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>(必要に応じて) 既定のディストリビューションを設定します。</p>
+<pre class="dosbatch"><code>wsl --set-default Ubuntu-22.04</code></pre></li>
+</ol>
+</section>
+<section id="ディストリビューションのアンインストール" class="level2">
+<h2 class="anchored" data-anchor-id="ディストリビューションのアンインストール">3. ディストリビューションのアンインストール</h2>
+<ol type="1">
+<li><p>PowerShell or コマンドプロンプトを開きます。</p></li>
+<li><p>インストール済みのディストリビューションを表示します。</p>
+<pre class="dosbatch"><code>wsl --list</code></pre></li>
+<li><p>不要なディストリビューションをアンインストールします。</p>
+<pre class="dosbatch"><code>wsl --unregister Ubuntu-22.04</code></pre></li>
+</ol>
 
 
 </section>

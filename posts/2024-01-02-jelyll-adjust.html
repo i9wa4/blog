@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="i9wa4">
-<meta name="dcterms.date" content="2023-12-31">
+<meta name="dcterms.date" content="2024-01-02">
 
-<title>i9wa4’s blog - Initial Post</title>
+<title>i9wa4’s blog - GitHub Pages (Jekyll) blog のタグ追加対応</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,8 +113,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">TOC</h2>
    
   <ul class="collapse">
-  <li><a href="#i9wa4-とは" id="toc-i9wa4-とは" class="nav-link active" data-scroll-target="#i9wa4-とは">1. i9wa4 とは</a></li>
-  <li><a href="#このブログの運用方針" id="toc-このブログの運用方針" class="nav-link" data-scroll-target="#このブログの運用方針">2. このブログの運用方針</a></li>
+  <li><a href="#調整前" id="toc-調整前" class="nav-link active" data-scroll-target="#調整前">1. 調整前</a></li>
+  <li><a href="#やりたいこと" id="toc-やりたいこと" class="nav-link" data-scroll-target="#やりたいこと">2. やりたいこと</a></li>
+  <li><a href="#タグ対応" id="toc-タグ対応" class="nav-link" data-scroll-target="#タグ対応">3. タグ対応</a></li>
+  <li><a href="#ヘッダ簡素化" id="toc-ヘッダ簡素化" class="nav-link" data-scroll-target="#ヘッダ簡素化">4. ヘッダ簡素化</a></li>
+  <li><a href="#感想" id="toc-感想" class="nav-link" data-scroll-target="#感想">5. 感想</a></li>
   </ul>
 </nav>
     </div>
@@ -123,9 +126,10 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Initial Post</h1>
+<h1 class="title">GitHub Pages (Jekyll) blog のタグ追加対応</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">diary</div>
+    <div class="quarto-category">jekyll</div>
+    <div class="quarto-category">dev</div>
   </div>
   </div>
 
@@ -143,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2023-12-31</p>
+      <p class="date">2024-01-02</p>
     </div>
   </div>
   
@@ -155,24 +159,68 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- # h1 -->
 <p>こんにちは。i9wa4 です。</p>
-<p>初投稿になります。</p>
-<section id="i9wa4-とは" class="level2">
-<h2 class="anchored" data-anchor-id="i9wa4-とは">1. i9wa4 とは</h2>
+<p>ブログを作ったので少しだけ機能と見た目を手入れしてみました。</p>
+<section id="調整前" class="level2">
+<h2 class="anchored" data-anchor-id="調整前">1. 調整前</h2>
 <ul>
-<li>読み：いくわよ</li>
-<li>仕事：データエンジニア・MLOpsエンジニア
+<li>現在 Jekyll (GitHub Pages) の Minima (<a href="https://github.com/jekyll/minima">jekyll/minima: Minima is a one-size-fits-all Jekyll theme for writers.</a>) が適用されている状態
 <ul>
-<li>業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。</li>
+<li>HTML ファイルが必要になったらここから持ってくる！</li>
 </ul></li>
 </ul>
 </section>
-<section id="このブログの運用方針" class="level2">
-<h2 class="anchored" data-anchor-id="このブログの運用方針">2. このブログの運用方針</h2>
+<section id="やりたいこと" class="level2">
+<h2 class="anchored" data-anchor-id="やりたいこと">2. やりたいこと</h2>
 <ul>
-<li>他サービスに流用するかもしれないけど記事の元データはここで一元管理したい</li>
-<li>これまで色々書いてきた記事もここに集約していきたい</li>
+<li>タグ対応
+<ul>
+<li>タグ毎の一覧ページの追加</li>
+<li>トップページに各タグの一覧ページへのリンク追加</li>
+<li>各記事にて付与したタグの一覧ページリンクの追加</li>
+</ul></li>
+<li>リポジトリルートの Markdown ファイルへのリンクがヘッダに追加されてしまうためヘッダの記述の簡素化</li>
+</ul>
+</section>
+<section id="タグ対応" class="level2">
+<h2 class="anchored" data-anchor-id="タグ対応">3. タグ対応</h2>
+<ul>
+<li>syudead さんの記事とリポジトリを参考に実装しました。私は HTML ではなく Markdown 中心の構成としたかったのであくまで参考という感じです。
+<ul>
+<li><a href="https://rainyflow.net/2016/03/13/jekyll-tags.html">Jekyllのブログでタグ機能を実装する</a>
+<ul>
+<li>各記事へのタグ付け方法</li>
+<li>一覧ページの html 記述</li>
+</ul></li>
+<li><a href="https://github.com/syudead/syudead.github.io">syudead/syudead.github.io</a>
+<ul>
+<li>ページ一覧の作成方法
+<ul>
+<li><code>./_inclides/tag.html</code> を <code>./blog.html</code> などの一覧ページ内にて include する</li>
+</ul></li>
+<li>各記述でのタグ一覧ページリンク表示
+<ul>
+<li><code>./_layouts/post.html</code> 参照</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>トップページに各タグの一覧ページへのリンクを追加する対応については <code>./index.md</code> に地道にリンクを追加する方法を取ることとしました。</li>
+</ul>
+</section>
+<section id="ヘッダ簡素化" class="level2">
+<h2 class="anchored" data-anchor-id="ヘッダ簡素化">4. ヘッダ簡素化</h2>
+<ul>
+<li>Minima の HTML ファイル (<a href="https://github.com/jekyll/minima/blob/master/_includes/header.html">minima/_includes/header.html at master · jekyll/minima</a>) をリポジトリに追加して対象箇所を削除すれば OK。
+<ul>
+<li>(2024/01/28 追記) スマホ版のハンバーガーメニューが寂しかったのでヘッダ簡素化は取りやめました。</li>
+</ul></li>
+</ul>
+</section>
+<section id="感想" class="level2">
+<h2 class="anchored" data-anchor-id="感想">5. 感想</h2>
+<ul>
+<li>必要最低限の機能は実装できたので割と満足です。</li>
+<li>見た目をちゃんと調整しようとすると HTML や CSS の調整が必要になってきますが、あんまりやりたくないので当面このままでいきます。</li>
 </ul>
 
 
