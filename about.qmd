@@ -4,8 +4,6 @@ author: i9wa4
 date: last-modified
 ---
 
-:自己紹介 {#tbl-self-introdiction}
-
 |                |                                     |
 | ---            | ---                                 |
 | 名前           | i9wa4 (いくわよ)                    |
