@@ -232,9 +232,6 @@ echo "現在のブランチ: " . branch</code></pre>
 
 
 
-<p>{% include tag.html %}</p>
-<p>Table of Content: - Table of Content {:toc}</p>
-<!-- # h1 -->
 <p>こんにちは。i9wa4 です。</p>
 <p>Windows マシンを新調する度に WSL2 をインストールしているので手順を書き残しておきます。</p>
 <section id="wsl-コマンドのインストール" class="level2">

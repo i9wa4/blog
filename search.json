@@ -137,7 +137,7 @@
     "href": "posts/2024-03-25-setup-wsl2.html",
     "title": "WSL2 のセットアップ",
     "section": "",
-    "text": "{% include tag.html %}\nTable of Content: - Table of Content {:toc}\nこんにちは。i9wa4 です。\nWindows マシンを新調する度に WSL2 をインストールしているので手順を書き残しておきます。"
+    "text": "こんにちは。i9wa4 です。\nWindows マシンを新調する度に WSL2 をインストールしているので手順を書き残しておきます。"
   },
   {
     "objectID": "posts/2024-03-25-setup-wsl2.html#wsl-コマンドのインストール",
