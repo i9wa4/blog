@@ -209,14 +209,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li><p>PowerShell or コマンドプロンプトを開きます。</p></li>
 <li><p>インストール可能なディストリビューションを表示します。</p>
-<pre class="dosbatch"><code>wsl --list --oneline</code></pre></li>
+<div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>wsl <span class="op">--</span>list <span class="op">--</span>oneline</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Ubuntu 22.04 LTS をインストールする場合は以下のように入力します。</p>
-<pre class="dosbatch"><code>wsl --install -d Ubuntu-22.04</code></pre></li>
+<div class="sourceCode" id="cb2"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>wsl <span class="op">--</span>install <span class="op">-</span>d Ubuntu-22<span class="op">.</span><span class="dv">04</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>画面表示に従ってユーザー名とパスワードを入力します。</p></li>
 <li><p>Ubuntu を終了します。</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>(必要に応じて) 既定のディストリビューションを設定します。</p>
-<pre class="dosbatch"><code>wsl --set-default Ubuntu-22.04</code></pre></li>
+<div class="sourceCode" id="cb4"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>wsl <span class="op">--</span>set-default Ubuntu-22<span class="op">.</span><span class="dv">04</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 </section>
 <section id="ディストリビューションのアンインストール" class="level2">
@@ -224,9 +224,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li><p>PowerShell or コマンドプロンプトを開きます。</p></li>
 <li><p>インストール済みのディストリビューションを表示します。</p>
-<pre class="dosbatch"><code>wsl --list</code></pre></li>
+<div class="sourceCode" id="cb5"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>wsl <span class="op">--</span>list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>不要なディストリビューションをアンインストールします。</p>
-<pre class="dosbatch"><code>wsl --unregister Ubuntu-22.04</code></pre></li>
+<div class="sourceCode" id="cb6"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>wsl <span class="op">--</span>unregister Ubuntu-22<span class="op">.</span><span class="dv">04</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
 
 
