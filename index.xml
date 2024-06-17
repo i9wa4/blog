@@ -10,7 +10,239 @@
 <atom:link href="https://i9wa4.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.555</generator>
-<lastBuildDate>Sat, 04 May 2024 18:23:09 GMT</lastBuildDate>
+<lastBuildDate>Mon, 17 Jun 2024 03:21:36 GMT</lastBuildDate>
+<item>
+  <title>Mac 環境構築手順</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-06-17-setup-mac.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>私の Mac 環境構築手順をまとめておきます。</p>
+<section id="システム設定" class="level2">
+<h2 class="anchored" data-anchor-id="システム設定">1. システム設定</h2>
+<ul>
+<li>マウスのスクロール方向変更</li>
+<li>プライバシーとセキュリティ
+<ul>
+<li>画面収録とシステムオーディオ録音
+<ul>
+<li>画面の収録とオーディオの録音を両方許可する
+<ul>
+<li>Chrome, Slack, Zoom</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>デスクトップ
+<ul>
+<li>壁紙をクリックしてデスクトップを表示
+<ul>
+<li>ステージマネージャー使用時のみ</li>
+</ul></li>
+</ul></li>
+<li>Dock
+<ul>
+<li>配置</li>
+<li>自動的に表示/非表示</li>
+</ul></li>
+<li>コントロールセンター
+<ul>
+<li>Bluetoothアイコンをメニューバーに表示する</li>
+<li>メニューバー
+<ul>
+<li>メニューバーを自動的に非表示しない</li>
+<li>時計
+<ul>
+<li>日付を常に表示</li>
+<li>秒を表示</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>キーボード
+<ul>
+<li>日本語入力が重いので設定見直す
+<ul>
+<li><a href="https://mupon.net/mac-im-slow-5-tips/">Macの日本語入力（日本語IM）が遅いのを解消する5のTips | 8vivid</a></li>
+</ul></li>
+<li>ショートカット
+<ul>
+<li><a href="https://eng-investor.com/mac-move-window-keyboard-shortcut/">[macOS]キーボードでウィンドウを左半分や右半分に移動する - エンジニアによる投資</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="ターミナル" class="level2">
+<h2 class="anchored" data-anchor-id="ターミナル">2. ターミナル</h2>
+<ul>
+<li>Alacritty を使う
+<ul>
+<li>Wezterm でもいいかもしれない</li>
+</ul></li>
+</ul>
+</section>
+<section id="zsh" class="level2">
+<h2 class="anchored" data-anchor-id="zsh">3. Zsh</h2>
+<ul>
+<li><p>Ctrl-R のコマンド履歴検索が実行できないとき</p>
+<ul>
+<li><a href="https://wayohoo.com/article/6922">zshで「control + R」をやってもコマンド履歴検索が実行できない場合の対処方法。 – 和洋風KAI</a></li>
+</ul></li>
+<li><p>~/.zshenv</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># あれば書く</span></span></code></pre></div></li>
+<li><p>~/.zshrc</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># あれば書く</span></span></code></pre></div></li>
+</ul>
+</section>
+<section id="aws" class="level2">
+<h2 class="anchored" data-anchor-id="aws">4. AWS</h2>
+<section id="okta-経由" class="level3">
+<h3 class="anchored" data-anchor-id="okta-経由">4.1. Okta 経由</h3>
+<ul>
+<li><a href="https://www.notion.so/AWS-IAM-Identity-Center-a4eda510decb43f6a51c1df902acf84a?pvs=21">AWS アカウントにIAM Identity Center ユーザーポータル経由でサインインする方法</a></li>
+</ul>
+</section>
+<section id="aws-cli-経由" class="level3">
+<h3 class="anchored" data-anchor-id="aws-cli-経由">4.2. AWS CLI 経由</h3>
+<ul>
+<li><p><a href="https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/getting-started-install.html">AWS CLIの最新バージョンのインストールまたは更新 - AWS Command Line Interface</a></p>
+<ul>
+<li>これに従って AWS CLI をインストールする</li>
+</ul></li>
+<li><p><a href="https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/sso-configure-profile-token.html">自動認証更新で IAM Identity Center AWS CLI トークンプロバイダーの認証情報を使用するようにを設定します - AWS Command Line Interface</a></p></li>
+<li><p>ログイン (毎回やる必要なし)</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">aws</span> sso login <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--profile</span> xxx</span></code></pre></div></li>
+<li><p>動作確認</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">aws</span> ec2 describe-instances <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--profile</span> xxx</span></code></pre></div></li>
+<li><p>default profile の設定手順</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ~/.zshrc 等に以下を記載しておく</span></span>
+<span id="cb5-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">export</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">AWS_DEFAULT_PROFILE</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span></span>
+<span id="cb5-3"></span>
+<span id="cb5-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># シェルの補完を使いながら以下のように入力する</span></span>
+<span id="cb5-5"><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">AWS_DEFAULT_PROFILE</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>xxx</span>
+<span id="cb5-6"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">aws</span> ec2 describe-instances</span>
+<span id="cb5-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">aws</span> s3 ls</span></code></pre></div></li>
+<li><p><code>~/.aws/credentials</code> の設定</p>
+<ul>
+<li>Access Keys の説明を読む！</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="その他" class="level2">
+<h2 class="anchored" data-anchor-id="その他">5. その他</h2>
+<ul>
+<li><a href="https://kizineko.com/delete-dsstore/">【Mac】.DS_Storeを一括削除&amp;作らないようにするコマンド - Kizineko | Webフリーランス</a></li>
+<li>Finder
+<ul>
+<li><p>よく使う項目 username 追加</p></li>
+<li><p>コマンド実行</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Finderを終了させられるようにする (Command+Q で終了できるようになる)</span></span>
+<span id="cb6-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">defaults</span> write com.apple.Finder QuitMenuItem <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-bool</span> YES</span>
+<span id="cb6-3"></span>
+<span id="cb6-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 元に戻す場合</span></span>
+<span id="cb6-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">defaults</span> write com.apple.Finder QuitMenuItem <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-bool</span> NO</span></code></pre></div></li>
+</ul></li>
+<li>プログラミング用フォント MyricaM をダウンロード・インストールする</li>
+<li>Docker Desktop の Docker Daemon 設定</li>
+</ul>
+</section>
+<section id="おまけ-ショートカット集" class="level2">
+<h2 class="anchored" data-anchor-id="おまけ-ショートカット集">6. (おまけ) ショートカット集</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>カテゴリ</th>
+<th>ショートカット</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ウインドウ操作</td>
+<td>Command + Tab</td>
+<td>アプリケーション切り替え</td>
+</tr>
+<tr class="even">
+<td>ウインドウ操作</td>
+<td>Command + @</td>
+<td>同一アプリケーションの切り替え</td>
+</tr>
+<tr class="odd">
+<td>ウインドウ操作</td>
+<td>Command + Option + Arrow</td>
+<td>Chrome タブ切り替え</td>
+</tr>
+<tr class="even">
+<td>その他</td>
+<td>Commad + Q</td>
+<td>Finder 終了</td>
+</tr>
+<tr class="odd">
+<td>その他</td>
+<td>Command + Ctrl + Q</td>
+<td>ロック</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+ ]]></description>
+  <category>mac</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-06-17-setup-mac.html</guid>
+  <pubDate>Mon, 17 Jun 2024 03:21:36 GMT</pubDate>
+</item>
 <item>
   <title>Quarto で作ったスライドを GitHub Pages にデプロイする</title>
   <dc:creator>i9wa4 </dc:creator>
