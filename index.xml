@@ -10,7 +10,111 @@
 <atom:link href="https://i9wa4.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.555</generator>
-<lastBuildDate>Mon, 17 Jun 2024 03:21:36 GMT</lastBuildDate>
+<lastBuildDate>Mon, 17 Jun 2024 03:42:17 GMT</lastBuildDate>
+<item>
+  <title>購入したガジェットの紹介</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-06-17-purchased-gadgets.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>詳細まで書くかは決めていませんが、これまで購入したガジェット一覧を作っておきます。</p>
+<div id="tbl-gadgets" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gadgets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: 購入ガジェット一覧
+</figcaption>
+<div aria-describedby="tbl-gadgets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>購入日</th>
+<th>ブランド</th>
+<th>製品名</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2019/07/01</td>
+<td>Logicool</td>
+<td><a href="https://www.yodobashi.com/product/100000001004464218/">Pebble M350</a></td>
+</tr>
+<tr class="even">
+<td>2020/07/19</td>
+<td>PFU</td>
+<td><a href="https://www.pfu.ricoh.com/direct/hhkb/detail_pd-kb800bs.html">HHKB Professional HYBRID Type-S 英語配列／墨</a></td>
+</tr>
+<tr class="odd">
+<td>2022/03/12</td>
+<td>Logicool</td>
+<td><a href="https://www.logicool.co.jp/ja-jp/products/mice/m575-ergo-wireless-trackball.910-005876.html">ERGO M575</a></td>
+</tr>
+<tr class="even">
+<td>2022/12/05</td>
+<td>Kensington</td>
+<td><a href="https://www.kensington.com/ja-jp/p/%E8%A3%BD%E5%93%81/%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%AB/%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%9C%E3%83%BC%E3%83%AB/%E3%82%B9%E3%83%AA%E3%83%A0%E3%83%96%E3%83%AC%E3%83%BC%E3%83%89%E3%83%88%E3%83%A9%E3%83%83%E3%82%AF%E3%83%9C%E3%83%BC%E3%83%AB/">スリムブレードトラックボール</a></td>
+</tr>
+<tr class="odd">
+<td>2023/03/05</td>
+<td>Google</td>
+<td><a href="https://www.amazon.co.jp/dp/B0CJ39LD8D">Pixel 6a</a></td>
+</tr>
+<tr class="even">
+<td>2023/03/12</td>
+<td>SONY</td>
+<td><a href="https://www.sony.jp/headphone/products/WF-1000XM4/">WF-1000XM4</a></td>
+</tr>
+<tr class="odd">
+<td>2023/08/05</td>
+<td>Beelink</td>
+<td><a href="https://www.amazon.co.jp/dp/B0CB4FFVYY">Beelink SEi10 Mini PC</a></td>
+</tr>
+<tr class="even">
+<td>2024/02/28</td>
+<td>Anker</td>
+<td><a href="https://www.ankerjapan.com/products/a8365">Anker PowerExpand 6-in-1 USB-C PD イーサネット ハブ</a></td>
+</tr>
+<tr class="odd">
+<td>2024/03/02</td>
+<td>Lenovo</td>
+<td><a href="https://www.lenovo.com/jp/ja/p/laptops/thinkpad/thinkpad-t-series/thinkpad-t14s-gen-4-(14-inch-amd)/len101t0080">ThinkPad T14s Gen 4 (AMD)</a></td>
+</tr>
+<tr class="even">
+<td>2024/04/05</td>
+<td>Shokz</td>
+<td><a href="https://jp.shokz.com/products/openrun-pro">OpenRun Pro Mini</a></td>
+</tr>
+<tr class="odd">
+<td>2024/05/06</td>
+<td>Fitbit</td>
+<td><a href="https://www.fitbit.com/global/jp/products/trackers/charge6">Fitbit Charge 6</a></td>
+</tr>
+<tr class="even">
+<td>2024/06/03</td>
+<td>Dell</td>
+<td><a href="https://www.dell.com/ja-jp/shop/dell-27-usb-c-%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-s2722dc/apd/210-bcde/%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC-%E3%83%A2%E3%83%8B%E3%82%BF%E3%83%BC%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B5%E3%83%AA%E3%83%BC">Dell 27 USB-C モニター - S2722DC</a></td>
+</tr>
+<tr class="odd">
+<td>2024/06/07</td>
+<td>Logicool</td>
+<td><a href="https://www.logicool.co.jp/ja-jp/products/webcams/hd-webcam-c270n.960-001265.html">C270n HDウェブカメラ</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>gadget</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-06-17-purchased-gadgets.html</guid>
+  <pubDate>Mon, 17 Jun 2024 03:42:17 GMT</pubDate>
+</item>
 <item>
   <title>Mac 環境構築手順</title>
   <dc:creator>i9wa4 </dc:creator>

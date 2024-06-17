@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2024-06-17-purchased-gadgets.html",
       "/posts/2024-06-17-setup-mac.html",
       "/posts/2024-05-05-deploy-quarto.html",
       "/posts/2024-05-04-get-git-branch-name.vim.html",

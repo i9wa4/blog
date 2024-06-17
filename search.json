@@ -175,6 +175,27 @@
     "text": "1. 検索エンジン設定\n\nGoogle 日本語検索\n\nhttps://www.google.com/search?q=%s\n\nGoogle 英語検索\n\nhttps://www.google.com/search?q=%s&gl=us&hl=en&gws_rd=cr&pws=0\n\nDuckDuckGo 日本語検索\n\nhttps://duckduckgo.com/?q=%s&kl=jp-jp&kz=-1&kav=1&kaf=1&k1=-1&ia=web\n\nDuckDuckGo 英語検索\n\nhttps://duckduckgo.com/?q=%s&kl=us-en&kz=-1&kav=1&kaf=1&k1=-1&ia=web"
   },
   {
+    "objectID": "posts/2024-06-17-purchased-gadgets.html",
+    "href": "posts/2024-06-17-purchased-gadgets.html",
+    "title": "購入したガジェットの紹介",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\n詳細まで書くかは決めていませんが、これまで購入したガジェット一覧を作っておきます。\n\n\n\nTable 1: 購入ガジェット一覧\n\n\n\n\n\n購入日\nブランド\n製品名\n\n\n\n\n2019/07/01\nLogicool\nPebble M350\n\n\n2020/07/19\nPFU\nHHKB Professional HYBRID Type-S 英語配列／墨\n\n\n2022/03/12\nLogicool\nERGO M575\n\n\n2022/12/05\nKensington\nスリムブレードトラックボール\n\n\n2023/03/05\nGoogle\nPixel 6a\n\n\n2023/03/12\nSONY\nWF-1000XM4\n\n\n2023/08/05\nBeelink\nBeelink SEi10 Mini PC\n\n\n2024/02/28\nAnker\nAnker PowerExpand 6-in-1 USB-C PD イーサネット ハブ\n\n\n2024/03/02\nLenovo\nThinkPad T14s Gen 4 (AMD)\n\n\n2024/04/05\nShokz\nOpenRun Pro Mini\n\n\n2024/05/06\nFitbit\nFitbit Charge 6\n\n\n2024/06/03\nDell\nDell 27 USB-C モニター - S2722DC\n\n\n2024/06/07\nLogicool\nC270n HDウェブカメラ"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "購入したガジェットの紹介\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nMac 環境構築手順\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\n\n\n2024-05-03\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nPostgreSQL 向け Tips\n\n\n\n\n\n\n\n\n2024-02-04\n\n\n\n\n\n\n\nGoogle Chrome 向け Tips\n\n\n\n\n\n\n\n\n2024-02-04\n\n\n\n\n\n\n\nGit 向け Tips\n\n\n\n\n\n\n\n\n2024-01-28\n\n\n\n\n\n\n\nMicrosoft Office 向け Tips\n\n\n\n\n\n\n\n\n2024-01-28\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\n\n\n2023-12-31\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "名前\ni9wa4 (いくわよ)\n\n\n職種\nデータエンジニア / MLOps エンジニア\n\n\n好きなエディタ\nVim\n\n\n好きなお酒\nサントリー山崎"
+  },
+  {
     "objectID": "posts/2024-01-02-jelyll-adjust.html",
     "href": "posts/2024-01-02-jelyll-adjust.html",
     "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
@@ -215,20 +236,6 @@
     "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
     "section": "5. 感想",
     "text": "5. 感想\n\n必要最低限の機能は実装できたので割と満足です。\n見た目をちゃんと調整しようとすると HTML や CSS の調整が必要になってきますが、あんまりやりたくないので当面このままでいきます。"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "名前\ni9wa4 (いくわよ)\n\n\n職種\nデータエンジニア / MLOps エンジニア\n\n\n好きなエディタ\nVim\n\n\n好きなお酒\nサントリー山崎"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Mac 環境構築手順\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\n\n\n2024-05-03\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nPostgreSQL 向け Tips\n\n\n\n\n\n\n\n\n2024-02-04\n\n\n\n\n\n\n\nGoogle Chrome 向け Tips\n\n\n\n\n\n\n\n\n2024-02-04\n\n\n\n\n\n\n\nGit 向け Tips\n\n\n\n\n\n\n\n\n2024-01-28\n\n\n\n\n\n\n\nMicrosoft Office 向け Tips\n\n\n\n\n\n\n\n\n2024-01-28\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\n\n\n2023-12-31\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2024-01-02-vim-plugin-mnh.html",
