@@ -147,12 +147,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">TOC</h2>
    
   <ul class="collapse">
-  <li><a href="#システム設定" id="toc-システム設定" class="nav-link active" data-scroll-target="#システム設定">1. システム設定</a></li>
-  <li><a href="#ターミナル" id="toc-ターミナル" class="nav-link" data-scroll-target="#ターミナル">2. ターミナル</a></li>
-  <li><a href="#zsh" id="toc-zsh" class="nav-link" data-scroll-target="#zsh">3. Zsh</a></li>
-  <li><a href="#aws" id="toc-aws" class="nav-link" data-scroll-target="#aws">4. AWS</a></li>
-  <li><a href="#その他" id="toc-その他" class="nav-link" data-scroll-target="#その他">5. その他</a></li>
-  <li><a href="#おまけ-ショートカット集" id="toc-おまけ-ショートカット集" class="nav-link" data-scroll-target="#おまけ-ショートカット集">6. (おまけ) ショートカット集</a></li>
+  <li><a href="#dotfiles-導入" id="toc-dotfiles-導入" class="nav-link active" data-scroll-target="#dotfiles-導入">1. dotfiles 導入</a></li>
+  <li><a href="#システム設定" id="toc-システム設定" class="nav-link" data-scroll-target="#システム設定">2. システム設定</a></li>
+  <li><a href="#ターミナル" id="toc-ターミナル" class="nav-link" data-scroll-target="#ターミナル">3. ターミナル</a></li>
+  <li><a href="#zsh" id="toc-zsh" class="nav-link" data-scroll-target="#zsh">4. Zsh</a></li>
+  <li><a href="#aws" id="toc-aws" class="nav-link" data-scroll-target="#aws">5. AWS</a></li>
+  <li><a href="#その他" id="toc-その他" class="nav-link" data-scroll-target="#その他">6. その他</a></li>
+  <li><a href="#おまけ-ショートカット集" id="toc-おまけ-ショートカット集" class="nav-link" data-scroll-target="#おまけ-ショートカット集">7. (おまけ) ショートカット集</a></li>
   </ul>
 </nav>
     </div>
@@ -195,8 +196,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>こんにちは。i9wa4 です。</p>
 <p>私の Mac 環境構築手順をまとめておきます。</p>
+<section id="dotfiles-導入" class="level2">
+<h2 class="anchored" data-anchor-id="dotfiles-導入">1. dotfiles 導入</h2>
+<p>cf.&nbsp;<a href="https://github.com/i9wa4/dotfiles" class="uri">https://github.com/i9wa4/dotfiles</a></p>
+</section>
 <section id="システム設定" class="level2">
-<h2 class="anchored" data-anchor-id="システム設定">1. システム設定</h2>
+<h2 class="anchored" data-anchor-id="システム設定">2. システム設定</h2>
 <ul>
 <li>マウスのスクロール方向変更</li>
 <li>プライバシーとセキュリティ
@@ -248,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 <section id="ターミナル" class="level2">
-<h2 class="anchored" data-anchor-id="ターミナル">2. ターミナル</h2>
+<h2 class="anchored" data-anchor-id="ターミナル">3. ターミナル</h2>
 <ul>
 <li>Alacritty を使う
 <ul>
@@ -257,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 <section id="zsh" class="level2">
-<h2 class="anchored" data-anchor-id="zsh">3. Zsh</h2>
+<h2 class="anchored" data-anchor-id="zsh">4. Zsh</h2>
 <ul>
 <li><p>Ctrl-R のコマンド履歴検索が実行できないとき</p>
 <ul>
@@ -270,15 +275,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 <section id="aws" class="level2">
-<h2 class="anchored" data-anchor-id="aws">4. AWS</h2>
+<h2 class="anchored" data-anchor-id="aws">5. AWS</h2>
 <section id="okta-経由" class="level3">
-<h3 class="anchored" data-anchor-id="okta-経由">4.1. Okta 経由</h3>
+<h3 class="anchored" data-anchor-id="okta-経由">5.1. Okta 経由</h3>
 <ul>
 <li><a href="https://www.notion.so/AWS-IAM-Identity-Center-a4eda510decb43f6a51c1df902acf84a?pvs=21">AWS アカウントにIAM Identity Center ユーザーポータル経由でサインインする方法</a></li>
 </ul>
 </section>
 <section id="aws-cli-経由" class="level3">
-<h3 class="anchored" data-anchor-id="aws-cli-経由">4.2. AWS CLI 経由</h3>
+<h3 class="anchored" data-anchor-id="aws-cli-経由">5.2. AWS CLI 経由</h3>
 <ul>
 <li><p><a href="https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/getting-started-install.html">AWS CLIの最新バージョンのインストールまたは更新 - AWS Command Line Interface</a></p>
 <ul>
@@ -305,9 +310,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 <section id="その他" class="level2">
-<h2 class="anchored" data-anchor-id="その他">5. その他</h2>
+<h2 class="anchored" data-anchor-id="その他">6. その他</h2>
 <ul>
-<li><a href="https://kizineko.com/delete-dsstore/">【Mac】.DS_Storeを一括削除&amp;作らないようにするコマンド - Kizineko | Webフリーランス</a></li>
+<li><a href="https://kizineko.com/delete-dsstore/">【Mac】.DS_Storeを一括削除&amp;作らないようにするコマンド - Kizineko</a></li>
 <li>Finder
 <ul>
 <li><p>よく使う項目 username 追加</p></li>
@@ -323,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 <section id="おまけ-ショートカット集" class="level2">
-<h2 class="anchored" data-anchor-id="おまけ-ショートカット集">6. (おまけ) ショートカット集</h2>
+<h2 class="anchored" data-anchor-id="おまけ-ショートカット集">7. (おまけ) ショートカット集</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
