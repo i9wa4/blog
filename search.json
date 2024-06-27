@@ -56,235 +56,74 @@
     "text": "3. ディストリビューションのアンインストール\n\nPowerShell or コマンドプロンプトを開きます。\nインストール済みのディストリビューションを表示します。\nwsl --list\n不要なディストリビューションをアンインストールします。\nwsl --unregister Ubuntu-22.04"
   },
   {
-    "objectID": "posts/2024-06-17-purchased-gadgets.html",
-    "href": "posts/2024-06-17-purchased-gadgets.html",
-    "title": "購入したガジェットの紹介",
+    "objectID": "posts/2024-06-17-gcloud-command-tips.html",
+    "href": "posts/2024-06-17-gcloud-command-tips.html",
+    "title": "Google Cloud CLI メモ",
     "section": "",
-    "text": "こんにちは。i9wa4 です。\n詳細まで書くかは決めていませんが、これまで購入したガジェット一覧を作っておきます。\n\n\n\nTable 1: 購入ガジェット一覧\n\n\n\n\n\n購入日\nブランド\n製品名\n\n\n\n\n2019/07/01\nLogicool\nPebble M350\n\n\n2020/07/19\nPFU\nHHKB Professional HYBRID Type-S 英語配列／墨\n\n\n2022/03/12\nLogicool\nERGO M575\n\n\n2022/12/05\nKensington\nスリムブレードトラックボール\n\n\n2023/03/05\nGoogle\nPixel 6a\n\n\n2023/03/12\nSONY\nWF-1000XM4\n\n\n2023/08/05\nBeelink\nBeelink SEi10 Mini PC\n\n\n2024/02/28\nAnker\nAnker PowerExpand 6-in-1 USB-C PD イーサネット ハブ\n\n\n2024/03/02\nLenovo\nThinkPad T14s Gen 4 (AMD)\n\n\n2024/04/05\nShokz\nOpenRun Pro Mini\n\n\n2024/05/06\nFitbit\nFitbit Charge 6\n\n\n2024/06/03\nDell\nDell 27 USB-C モニター - S2722DC\n\n\n2024/06/07\nLogicool\nC270n HDウェブカメラ"
+    "text": "こんにちは。i9wa4 です。\nGoogle Cloud CLI (gcloud CLI) のメモです。\n# keyfile 登録からテーブル確認まで\ngcloud auth activate-service-account --key-file ***.json\ngcloud auth list\ngcloud set account ***\nbq --project_id=aaaaa ls dataset\nbq --project_id=aaaaa show dataset.table_name\nbq --project_id=aaaaa head dataset.table_name -n 5\n# ログイン\ngcloud auth login"
   },
   {
-    "objectID": "posts/2024-02-04-posgresql-tips.html",
-    "href": "posts/2024-02-04-posgresql-tips.html",
-    "title": "PostgreSQL 向け Tips",
+    "objectID": "posts/2024-02-04-chrome-tips.html",
+    "href": "posts/2024-02-04-chrome-tips.html",
+    "title": "Google Chrome 向け Tips",
     "section": "",
-    "text": "こんにちは。i9wa4 です。\n自分用に PostgreSQL 向けの Tips を書き残しておきます。"
+    "text": "こんにちは。i9wa4 です。\n自分用に Google Chrome 向けの Tips を書き残しておきます。"
   },
   {
-    "objectID": "posts/2024-02-04-posgresql-tips.html#postgresql-起動データベースへのアクセス",
-    "href": "posts/2024-02-04-posgresql-tips.html#postgresql-起動データベースへのアクセス",
-    "title": "PostgreSQL 向け Tips",
-    "section": "1. PostgreSQL 起動～データベースへのアクセス",
-    "text": "1. PostgreSQL 起動～データベースへのアクセス\nいつも忘れるので取っかかりとしてコマンドを書いておきます。\npg_ctl restart\npsql -U postgres -d db_name\n\npg_ctl restart\npsql -U postgres\nCREATE DATABASE db_name;\n\\c db_name\nCREATE SCHEMA sc_name;"
+    "objectID": "posts/2024-02-04-chrome-tips.html#検索エンジン設定",
+    "href": "posts/2024-02-04-chrome-tips.html#検索エンジン設定",
+    "title": "Google Chrome 向け Tips",
+    "section": "1. 検索エンジン設定",
+    "text": "1. 検索エンジン設定\n\nGoogle 日本語検索\n\nhttps://www.google.com/search?q=%s\n\nGoogle 英語検索\n\nhttps://www.google.com/search?q=%s&gl=us&hl=en&gws_rd=cr&pws=0\n\nDuckDuckGo 日本語検索\n\nhttps://duckduckgo.com/?q=%s&kl=jp-jp&kz=-1&kav=1&kaf=1&k1=-1&ia=web\n\nDuckDuckGo 英語検索\n\nhttps://duckduckgo.com/?q=%s&kl=us-en&kz=-1&kav=1&kaf=1&k1=-1&ia=web"
   },
   {
-    "objectID": "posts/2024-01-02-jelyll-adjust.html",
-    "href": "posts/2024-01-02-jelyll-adjust.html",
-    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
+    "objectID": "posts/2024-01-27-setup-efm-langserver.html",
+    "href": "posts/2024-01-27-setup-efm-langserver.html",
+    "title": "efm-langserver を Vim/Neovim で利用する",
     "section": "",
-    "text": "こんにちは。i9wa4 です。\nブログを作ったので少しだけ機能と見た目を手入れしてみました。"
+    "text": "こんにちは。i9wa4 です。\n最近 Vim と Neovim に efm-langserver を導入したので手順を説明していきます。"
   },
   {
-    "objectID": "posts/2024-01-02-jelyll-adjust.html#調整前",
-    "href": "posts/2024-01-02-jelyll-adjust.html#調整前",
-    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
-    "section": "1. 調整前",
-    "text": "1. 調整前\n\n現在 Jekyll (GitHub Pages) の Minima (jekyll/minima: Minima is a one-size-fits-all Jekyll theme for writers.) が適用されている状態\n\nHTML ファイルが必要になったらここから持ってくる！"
+    "objectID": "posts/2024-01-27-setup-efm-langserver.html#efm-langserver-とは",
+    "href": "posts/2024-01-27-setup-efm-langserver.html#efm-langserver-とは",
+    "title": "efm-langserver を Vim/Neovim で利用する",
+    "section": "1. efm-langserver とは",
+    "text": "1. efm-langserver とは\nmattn さんの記事を見るのが最良ですね。\nBig Sky :: Lint ツールを Language Server に対応させるコマンド efm-langserver 作った。\n\nどんな言語であろうとも Lint ツールが grep と同様の形式で結果を出力してくれさえすれば Language Server にしてしまうコマンド\n\nLinter をインストールした後 Vim/Neovim で Info や Error を画面内に表示させたいときに efm-langserver が活用できると思えばよいです。"
   },
   {
-    "objectID": "posts/2024-01-02-jelyll-adjust.html#やりたいこと",
-    "href": "posts/2024-01-02-jelyll-adjust.html#やりたいこと",
-    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
-    "section": "2. やりたいこと",
-    "text": "2. やりたいこと\n\nタグ対応\n\nタグ毎の一覧ページの追加\nトップページに各タグの一覧ページへのリンク追加\n各記事にて付与したタグの一覧ページリンクの追加\n\nリポジトリルートの Markdown ファイルへのリンクがヘッダに追加されてしまうためヘッダの記述の簡素化"
+    "objectID": "posts/2024-01-27-setup-efm-langserver.html#efm-langserver-のインストール",
+    "href": "posts/2024-01-27-setup-efm-langserver.html#efm-langserver-のインストール",
+    "title": "efm-langserver を Vim/Neovim で利用する",
+    "section": "2. efm-langserver のインストール",
+    "text": "2. efm-langserver のインストール\nUbuntu 22.04 (WSL2) でのインストール手順を記載しておきます。\nGo 言語を Go Wiki: Ubuntu - The Go Programming Language に従ってインストールします。\nsudo add-apt-repository -y ppa:longsleep/golang-backports\nsudo apt update\nsudo apt install -y golang-go\nefm-langserver を GitHub - mattn/efm-langserver: General purpose Language Server に従ってインストールします。\ngo install github.com/mattn/efm-langserver@latest\n~/.profile などに以下を追記して PATH を通しておきます。\nexport PATH=\"${HOME}\"/go/bin:\"${PATH}\""
   },
   {
-    "objectID": "posts/2024-01-02-jelyll-adjust.html#タグ対応",
-    "href": "posts/2024-01-02-jelyll-adjust.html#タグ対応",
-    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
-    "section": "3. タグ対応",
-    "text": "3. タグ対応\n\nsyudead さんの記事とリポジトリを参考に実装しました。私は HTML ではなく Markdown 中心の構成としたかったのであくまで参考という感じです。\n\nJekyllのブログでタグ機能を実装する\n\n各記事へのタグ付け方法\n一覧ページの html 記述\n\nsyudead/syudead.github.io\n\nページ一覧の作成方法\n\n./_inclides/tag.html を ./blog.html などの一覧ページ内にて include する\n\n各記述でのタグ一覧ページリンク表示\n\n./_layouts/post.html 参照\n\n\n\nトップページに各タグの一覧ページへのリンクを追加する対応については ./index.md に地道にリンクを追加する方法を取ることとしました。"
+    "objectID": "posts/2024-01-27-setup-efm-langserver.html#config.yaml-の作成",
+    "href": "posts/2024-01-27-setup-efm-langserver.html#config.yaml-の作成",
+    "title": "efm-langserver を Vim/Neovim で利用する",
+    "section": "3. config.yaml の作成",
+    "text": "3. config.yaml の作成\nefm-langserver 用設定ファイル $XDG_CONFIG_HOME/efm-langserver/config.yaml に必要な設定を記述していきます。\nREADME を参考に shellcheck を使うための設定のみ抽出したものが以下です。\nversion: 2\nroot-markers:\n  - .git/\nlint-debounce: 1s\n\ntools:\n  sh-shellcheck: &sh-shellcheck\n    lint-command: 'shellcheck -f gcc -x'\n    lint-source: 'shellcheck'\n    lint-formats:\n      - '%f:%l:%c: %trror: %m'\n      - '%f:%l:%c: %tarning: %m'\n      - '%f:%l:%c: %tote: %m'\n\nlanguages:\n  sh:\n    - &lt;&lt;: *sh-shellcheck"
   },
   {
-    "objectID": "posts/2024-01-02-jelyll-adjust.html#ヘッダ簡素化",
-    "href": "posts/2024-01-02-jelyll-adjust.html#ヘッダ簡素化",
-    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
-    "section": "4. ヘッダ簡素化",
-    "text": "4. ヘッダ簡素化\n\nMinima の HTML ファイル (minima/_includes/header.html at master · jekyll/minima) をリポジトリに追加して対象箇所を削除すれば OK。\n\n(2024/01/28 追記) スマホ版のハンバーガーメニューが寂しかったのでヘッダ簡素化は取りやめました。"
+    "objectID": "posts/2024-01-27-setup-efm-langserver.html#vim-の設定",
+    "href": "posts/2024-01-27-setup-efm-langserver.html#vim-の設定",
+    "title": "efm-langserver を Vim/Neovim で利用する",
+    "section": "4. Vim の設定",
+    "text": "4. Vim の設定\nプラグインマネージャー dein.vim や dpp.vim などで採用されている TOML ファイルでのプラグイン設定箇所を抽出しました。遅延起動設定はお好みで。\n[[plugins]]\nrepo = 'prabirshrestha/vim-lsp'\non_event = ['VimEnter']\n\n[[plugins]]\nrepo = 'mattn/vim-lsp-settings'\non_source = ['vim-lsp']\nhook_source = '''\nlet g:lsp_auto_enable = 1\nlet g:lsp_log_file = ''\nlet g:lsp_settings = {\n  \\   'efm-langserver': {\n  \\     'disabled': v:false,\n  \\     'allowlist': ['sh'],\n  \\   }\n  \\ }\n'''"
   },
   {
-    "objectID": "posts/2024-01-02-jelyll-adjust.html#感想",
-    "href": "posts/2024-01-02-jelyll-adjust.html#感想",
-    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
-    "section": "5. 感想",
-    "text": "5. 感想\n\n必要最低限の機能は実装できたので割と満足です。\n見た目をちゃんと調整しようとすると HTML や CSS の調整が必要になってきますが、あんまりやりたくないので当面このままでいきます。"
+    "objectID": "posts/2024-01-27-setup-efm-langserver.html#neovim-の設定",
+    "href": "posts/2024-01-27-setup-efm-langserver.html#neovim-の設定",
+    "title": "efm-langserver を Vim/Neovim で利用する",
+    "section": "5. Neovim の設定",
+    "text": "5. Neovim の設定\nVim 同様に TOML ファイルの記述を抽出しました。こちらも遅延起動設定はお好みで。\n[[plugins]]\nrepo = 'neovim/nvim-lspconfig'\non_event = ['VimEnter']\nlua_source = '''\nlocal lspconfig = require('lspconfig')\nlspconfig.efm.setup{}\n'''"
   },
   {
-    "objectID": "posts/2024-01-01-init.html",
-    "href": "posts/2024-01-01-init.html",
-    "title": "Initial Post",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。\n初投稿になります。"
-  },
-  {
-    "objectID": "posts/2024-01-01-init.html#i9wa4-とは",
-    "href": "posts/2024-01-01-init.html#i9wa4-とは",
-    "title": "Initial Post",
-    "section": "1. i9wa4 とは",
-    "text": "1. i9wa4 とは\n\n読み：いくわよ\n仕事：データエンジニア・MLOpsエンジニア\n\n業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。"
-  },
-  {
-    "objectID": "posts/2024-01-01-init.html#このブログの運用方針",
-    "href": "posts/2024-01-01-init.html#このブログの運用方針",
-    "title": "Initial Post",
-    "section": "2. このブログの運用方針",
-    "text": "2. このブログの運用方針\n\n他サービスに流用するかもしれないけど記事の元データはここで一元管理したい\nこれまで色々書いてきた記事もここに集約していきたい"
-  },
-  {
-    "objectID": "posts/2024-03-26-setup-ds100knock.html",
-    "href": "posts/2024-03-26-setup-ds100knock.html",
-    "title": "データサイエンス100本ノックの実行環境構築 (WSL2)",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。\n下記リポジトリを見てください。以上。\nhttps://github.com/i9wa4/wsl2-100knocks-preprocess"
-  },
-  {
-    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html",
-    "href": "posts/2024-05-04-get-git-branch-name.vim.html",
-    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。"
-  },
-  {
-    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#経緯",
-    "href": "posts/2024-05-04-get-git-branch-name.vim.html#経緯",
-    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
-    "section": "1. 経緯",
-    "text": "1. 経緯\n私の Vim 設定では操作中のリポジトリのブランチ名を tabline に表示させていて、これは bash-completion に依存した実装となっています。この依存をなくし、ついでに依存をゼロにしようと思ったので Vim script でプラグインを書いてみようと思いました。\n.git ディレクトリを覗けば現在のブランチ名が分かるらしいことは知っていて、以下のリポジトリが自分のやりたいことであるということも知っている状態です。\nhttps://github.com/itchyny/vim-gitbranch\nGemini がどれくらい使えるか試してみたくて、上記リポジトリは見ずに進めてみます。"
-  },
-  {
-    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#gemini-との開発過程",
-    "href": "posts/2024-05-04-get-git-branch-name.vim.html#gemini-との開発過程",
-    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
-    "section": "2. Gemini との開発過程",
-    "text": "2. Gemini との開発過程\nGemini とのやりとりを書き残しておきます。\n\n2.1. .git 探索関数作成\n\n2.1.1. 質問\nVim script で以下の関数を作成してほしいです。\n- あるディレクトリのパスを引数にとり、そこから順に上の階層をたどって、.git ディレクトリがあればそこで探索をやめて.gitディレクトリのパスを戻り値とする。見つからなければ空文字列を返す。\n\n\n2.1.2. 回答\nVim script で .git ディレクトリを探す関数\n\n以下の Vim script は、引数として渡されたディレクトリパスから順に上の階層をたどり、.git ディレクトリを見つけたらそのパスを返します。見つからなければ空文字列を返します。\n\nfunction! FindGitDir(dir)\n  \" 引数がない場合はカレントディレクトリを代入 \"\n  if (empty(a:dir))\n    let dir = expand('%:p')\n  endif\n\n  \" ループフラグを初期化 \"\n  let found = 0\n\n  \" 順に上の階層をたどる \"\n  while (!found && !empty(dir) && dir != '/')\n    \" .git ディレクトリが存在するか確認 \"\n    if (isdirectory(dir . '/.git'))\n      let found = 1\n      let gitdir = dir . '/.git'\n    endif\n\n    \" 上の階層へ移動 \"\n    let dir = expand(dirname(dir))\n  endwhile\n\n  \" 結果を返す \"\n  if (found)\n    return gitdir\n  else\n    return ''\n  endif\nendfunction\n\n\n\n2.2. ブランチ名取得関数作成\n\n2.2.1. 質問\nVim script で以下の関数を作成してほしいです。\n- .gitディレクトリのパスを引数にとり、.gitディレクトリを除いて現在のブランチ名を取得し、それを戻り値とする。\n\n\n2.2.2. 回答\n以下の Vim script は、.git ディレクトリのパスを引数にとり、.git ディレクトリを除いた現在のブランチ名を取得し、それを戻り値とします。\n\nfunction! GetCurrentBranch(gitdir)\n  \" 引数が空の場合、エラーを返す \"\n  if (empty(a:gitdir))\n    error('引数が空です')\n  endif\n\n  \" カレントブランチ名の取得 \"\n  let branch = system('git --git-dir=\"' . a:gitdir . '\" rev-parse --abbrev-ref HEAD')\n\n  \" .git ディレクトリを除いたブランチ名を返す \"\n  return substitute(branch, a:gitdir . '/', '', 'g')\nendfunction\n\n\n2.2.3. 質問\nsystem() を使わず、gitコマンドを使わずに実現させてほしいです。\n\n\n2.2.4. 回答\nVim script で system() や git コマンドを使わずに現在のブランチ名を取得するには、以下の方法があります。\n\n\n1. :echo %b コマンドを使用する\n\nこの方法は、最も簡単でシンプルな方法です。%b 変数は、現在選択されているバッファのブランチ名を表します。\n\n\" 現在のブランチ名をエコーする \"\n:echo %b\n\n\n2. expand('%:p:h') を使って .git/HEAD ファイルを読み込む\n\nこの方法は、より汎用的で、カレントバッファ以外のブランチ名を取得する場合にも使用できます。.git/HEAD ファイルには、現在のブランチ名が格納されています。\n\n\" .git/HEAD ファイルのパスを取得 \"\nlet headfile = expand('%:p:h') . '/.git/HEAD'\n\n\" HEAD ファイルの内容を読み込む \"\nlet headcontent = readfile(headfile)\n\n\" ブランチ名を抽出する \"\nlet branch = match(headcontent, 'ref: refs/heads/(.+)')\n\n\" 結果を確認 \"\necho \"現在のブランチ: \" . branch\n\n\n3. git log の出力を解析する\n\nこの方法は、より詳細なブランチ情報 (コミットハッシュなど) を取得する場合に役立ちます。\nVim Script\n\n\" git log の出力をバッファに読み込む \"\n:redir &gt; /dev/null git log -1\n\n\" ブランチ名を抽出する \"\nlet branch = match(v:buffer['[0]'], 'ref: refs/heads/(.+)')\n\n\" 結果を確認 \"\necho \"現在のブランチ: \" . branch\n回答1が嘘すぎてびっくり。今回は回答2がよさそう。\nこの時点で下記リポジトリを確認してみたところ回答2と同様の手法でブランチ名を取得しているようでした。\nhttps://github.com/itchyny/vim-gitbranch\nここまで分かればあとは動作を確認しながら書けそうです。"
-  },
-  {
-    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#完成品",
-    "href": "posts/2024-05-04-get-git-branch-name.vim.html#完成品",
-    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
-    "section": "3. 完成品",
-    "text": "3. 完成品\nGemini と考えたコードが跡形もなくなっている。。なぜ。。\nTODO: 繰り返し呼ばれることを念頭に処理を軽くしたい\nhttps://github.com/i9wa4/get-git-branch-name.vim"
-  },
-  {
-    "objectID": "posts/2024-01-28-git-tips.html",
-    "href": "posts/2024-01-28-git-tips.html",
-    "title": "Git 向け Tips",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。\n自分用に Git 向けの Tips を書き残しておきます。"
-  },
-  {
-    "objectID": "posts/2024-01-28-git-tips.html#よく使うコマンド",
-    "href": "posts/2024-01-28-git-tips.html#よく使うコマンド",
-    "title": "Git 向け Tips",
-    "section": "1. よく使うコマンド",
-    "text": "1. よく使うコマンド\ngit add -n .\ngit log --graph\ngit diff --name-only HEAD HEAD~2\ngit diff ID1 ID2 filename\ngit difftool ID1 ID2\ngit show ID\n\ngit reflog\ngit rebase"
-  },
-  {
-    "objectID": "posts/2024-01-28-git-tips.html#リモートリポジトリ作成",
-    "href": "posts/2024-01-28-git-tips.html#リモートリポジトリ作成",
-    "title": "Git 向け Tips",
-    "section": "2. リモートリポジトリ作成",
-    "text": "2. リモートリポジトリ作成\ngit init --bare --shared\ngit remote add origin url\ngit clone url"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。\n少し前に作った Vim/Neovim プラグインの紹介記事となります。"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#プラグイン概要",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html#プラグイン概要",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "1. プラグイン概要",
-    "text": "1. プラグイン概要\n\nhttps://github.com/i9wa4/markdown-number-header.vim\n\nMarkdown の見出し番号を付ける or 更新するプラグインです。\nDeno と Denops に依存しています。"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#プラグインを作ることになったきっかけ",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html#プラグインを作ることになったきっかけ",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "2. プラグインを作ることになったきっかけ",
-    "text": "2. プラグインを作ることになったきっかけ\nMarkdown All in One という VSCode 拡張の Markdown 見出し番号を付ける機能を Vim でも使いたかったのですが、CLI アプリケーション (Formatter) や Vim プラグインを探しても見つからなかったので自作しようと思い至りました。"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグインとして作ろうと思った理由",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグインとして作ろうと思った理由",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "3. Denops プラグインとして作ろうと思った理由",
-    "text": "3. Denops プラグインとして作ろうと思った理由\nまず、自分が Vim 上でしか使わないため CLI アプリケーションとしてではなく Vim プラグインとして作ろうとは思ってました。\nそして私は Vim 使いなので Vim script で書くか Denops プラグインとして TypeScript で書くかの二択で、楽しそうなので後者を選びました。"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグイン開発体験について",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグイン開発体験について",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "4. Denops プラグイン開発体験について",
-    "text": "4. Denops プラグイン開発体験について\n初めて Denops プラグインを作ったし、しかも TypeScript にも触れたことがなかったのですが意外と困ることは少なかったです。\n核となる見出し番号を振る処理は TypeScript の本領発揮という感じで楽に書けましたね。\nまず以下のドキュメントに従ってチュートリアルを終えて、あとは先人の Denops プラグインのリポジトリを覗いてお作法を学びつつプラグインを完成させました。\n\n参考ページ:\n\nDeno で Vim/Neovim のプラグインを書く (denops.vim) | Zenn\nIntroduction - Denops Documentation (英語版)"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#感想",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html#感想",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "5. 感想",
-    "text": "5. 感想\n今も毎日使っているプラグインなので「無いんだったら作ればいい」精神でフッ軽に作れたことを嬉しく思ってます。\n今後も必要なものは自分で作っていたいですね。"
-  },
-  {
-    "objectID": "posts/2024-05-05-deploy-quarto.html",
-    "href": "posts/2024-05-05-deploy-quarto.html",
-    "title": "Quarto で作ったスライドを GitHub Pages にデプロイする",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。"
-  },
-  {
-    "objectID": "posts/2024-05-05-deploy-quarto.html#前提",
-    "href": "posts/2024-05-05-deploy-quarto.html#前提",
-    "title": "Quarto で作ったスライドを GitHub Pages にデプロイする",
-    "section": "1. 前提",
-    "text": "1. 前提\nスライドをできるだけ Git で管理したいので Markdown をスライドに変換する方向性で色々なツールを比較検討していて、 Quarto (https://quarto.org/) に決めました。\n.qmd ファイルという見慣れないファイルを利用しますが、利点としては以下ですね。 - 環境構築が pip で完了する - VS Code で開くと Jupyter Notebook っぽくセルを実行できる"
-  },
-  {
-    "objectID": "posts/2024-05-05-deploy-quarto.html#やったこと",
-    "href": "posts/2024-05-05-deploy-quarto.html#やったこと",
-    "title": "Quarto で作ったスライドを GitHub Pages にデプロイする",
-    "section": "2. やったこと",
-    "text": "2. やったこと\n下記リポジトリを整備しました。\nhttps://github.com/i9wa4/slides\nREADME.md にも書いてますが\nQuartoでスライドを作ってGitHub Pagesで公開する #GitHubActions - Qiita\nを参考にしてます。"
-  },
-  {
-    "objectID": "posts/2024-05-05-deploy-quarto.html#感想",
-    "href": "posts/2024-05-05-deploy-quarto.html#感想",
-    "title": "Quarto で作ったスライドを GitHub Pages にデプロイする",
-    "section": "3. 感想",
-    "text": "3. 感想\nGitHub Actions はまだよく分かってないままなのですが、一旦動くようになってよかったです。\nスライド一覧に関しては Gemini も意外とやるじゃんと思いました。質問しながらコードの不備を指摘すると正しいコードを書いてくれますね。"
-  },
-  {
-    "objectID": "posts/2024-01-28-microsoft-office-tips.html",
-    "href": "posts/2024-01-28-microsoft-office-tips.html",
-    "title": "Microsoft Office 向け Tips",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。\n自分用に Microsoft Office 向けの Tips を書き残しておきます。"
-  },
-  {
-    "objectID": "posts/2024-01-28-microsoft-office-tips.html#excel",
-    "href": "posts/2024-01-28-microsoft-office-tips.html#excel",
-    "title": "Microsoft Office 向け Tips",
-    "section": "1. Excel",
-    "text": "1. Excel\n\n1.1. Excel VBA\n\nアドイン追加先\n\n%USERPROFILE%\\AppData\\Roaming\\Microsoft\\AddIns\n\n\n\n\n1.2. Excel 関数\n\nシート名を記載したセルB2を利用したハイパーリンク作成\n\n=HYPERLINK(\"#'\"&B2&\"'!$A$1\",B2)"
-  },
-  {
-    "objectID": "posts/2024-01-28-microsoft-office-tips.html#word",
-    "href": "posts/2024-01-28-microsoft-office-tips.html#word",
-    "title": "Microsoft Office 向け Tips",
-    "section": "2. Word",
-    "text": "2. Word\n\n2.1. Normal.dotm 作成\n\n%APPDATA%\\Microsoft\\Templates\\Normal.dotm 削除\nデザインを作成し既定に設定する\n\nテーマ設定\n\n見出し: 游ゴシック Arial\n本文: 游ゴシック Medium Arial\n\nアウトライン –&gt; 新しいアウトラインの定義 –&gt; オプション –&gt; レベルと対応付ける見出しスタイル\n本文: 10.5pt\n見出し 1: 18pt Bold"
+    "objectID": "posts/2024-01-27-setup-efm-langserver.html#感想",
+    "href": "posts/2024-01-27-setup-efm-langserver.html#感想",
+    "title": "efm-langserver を Vim/Neovim で利用する",
+    "section": "6. 感想",
+    "text": "6. 感想\nLinter をインストールできていれば出力形式を見て自力で Language Server として組み込める……素晴らしいですね！\nLinter は手動でインストールして設定ファイルを管理しておくのが結局一番分かりやすいなと実感しているのですが、その状態で簡単に Vim/Neovim に反映できる efm-langserver はかなり有り難いです。"
   },
   {
     "objectID": "posts/2024-06-17-setup-mac.html",
@@ -350,81 +189,270 @@
     "text": "8. (おまけ) ショートカット集\n\n\n\n\n\n\n\n\nカテゴリ\nショートカット\n説明\n\n\n\n\nウインドウ操作\nCommand + Tab\nアプリケーション切り替え\n\n\nウインドウ操作\nCommand + @\n同一アプリケーションの切り替え\n\n\nウインドウ操作\nCommand + Option + Arrow\nChrome タブ切り替え\n\n\nその他\nCommad + Q\nFinder 終了\n\n\nその他\nCommand + Ctrl + Q\nロック"
   },
   {
-    "objectID": "posts/2024-01-27-setup-efm-langserver.html",
-    "href": "posts/2024-01-27-setup-efm-langserver.html",
-    "title": "efm-langserver を Vim/Neovim で利用する",
+    "objectID": "posts/2024-01-28-microsoft-office-tips.html",
+    "href": "posts/2024-01-28-microsoft-office-tips.html",
+    "title": "Microsoft Office 向け Tips",
     "section": "",
-    "text": "こんにちは。i9wa4 です。\n最近 Vim と Neovim に efm-langserver を導入したので手順を説明していきます。"
+    "text": "こんにちは。i9wa4 です。\n自分用に Microsoft Office 向けの Tips を書き残しておきます。"
   },
   {
-    "objectID": "posts/2024-01-27-setup-efm-langserver.html#efm-langserver-とは",
-    "href": "posts/2024-01-27-setup-efm-langserver.html#efm-langserver-とは",
-    "title": "efm-langserver を Vim/Neovim で利用する",
-    "section": "1. efm-langserver とは",
-    "text": "1. efm-langserver とは\nmattn さんの記事を見るのが最良ですね。\nBig Sky :: Lint ツールを Language Server に対応させるコマンド efm-langserver 作った。\n\nどんな言語であろうとも Lint ツールが grep と同様の形式で結果を出力してくれさえすれば Language Server にしてしまうコマンド\n\nLinter をインストールした後 Vim/Neovim で Info や Error を画面内に表示させたいときに efm-langserver が活用できると思えばよいです。"
+    "objectID": "posts/2024-01-28-microsoft-office-tips.html#excel",
+    "href": "posts/2024-01-28-microsoft-office-tips.html#excel",
+    "title": "Microsoft Office 向け Tips",
+    "section": "1. Excel",
+    "text": "1. Excel\n\n1.1. Excel VBA\n\nアドイン追加先\n\n%USERPROFILE%\\AppData\\Roaming\\Microsoft\\AddIns\n\n\n\n\n1.2. Excel 関数\n\nシート名を記載したセルB2を利用したハイパーリンク作成\n\n=HYPERLINK(\"#'\"&B2&\"'!$A$1\",B2)"
   },
   {
-    "objectID": "posts/2024-01-27-setup-efm-langserver.html#efm-langserver-のインストール",
-    "href": "posts/2024-01-27-setup-efm-langserver.html#efm-langserver-のインストール",
-    "title": "efm-langserver を Vim/Neovim で利用する",
-    "section": "2. efm-langserver のインストール",
-    "text": "2. efm-langserver のインストール\nUbuntu 22.04 (WSL2) でのインストール手順を記載しておきます。\nGo 言語を Go Wiki: Ubuntu - The Go Programming Language に従ってインストールします。\nsudo add-apt-repository -y ppa:longsleep/golang-backports\nsudo apt update\nsudo apt install -y golang-go\nefm-langserver を GitHub - mattn/efm-langserver: General purpose Language Server に従ってインストールします。\ngo install github.com/mattn/efm-langserver@latest\n~/.profile などに以下を追記して PATH を通しておきます。\nexport PATH=\"${HOME}\"/go/bin:\"${PATH}\""
+    "objectID": "posts/2024-01-28-microsoft-office-tips.html#word",
+    "href": "posts/2024-01-28-microsoft-office-tips.html#word",
+    "title": "Microsoft Office 向け Tips",
+    "section": "2. Word",
+    "text": "2. Word\n\n2.1. Normal.dotm 作成\n\n%APPDATA%\\Microsoft\\Templates\\Normal.dotm 削除\nデザインを作成し既定に設定する\n\nテーマ設定\n\n見出し: 游ゴシック Arial\n本文: 游ゴシック Medium Arial\n\nアウトライン –&gt; 新しいアウトラインの定義 –&gt; オプション –&gt; レベルと対応付ける見出しスタイル\n本文: 10.5pt\n見出し 1: 18pt Bold"
   },
   {
-    "objectID": "posts/2024-01-27-setup-efm-langserver.html#config.yaml-の作成",
-    "href": "posts/2024-01-27-setup-efm-langserver.html#config.yaml-の作成",
-    "title": "efm-langserver を Vim/Neovim で利用する",
-    "section": "3. config.yaml の作成",
-    "text": "3. config.yaml の作成\nefm-langserver 用設定ファイル $XDG_CONFIG_HOME/efm-langserver/config.yaml に必要な設定を記述していきます。\nREADME を参考に shellcheck を使うための設定のみ抽出したものが以下です。\nversion: 2\nroot-markers:\n  - .git/\nlint-debounce: 1s\n\ntools:\n  sh-shellcheck: &sh-shellcheck\n    lint-command: 'shellcheck -f gcc -x'\n    lint-source: 'shellcheck'\n    lint-formats:\n      - '%f:%l:%c: %trror: %m'\n      - '%f:%l:%c: %tarning: %m'\n      - '%f:%l:%c: %tote: %m'\n\nlanguages:\n  sh:\n    - &lt;&lt;: *sh-shellcheck"
-  },
-  {
-    "objectID": "posts/2024-01-27-setup-efm-langserver.html#vim-の設定",
-    "href": "posts/2024-01-27-setup-efm-langserver.html#vim-の設定",
-    "title": "efm-langserver を Vim/Neovim で利用する",
-    "section": "4. Vim の設定",
-    "text": "4. Vim の設定\nプラグインマネージャー dein.vim や dpp.vim などで採用されている TOML ファイルでのプラグイン設定箇所を抽出しました。遅延起動設定はお好みで。\n[[plugins]]\nrepo = 'prabirshrestha/vim-lsp'\non_event = ['VimEnter']\n\n[[plugins]]\nrepo = 'mattn/vim-lsp-settings'\non_source = ['vim-lsp']\nhook_source = '''\nlet g:lsp_auto_enable = 1\nlet g:lsp_log_file = ''\nlet g:lsp_settings = {\n  \\   'efm-langserver': {\n  \\     'disabled': v:false,\n  \\     'allowlist': ['sh'],\n  \\   }\n  \\ }\n'''"
-  },
-  {
-    "objectID": "posts/2024-01-27-setup-efm-langserver.html#neovim-の設定",
-    "href": "posts/2024-01-27-setup-efm-langserver.html#neovim-の設定",
-    "title": "efm-langserver を Vim/Neovim で利用する",
-    "section": "5. Neovim の設定",
-    "text": "5. Neovim の設定\nVim 同様に TOML ファイルの記述を抽出しました。こちらも遅延起動設定はお好みで。\n[[plugins]]\nrepo = 'neovim/nvim-lspconfig'\non_event = ['VimEnter']\nlua_source = '''\nlocal lspconfig = require('lspconfig')\nlspconfig.efm.setup{}\n'''"
-  },
-  {
-    "objectID": "posts/2024-01-27-setup-efm-langserver.html#感想",
-    "href": "posts/2024-01-27-setup-efm-langserver.html#感想",
-    "title": "efm-langserver を Vim/Neovim で利用する",
-    "section": "6. 感想",
-    "text": "6. 感想\nLinter をインストールできていれば出力形式を見て自力で Language Server として組み込める……素晴らしいですね！\nLinter は手動でインストールして設定ファイルを管理しておくのが結局一番分かりやすいなと実感しているのですが、その状態で簡単に Vim/Neovim に反映できる efm-langserver はかなり有り難いです。"
-  },
-  {
-    "objectID": "posts/2024-02-04-chrome-tips.html",
-    "href": "posts/2024-02-04-chrome-tips.html",
-    "title": "Google Chrome 向け Tips",
+    "objectID": "posts/2024-05-05-deploy-quarto.html",
+    "href": "posts/2024-05-05-deploy-quarto.html",
+    "title": "Quarto で作ったスライドを GitHub Pages にデプロイする",
     "section": "",
-    "text": "こんにちは。i9wa4 です。\n自分用に Google Chrome 向けの Tips を書き残しておきます。"
+    "text": "こんにちは。i9wa4 です。"
   },
   {
-    "objectID": "posts/2024-02-04-chrome-tips.html#検索エンジン設定",
-    "href": "posts/2024-02-04-chrome-tips.html#検索エンジン設定",
-    "title": "Google Chrome 向け Tips",
-    "section": "1. 検索エンジン設定",
-    "text": "1. 検索エンジン設定\n\nGoogle 日本語検索\n\nhttps://www.google.com/search?q=%s\n\nGoogle 英語検索\n\nhttps://www.google.com/search?q=%s&gl=us&hl=en&gws_rd=cr&pws=0\n\nDuckDuckGo 日本語検索\n\nhttps://duckduckgo.com/?q=%s&kl=jp-jp&kz=-1&kav=1&kaf=1&k1=-1&ia=web\n\nDuckDuckGo 英語検索\n\nhttps://duckduckgo.com/?q=%s&kl=us-en&kz=-1&kav=1&kaf=1&k1=-1&ia=web"
+    "objectID": "posts/2024-05-05-deploy-quarto.html#前提",
+    "href": "posts/2024-05-05-deploy-quarto.html#前提",
+    "title": "Quarto で作ったスライドを GitHub Pages にデプロイする",
+    "section": "1. 前提",
+    "text": "1. 前提\nスライドをできるだけ Git で管理したいので Markdown をスライドに変換する方向性で色々なツールを比較検討していて、 Quarto (https://quarto.org/) に決めました。\n.qmd ファイルという見慣れないファイルを利用しますが、利点としては以下ですね。 - 環境構築が pip で完了する - VS Code で開くと Jupyter Notebook っぽくセルを実行できる"
   },
   {
-    "objectID": "posts/2024-06-17-gcloud-command-tips.html",
-    "href": "posts/2024-06-17-gcloud-command-tips.html",
-    "title": "Google Cloud CLI メモ",
+    "objectID": "posts/2024-05-05-deploy-quarto.html#やったこと",
+    "href": "posts/2024-05-05-deploy-quarto.html#やったこと",
+    "title": "Quarto で作ったスライドを GitHub Pages にデプロイする",
+    "section": "2. やったこと",
+    "text": "2. やったこと\n下記リポジトリを整備しました。\nhttps://github.com/i9wa4/slides\nREADME.md にも書いてますが\nQuartoでスライドを作ってGitHub Pagesで公開する #GitHubActions - Qiita\nを参考にしてます。"
+  },
+  {
+    "objectID": "posts/2024-05-05-deploy-quarto.html#感想",
+    "href": "posts/2024-05-05-deploy-quarto.html#感想",
+    "title": "Quarto で作ったスライドを GitHub Pages にデプロイする",
+    "section": "3. 感想",
+    "text": "3. 感想\nGitHub Actions はまだよく分かってないままなのですが、一旦動くようになってよかったです。\nスライド一覧に関しては Gemini も意外とやるじゃんと思いました。質問しながらコードの不備を指摘すると正しいコードを書いてくれますね。"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
     "section": "",
-    "text": "こんにちは。i9wa4 です。\nGoogle Cloud CLI (gcloud CLI) のメモです。\n# keyfile 登録からテーブル確認まで\ngcloud auth activate-service-account --key-file ***.json\ngcloud auth list\ngcloud set account ***\nbq --project_id=aaaaa ls dataset\nbq --project_id=aaaaa show dataset.table_name\nbq --project_id=aaaaa head dataset.table_name -n 5\n# ログイン\ngcloud auth login"
+    "text": "こんにちは。i9wa4 です。\n少し前に作った Vim/Neovim プラグインの紹介記事となります。"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#プラグイン概要",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html#プラグイン概要",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
+    "section": "1. プラグイン概要",
+    "text": "1. プラグイン概要\n\nhttps://github.com/i9wa4/markdown-number-header.vim\n\nMarkdown の見出し番号を付ける or 更新するプラグインです。\nDeno と Denops に依存しています。"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#プラグインを作ることになったきっかけ",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html#プラグインを作ることになったきっかけ",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
+    "section": "2. プラグインを作ることになったきっかけ",
+    "text": "2. プラグインを作ることになったきっかけ\nMarkdown All in One という VSCode 拡張の Markdown 見出し番号を付ける機能を Vim でも使いたかったのですが、CLI アプリケーション (Formatter) や Vim プラグインを探しても見つからなかったので自作しようと思い至りました。"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグインとして作ろうと思った理由",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグインとして作ろうと思った理由",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
+    "section": "3. Denops プラグインとして作ろうと思った理由",
+    "text": "3. Denops プラグインとして作ろうと思った理由\nまず、自分が Vim 上でしか使わないため CLI アプリケーションとしてではなく Vim プラグインとして作ろうとは思ってました。\nそして私は Vim 使いなので Vim script で書くか Denops プラグインとして TypeScript で書くかの二択で、楽しそうなので後者を選びました。"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグイン開発体験について",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグイン開発体験について",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
+    "section": "4. Denops プラグイン開発体験について",
+    "text": "4. Denops プラグイン開発体験について\n初めて Denops プラグインを作ったし、しかも TypeScript にも触れたことがなかったのですが意外と困ることは少なかったです。\n核となる見出し番号を振る処理は TypeScript の本領発揮という感じで楽に書けましたね。\nまず以下のドキュメントに従ってチュートリアルを終えて、あとは先人の Denops プラグインのリポジトリを覗いてお作法を学びつつプラグインを完成させました。\n\n参考ページ:\n\nDeno で Vim/Neovim のプラグインを書く (denops.vim) | Zenn\nIntroduction - Denops Documentation (英語版)"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#感想",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html#感想",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
+    "section": "5. 感想",
+    "text": "5. 感想\n今も毎日使っているプラグインなので「無いんだったら作ればいい」精神でフッ軽に作れたことを嬉しく思ってます。\n今後も必要なものは自分で作っていたいですね。"
+  },
+  {
+    "objectID": "posts/2024-01-28-git-tips.html",
+    "href": "posts/2024-01-28-git-tips.html",
+    "title": "Git 向け Tips",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\n自分用に Git 向けの Tips を書き残しておきます。"
+  },
+  {
+    "objectID": "posts/2024-01-28-git-tips.html#よく使うコマンド",
+    "href": "posts/2024-01-28-git-tips.html#よく使うコマンド",
+    "title": "Git 向け Tips",
+    "section": "1. よく使うコマンド",
+    "text": "1. よく使うコマンド\ngit add -n .\ngit log --graph\ngit diff --name-only HEAD HEAD~2\ngit diff ID1 ID2 filename\ngit difftool ID1 ID2\ngit show ID\n\ngit reflog\ngit rebase"
+  },
+  {
+    "objectID": "posts/2024-01-28-git-tips.html#リモートリポジトリ作成",
+    "href": "posts/2024-01-28-git-tips.html#リモートリポジトリ作成",
+    "title": "Git 向け Tips",
+    "section": "2. リモートリポジトリ作成",
+    "text": "2. リモートリポジトリ作成\ngit init --bare --shared\ngit remote add origin url\ngit clone url"
+  },
+  {
+    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html",
+    "href": "posts/2024-05-04-get-git-branch-name.vim.html",
+    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。"
+  },
+  {
+    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#経緯",
+    "href": "posts/2024-05-04-get-git-branch-name.vim.html#経緯",
+    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
+    "section": "1. 経緯",
+    "text": "1. 経緯\n私の Vim 設定では操作中のリポジトリのブランチ名を tabline に表示させていて、これは bash-completion に依存した実装となっています。この依存をなくし、ついでに依存をゼロにしようと思ったので Vim script でプラグインを書いてみようと思いました。\n.git ディレクトリを覗けば現在のブランチ名が分かるらしいことは知っていて、以下のリポジトリが自分のやりたいことであるということも知っている状態です。\nhttps://github.com/itchyny/vim-gitbranch\nGemini がどれくらい使えるか試してみたくて、上記リポジトリは見ずに進めてみます。"
+  },
+  {
+    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#gemini-との開発過程",
+    "href": "posts/2024-05-04-get-git-branch-name.vim.html#gemini-との開発過程",
+    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
+    "section": "2. Gemini との開発過程",
+    "text": "2. Gemini との開発過程\nGemini とのやりとりを書き残しておきます。\n\n2.1. .git 探索関数作成\n\n2.1.1. 質問\nVim script で以下の関数を作成してほしいです。\n- あるディレクトリのパスを引数にとり、そこから順に上の階層をたどって、.git ディレクトリがあればそこで探索をやめて.gitディレクトリのパスを戻り値とする。見つからなければ空文字列を返す。\n\n\n2.1.2. 回答\nVim script で .git ディレクトリを探す関数\n\n以下の Vim script は、引数として渡されたディレクトリパスから順に上の階層をたどり、.git ディレクトリを見つけたらそのパスを返します。見つからなければ空文字列を返します。\n\nfunction! FindGitDir(dir)\n  \" 引数がない場合はカレントディレクトリを代入 \"\n  if (empty(a:dir))\n    let dir = expand('%:p')\n  endif\n\n  \" ループフラグを初期化 \"\n  let found = 0\n\n  \" 順に上の階層をたどる \"\n  while (!found && !empty(dir) && dir != '/')\n    \" .git ディレクトリが存在するか確認 \"\n    if (isdirectory(dir . '/.git'))\n      let found = 1\n      let gitdir = dir . '/.git'\n    endif\n\n    \" 上の階層へ移動 \"\n    let dir = expand(dirname(dir))\n  endwhile\n\n  \" 結果を返す \"\n  if (found)\n    return gitdir\n  else\n    return ''\n  endif\nendfunction\n\n\n\n2.2. ブランチ名取得関数作成\n\n2.2.1. 質問\nVim script で以下の関数を作成してほしいです。\n- .gitディレクトリのパスを引数にとり、.gitディレクトリを除いて現在のブランチ名を取得し、それを戻り値とする。\n\n\n2.2.2. 回答\n以下の Vim script は、.git ディレクトリのパスを引数にとり、.git ディレクトリを除いた現在のブランチ名を取得し、それを戻り値とします。\n\nfunction! GetCurrentBranch(gitdir)\n  \" 引数が空の場合、エラーを返す \"\n  if (empty(a:gitdir))\n    error('引数が空です')\n  endif\n\n  \" カレントブランチ名の取得 \"\n  let branch = system('git --git-dir=\"' . a:gitdir . '\" rev-parse --abbrev-ref HEAD')\n\n  \" .git ディレクトリを除いたブランチ名を返す \"\n  return substitute(branch, a:gitdir . '/', '', 'g')\nendfunction\n\n\n2.2.3. 質問\nsystem() を使わず、gitコマンドを使わずに実現させてほしいです。\n\n\n2.2.4. 回答\nVim script で system() や git コマンドを使わずに現在のブランチ名を取得するには、以下の方法があります。\n\n\n1. :echo %b コマンドを使用する\n\nこの方法は、最も簡単でシンプルな方法です。%b 変数は、現在選択されているバッファのブランチ名を表します。\n\n\" 現在のブランチ名をエコーする \"\n:echo %b\n\n\n2. expand('%:p:h') を使って .git/HEAD ファイルを読み込む\n\nこの方法は、より汎用的で、カレントバッファ以外のブランチ名を取得する場合にも使用できます。.git/HEAD ファイルには、現在のブランチ名が格納されています。\n\n\" .git/HEAD ファイルのパスを取得 \"\nlet headfile = expand('%:p:h') . '/.git/HEAD'\n\n\" HEAD ファイルの内容を読み込む \"\nlet headcontent = readfile(headfile)\n\n\" ブランチ名を抽出する \"\nlet branch = match(headcontent, 'ref: refs/heads/(.+)')\n\n\" 結果を確認 \"\necho \"現在のブランチ: \" . branch\n\n\n3. git log の出力を解析する\n\nこの方法は、より詳細なブランチ情報 (コミットハッシュなど) を取得する場合に役立ちます。\nVim Script\n\n\" git log の出力をバッファに読み込む \"\n:redir &gt; /dev/null git log -1\n\n\" ブランチ名を抽出する \"\nlet branch = match(v:buffer['[0]'], 'ref: refs/heads/(.+)')\n\n\" 結果を確認 \"\necho \"現在のブランチ: \" . branch\n回答1が嘘すぎてびっくり。今回は回答2がよさそう。\nこの時点で下記リポジトリを確認してみたところ回答2と同様の手法でブランチ名を取得しているようでした。\nhttps://github.com/itchyny/vim-gitbranch\nここまで分かればあとは動作を確認しながら書けそうです。"
+  },
+  {
+    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#完成品",
+    "href": "posts/2024-05-04-get-git-branch-name.vim.html#完成品",
+    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
+    "section": "3. 完成品",
+    "text": "3. 完成品\nGemini と考えたコードが跡形もなくなっている。。なぜ。。\nTODO: 繰り返し呼ばれることを念頭に処理を軽くしたい\nhttps://github.com/i9wa4/get-git-branch-name.vim"
+  },
+  {
+    "objectID": "posts/2024-03-26-setup-ds100knock.html",
+    "href": "posts/2024-03-26-setup-ds100knock.html",
+    "title": "データサイエンス100本ノックの実行環境構築 (WSL2)",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\n下記リポジトリを見てください。以上。\nhttps://github.com/i9wa4/wsl2-100knocks-preprocess"
+  },
+  {
+    "objectID": "posts/2024-01-01-init.html",
+    "href": "posts/2024-01-01-init.html",
+    "title": "Initial Post",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\n初投稿になります。"
+  },
+  {
+    "objectID": "posts/2024-01-01-init.html#i9wa4-とは",
+    "href": "posts/2024-01-01-init.html#i9wa4-とは",
+    "title": "Initial Post",
+    "section": "1. i9wa4 とは",
+    "text": "1. i9wa4 とは\n\n読み：いくわよ\n仕事：データエンジニア・MLOpsエンジニア\n\n業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。"
+  },
+  {
+    "objectID": "posts/2024-01-01-init.html#このブログの運用方針",
+    "href": "posts/2024-01-01-init.html#このブログの運用方針",
+    "title": "Initial Post",
+    "section": "2. このブログの運用方針",
+    "text": "2. このブログの運用方針\n\n他サービスに流用するかもしれないけど記事の元データはここで一元管理したい\nこれまで色々書いてきた記事もここに集約していきたい"
+  },
+  {
+    "objectID": "posts/2024-01-02-jelyll-adjust.html",
+    "href": "posts/2024-01-02-jelyll-adjust.html",
+    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\nブログを作ったので少しだけ機能と見た目を手入れしてみました。"
+  },
+  {
+    "objectID": "posts/2024-01-02-jelyll-adjust.html#調整前",
+    "href": "posts/2024-01-02-jelyll-adjust.html#調整前",
+    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
+    "section": "1. 調整前",
+    "text": "1. 調整前\n\n現在 Jekyll (GitHub Pages) の Minima (jekyll/minima: Minima is a one-size-fits-all Jekyll theme for writers.) が適用されている状態\n\nHTML ファイルが必要になったらここから持ってくる！"
+  },
+  {
+    "objectID": "posts/2024-01-02-jelyll-adjust.html#やりたいこと",
+    "href": "posts/2024-01-02-jelyll-adjust.html#やりたいこと",
+    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
+    "section": "2. やりたいこと",
+    "text": "2. やりたいこと\n\nタグ対応\n\nタグ毎の一覧ページの追加\nトップページに各タグの一覧ページへのリンク追加\n各記事にて付与したタグの一覧ページリンクの追加\n\nリポジトリルートの Markdown ファイルへのリンクがヘッダに追加されてしまうためヘッダの記述の簡素化"
+  },
+  {
+    "objectID": "posts/2024-01-02-jelyll-adjust.html#タグ対応",
+    "href": "posts/2024-01-02-jelyll-adjust.html#タグ対応",
+    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
+    "section": "3. タグ対応",
+    "text": "3. タグ対応\n\nsyudead さんの記事とリポジトリを参考に実装しました。私は HTML ではなく Markdown 中心の構成としたかったのであくまで参考という感じです。\n\nJekyllのブログでタグ機能を実装する\n\n各記事へのタグ付け方法\n一覧ページの html 記述\n\nsyudead/syudead.github.io\n\nページ一覧の作成方法\n\n./_inclides/tag.html を ./blog.html などの一覧ページ内にて include する\n\n各記述でのタグ一覧ページリンク表示\n\n./_layouts/post.html 参照\n\n\n\nトップページに各タグの一覧ページへのリンクを追加する対応については ./index.md に地道にリンクを追加する方法を取ることとしました。"
+  },
+  {
+    "objectID": "posts/2024-01-02-jelyll-adjust.html#ヘッダ簡素化",
+    "href": "posts/2024-01-02-jelyll-adjust.html#ヘッダ簡素化",
+    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
+    "section": "4. ヘッダ簡素化",
+    "text": "4. ヘッダ簡素化\n\nMinima の HTML ファイル (minima/_includes/header.html at master · jekyll/minima) をリポジトリに追加して対象箇所を削除すれば OK。\n\n(2024/01/28 追記) スマホ版のハンバーガーメニューが寂しかったのでヘッダ簡素化は取りやめました。"
+  },
+  {
+    "objectID": "posts/2024-01-02-jelyll-adjust.html#感想",
+    "href": "posts/2024-01-02-jelyll-adjust.html#感想",
+    "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
+    "section": "5. 感想",
+    "text": "5. 感想\n\n必要最低限の機能は実装できたので割と満足です。\n見た目をちゃんと調整しようとすると HTML や CSS の調整が必要になってきますが、あんまりやりたくないので当面このままでいきます。"
+  },
+  {
+    "objectID": "posts/2024-02-04-posgresql-tips.html",
+    "href": "posts/2024-02-04-posgresql-tips.html",
+    "title": "PostgreSQL 向け Tips",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\n自分用に PostgreSQL 向けの Tips を書き残しておきます。"
+  },
+  {
+    "objectID": "posts/2024-02-04-posgresql-tips.html#postgresql-起動データベースへのアクセス",
+    "href": "posts/2024-02-04-posgresql-tips.html#postgresql-起動データベースへのアクセス",
+    "title": "PostgreSQL 向け Tips",
+    "section": "1. PostgreSQL 起動～データベースへのアクセス",
+    "text": "1. PostgreSQL 起動～データベースへのアクセス\nいつも忘れるので取っかかりとしてコマンドを書いておきます。\npg_ctl restart\npsql -U postgres -d db_name\n\npg_ctl restart\npsql -U postgres\nCREATE DATABASE db_name;\n\\c db_name\nCREATE SCHEMA sc_name;"
+  },
+  {
+    "objectID": "posts/2024-06-17-purchased-gadgets.html",
+    "href": "posts/2024-06-17-purchased-gadgets.html",
+    "title": "購入したガジェットの紹介",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\n詳細まで書くかは決めていませんが、これまで購入したガジェット一覧を作っておきます。\n\n\n\nTable 1: 購入ガジェット一覧\n\n\n\n\n\n購入日\nブランド\n製品名\n\n\n\n\n2019/07/01\nLogicool\nPebble M350\n\n\n2020/07/19\nPFU\nHHKB Professional HYBRID Type-S 英語配列／墨\n\n\n2022/03/12\nLogicool\nERGO M575\n\n\n2022/12/05\nKensington\nスリムブレードトラックボール\n\n\n2023/03/05\nGoogle\nPixel 6a\n\n\n2023/03/12\nSONY\nWF-1000XM4\n\n\n2023/08/05\nBeelink\nBeelink SEi10 Mini PC\n\n\n2024/02/28\nAnker\nAnker PowerExpand 6-in-1 USB-C PD イーサネット ハブ\n\n\n2024/03/02\nLenovo\nThinkPad T14s Gen 4 (AMD)\n\n\n2024/04/05\nShokz\nOpenRun Pro Mini\n\n\n2024/05/06\nFitbit\nFitbit Charge 6\n\n\n2024/06/03\nDell\nDell 27 USB-C モニター - S2722DC\n\n\n2024/06/07\nLogicool\nC270n HDウェブカメラ"
+  },
+  {
+    "objectID": "posts/2024-06-28-systemd-user.html",
+    "href": "posts/2024-06-28-systemd-user.html",
+    "title": "systemd がユーザー権限でも使える",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\nsystemd がユーザー権限でも設定できると知ったので記事にします。"
+  },
+  {
+    "objectID": "posts/2024-06-28-systemd-user.html#基本的な情報まとめ",
+    "href": "posts/2024-06-28-systemd-user.html#基本的な情報まとめ",
+    "title": "systemd がユーザー権限でも使える",
+    "section": "1. 基本的な情報まとめ",
+    "text": "1. 基本的な情報まとめ\n\n設定ファイル格納先\n\n~/.config/systemd/user/\n\nコマンド\n\nsystemd --user\nuser オプションを付けて通常の systemd と同様に使用する"
+  },
+  {
+    "objectID": "posts/2024-06-28-systemd-user.html#timer-設定手順",
+    "href": "posts/2024-06-28-systemd-user.html#timer-設定手順",
+    "title": "systemd がユーザー権限でも使える",
+    "section": "2. timer 設定手順",
+    "text": "2. timer 設定手順\n私の用途では設定ファイル格納先と timer 設定ができれば OK です。\n下記リポジトリの設定を使って説明していきます。\ni9wa4/minecraft-bedrock-server-setup/bin/init.sh\n# ~/.config/systemd/user/ に設定ファイルを配置する\nln -fs \"${DIR_REPO}\"/etc/mbs-backup.service \\\n  \"${HOME}\"/.config/systemd/user/mbs-backup.service\nln -fs \"${DIR_REPO}\"/etc/mbs-backup.timer \\\n  \"${HOME}\"/.config/systemd/user/mbs-backup.timer\n\n# 設定ファイルを読み込む\nsystemctl --user daemon-reload\n\n# timer をログイン時に実行する\nsystemctl --user enable mbs-backup.timer\n\n# timer を実行する\nsystemctl --user start mbs-backup.timer"
+  },
+  {
+    "objectID": "posts/2024-06-28-systemd-user.html#参考リンク",
+    "href": "posts/2024-06-28-systemd-user.html#参考リンク",
+    "title": "systemd がユーザー権限でも使える",
+    "section": "3. 参考リンク",
+    "text": "3. 参考リンク\n\nsystemd/ユーザー - ArchWiki"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Blog",
     "section": "",
-    "text": "Google Cloud CLI メモ\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\n購入したガジェットの紹介\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nMac 環境構築手順\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\n\n\n2024-05-03\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nPostgreSQL 向け Tips\n\n\n\n\n\n\n\n\n2024-02-04\n\n\n\n\n\n\n\nGoogle Chrome 向け Tips\n\n\n\n\n\n\n\n\n2024-02-04\n\n\n\n\n\n\n\nGit 向け Tips\n\n\n\n\n\n\n\n\n2024-01-28\n\n\n\n\n\n\n\nMicrosoft Office 向け Tips\n\n\n\n\n\n\n\n\n2024-01-28\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\n\n\n2023-12-31\n\n\n\n\n\n\nNo matching items"
+    "text": "systemd がユーザー権限でも使える\n\n\n\n\n\n\n\n\n2024-06-27\n\n\n\n\n\n\n\nGoogle Cloud CLI メモ\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\n購入したガジェットの紹介\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nMac 環境構築手順\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\n\n\n2024-05-03\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nPostgreSQL 向け Tips\n\n\n\n\n\n\n\n\n2024-02-04\n\n\n\n\n\n\n\nGoogle Chrome 向け Tips\n\n\n\n\n\n\n\n\n2024-02-04\n\n\n\n\n\n\n\nGit 向け Tips\n\n\n\n\n\n\n\n\n2024-01-28\n\n\n\n\n\n\n\nMicrosoft Office 向け Tips\n\n\n\n\n\n\n\n\n2024-01-28\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\n\n\n2023-12-31\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "drafts/2024-03-24-resignation.html",

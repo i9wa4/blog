@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="i9wa4">
-<meta name="dcterms.date" content="2024-01-02">
+<meta name="dcterms.date" content="2024-06-27">
 
-<title>i9wa4’s blog - GitHub Pages (Jekyll) blog のタグ追加対応</title>
+<title>i9wa4’s blog - systemd がユーザー権限でも使える</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,11 +147,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">TOC</h2>
    
   <ul class="collapse">
-  <li><a href="#調整前" id="toc-調整前" class="nav-link active" data-scroll-target="#調整前">1. 調整前</a></li>
-  <li><a href="#やりたいこと" id="toc-やりたいこと" class="nav-link" data-scroll-target="#やりたいこと">2. やりたいこと</a></li>
-  <li><a href="#タグ対応" id="toc-タグ対応" class="nav-link" data-scroll-target="#タグ対応">3. タグ対応</a></li>
-  <li><a href="#ヘッダ簡素化" id="toc-ヘッダ簡素化" class="nav-link" data-scroll-target="#ヘッダ簡素化">4. ヘッダ簡素化</a></li>
-  <li><a href="#感想" id="toc-感想" class="nav-link" data-scroll-target="#感想">5. 感想</a></li>
+  <li><a href="#基本的な情報まとめ" id="toc-基本的な情報まとめ" class="nav-link active" data-scroll-target="#基本的な情報まとめ">1. 基本的な情報まとめ</a></li>
+  <li><a href="#timer-設定手順" id="toc-timer-設定手順" class="nav-link" data-scroll-target="#timer-設定手順">2. timer 設定手順</a></li>
+  <li><a href="#参考リンク" id="toc-参考リンク" class="nav-link" data-scroll-target="#参考リンク">3. 参考リンク</a></li>
   </ul>
 </nav>
     </div>
@@ -126,9 +158,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">GitHub Pages (Jekyll) blog のタグ追加対応</h1>
+<h1 class="title">systemd がユーザー権限でも使える</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">jekyll</div>
     <div class="quarto-category">dev</div>
   </div>
   </div>
@@ -147,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2024-01-02</p>
+      <p class="date">2024-06-27</p>
     </div>
   </div>
   
@@ -160,67 +191,45 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>こんにちは。i9wa4 です。</p>
-<p>ブログを作ったので少しだけ機能と見た目を手入れしてみました。</p>
-<section id="調整前" class="level2">
-<h2 class="anchored" data-anchor-id="調整前">1. 調整前</h2>
+<p>systemd がユーザー権限でも設定できると知ったので記事にします。</p>
+<section id="基本的な情報まとめ" class="level2">
+<h2 class="anchored" data-anchor-id="基本的な情報まとめ">1. 基本的な情報まとめ</h2>
 <ul>
-<li>現在 Jekyll (GitHub Pages) の Minima (<a href="https://github.com/jekyll/minima">jekyll/minima: Minima is a one-size-fits-all Jekyll theme for writers.</a>) が適用されている状態
+<li>設定ファイル格納先
 <ul>
-<li>HTML ファイルが必要になったらここから持ってくる！</li>
+<li><code>~/.config/systemd/user/</code></li>
+</ul></li>
+<li>コマンド
+<ul>
+<li><code>systemd --user</code></li>
+<li>user オプションを付けて通常の systemd と同様に使用する</li>
 </ul></li>
 </ul>
 </section>
-<section id="やりたいこと" class="level2">
-<h2 class="anchored" data-anchor-id="やりたいこと">2. やりたいこと</h2>
-<ul>
-<li>タグ対応
-<ul>
-<li>タグ毎の一覧ページの追加</li>
-<li>トップページに各タグの一覧ページへのリンク追加</li>
-<li>各記事にて付与したタグの一覧ページリンクの追加</li>
-</ul></li>
-<li>リポジトリルートの Markdown ファイルへのリンクがヘッダに追加されてしまうためヘッダの記述の簡素化</li>
-</ul>
+<section id="timer-設定手順" class="level2">
+<h2 class="anchored" data-anchor-id="timer-設定手順">2. timer 設定手順</h2>
+<p>私の用途では設定ファイル格納先と timer 設定ができれば OK です。</p>
+<p>下記リポジトリの設定を使って説明していきます。</p>
+<p><a href="https://github.com/i9wa4/minecraft-bedrock-server-setup/blob/4d3b5922e6879774ead1f5bc6cd7f361a4af8caa/bin/init.sh">i9wa4/minecraft-bedrock-server-setup/bin/init.sh</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~/.config/systemd/user/ に設定ファイルを配置する</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-fs</span> <span class="st">"</span><span class="va">${DIR_REPO}</span><span class="st">"</span>/etc/mbs-backup.service <span class="dt">\</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"</span><span class="va">${HOME}</span><span class="st">"</span>/.config/systemd/user/mbs-backup.service</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-fs</span> <span class="st">"</span><span class="va">${DIR_REPO}</span><span class="st">"</span>/etc/mbs-backup.timer <span class="dt">\</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"</span><span class="va">${HOME}</span><span class="st">"</span>/.config/systemd/user/mbs-backup.timer</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 設定ファイルを読み込む</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> daemon-reload</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># timer をログイン時に実行する</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> enable mbs-backup.timer</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># timer を実行する</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> start mbs-backup.timer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="タグ対応" class="level2">
-<h2 class="anchored" data-anchor-id="タグ対応">3. タグ対応</h2>
+<section id="参考リンク" class="level2">
+<h2 class="anchored" data-anchor-id="参考リンク">3. 参考リンク</h2>
 <ul>
-<li>syudead さんの記事とリポジトリを参考に実装しました。私は HTML ではなく Markdown 中心の構成としたかったのであくまで参考という感じです。
-<ul>
-<li><a href="https://rainyflow.net/2016/03/13/jekyll-tags.html">Jekyllのブログでタグ機能を実装する</a>
-<ul>
-<li>各記事へのタグ付け方法</li>
-<li>一覧ページの html 記述</li>
-</ul></li>
-<li><a href="https://github.com/syudead/syudead.github.io">syudead/syudead.github.io</a>
-<ul>
-<li>ページ一覧の作成方法
-<ul>
-<li><code>./_inclides/tag.html</code> を <code>./blog.html</code> などの一覧ページ内にて include する</li>
-</ul></li>
-<li>各記述でのタグ一覧ページリンク表示
-<ul>
-<li><code>./_layouts/post.html</code> 参照</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>トップページに各タグの一覧ページへのリンクを追加する対応については <code>./index.md</code> に地道にリンクを追加する方法を取ることとしました。</li>
-</ul>
-</section>
-<section id="ヘッダ簡素化" class="level2">
-<h2 class="anchored" data-anchor-id="ヘッダ簡素化">4. ヘッダ簡素化</h2>
-<ul>
-<li>Minima の HTML ファイル (<a href="https://github.com/jekyll/minima/blob/master/_includes/header.html">minima/_includes/header.html at master · jekyll/minima</a>) をリポジトリに追加して対象箇所を削除すれば OK。
-<ul>
-<li>(2024/01/28 追記) スマホ版のハンバーガーメニューが寂しかったのでヘッダ簡素化は取りやめました。</li>
-</ul></li>
-</ul>
-</section>
-<section id="感想" class="level2">
-<h2 class="anchored" data-anchor-id="感想">5. 感想</h2>
-<ul>
-<li>必要最低限の機能は実装できたので割と満足です。</li>
-<li>見た目をちゃんと調整しようとすると HTML や CSS の調整が必要になってきますが、あんまりやりたくないので当面このままでいきます。</li>
+<li><a href="https://wiki.archlinux.jp/index.php/Systemd/ユーザー">systemd/ユーザー - ArchWiki</a></li>
 </ul>
 
 

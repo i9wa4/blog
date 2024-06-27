@@ -9,8 +9,123 @@
 <link>https://i9wa4.github.io/blog/</link>
 <atom:link href="https://i9wa4.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.4.555</generator>
-<lastBuildDate>Mon, 17 Jun 2024 06:26:26 GMT</lastBuildDate>
+<generator>quarto-1.4.556</generator>
+<lastBuildDate>Thu, 27 Jun 2024 16:56:32 GMT</lastBuildDate>
+<item>
+  <title>systemd がユーザー権限でも使える</title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/posts/2024-06-28-systemd-user.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>systemd がユーザー権限でも設定できると知ったので記事にします。</p>
+<section id="基本的な情報まとめ" class="level2">
+<h2 class="anchored" data-anchor-id="基本的な情報まとめ">1. 基本的な情報まとめ</h2>
+<ul>
+<li>設定ファイル格納先
+<ul>
+<li><code>~/.config/systemd/user/</code></li>
+</ul></li>
+<li>コマンド
+<ul>
+<li><code>systemd --user</code></li>
+<li>user オプションを付けて通常の systemd と同様に使用する</li>
+</ul></li>
+</ul>
+</section>
+<section id="timer-設定手順" class="level2">
+<h2 class="anchored" data-anchor-id="timer-設定手順">2. timer 設定手順</h2>
+<p>私の用途では設定ファイル格納先と timer 設定ができれば OK です。</p>
+<p>下記リポジトリの設定を使って説明していきます。</p>
+<p><a href="https://github.com/i9wa4/minecraft-bedrock-server-setup/blob/4d3b5922e6879774ead1f5bc6cd7f361a4af8caa/bin/init.sh">i9wa4/minecraft-bedrock-server-setup/bin/init.sh</a></p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ~/.config/systemd/user/ に設定ファイルを配置する</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ln</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-fs</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">${DIR_REPO}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>/etc/mbs-backup.service <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb1-3">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">${HOME}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>/.config/systemd/user/mbs-backup.service</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ln</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-fs</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">${DIR_REPO}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>/etc/mbs-backup.timer <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb1-5">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">${HOME}</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>/.config/systemd/user/mbs-backup.timer</span>
+<span id="cb1-6"></span>
+<span id="cb1-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 設定ファイルを読み込む</span></span>
+<span id="cb1-8"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">systemctl</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--user</span> daemon-reload</span>
+<span id="cb1-9"></span>
+<span id="cb1-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># timer をログイン時に実行する</span></span>
+<span id="cb1-11"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">systemctl</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--user</span> enable mbs-backup.timer</span>
+<span id="cb1-12"></span>
+<span id="cb1-13"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># timer を実行する</span></span>
+<span id="cb1-14"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">systemctl</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--user</span> start mbs-backup.timer</span></code></pre></div>
+</section>
+<section id="参考リンク" class="level2">
+<h2 class="anchored" data-anchor-id="参考リンク">3. 参考リンク</h2>
+<ul>
+<li><a href="https://wiki.archlinux.jp/index.php/Systemd/ユーザー">systemd/ユーザー - ArchWiki</a></li>
+</ul>
+
+
+</section>
+
+ ]]></description>
+  <category>dev</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-06-28-systemd-user.html</guid>
+  <pubDate>Thu, 27 Jun 2024 16:56:32 GMT</pubDate>
+</item>
 <item>
   <title>Google Cloud CLI メモ</title>
   <dc:creator>i9wa4 </dc:creator>
