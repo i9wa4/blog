@@ -9,7 +9,7 @@
 <link>https://i9wa4.github.io/blog/</link>
 <atom:link href="https://i9wa4.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.4.556</generator>
+<generator>quarto-1.4.557</generator>
 <lastBuildDate>Thu, 27 Jun 2024 16:56:32 GMT</lastBuildDate>
 <item>
   <title>systemd がユーザー権限でも使える</title>
@@ -38,7 +38,7 @@
 </section>
 <section id="timer-設定手順" class="level2">
 <h2 class="anchored" data-anchor-id="timer-設定手順">2. timer 設定手順</h2>
-<p>私の用途では設定ファイル格納先と timer 設定ができれば OK です。</p>
+<p>私の用途では timer 設定ができれば OK です。</p>
 <p>下記リポジトリの設定を使って説明していきます。</p>
 <p><a href="https://github.com/i9wa4/minecraft-bedrock-server-setup/blob/4d3b5922e6879774ead1f5bc6cd7f361a4af8caa/bin/init.sh">i9wa4/minecraft-bedrock-server-setup/bin/init.sh</a></p>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
