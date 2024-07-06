@@ -9,7 +9,7 @@
 <link>https://i9wa4.github.io/blog/</link>
 <atom:link href="https://i9wa4.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.4.557</generator>
+<generator>quarto-1.5.53</generator>
 <lastBuildDate>Thu, 27 Jun 2024 16:56:32 GMT</lastBuildDate>
 <item>
   <title>systemd がユーザー権限でも使える</title>
@@ -203,7 +203,7 @@ font-style: inherit;">gcloud</span> auth login</span></code></pre></div>
 
 <p>こんにちは。i9wa4 です。</p>
 <p>詳細まで書くかは決めていませんが、これまで購入したガジェット一覧を作っておきます。</p>
-<div id="tbl-gadgets" class="quarto-float anchored">
+<div id="tbl-gadgets" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gadgets-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: 購入ガジェット一覧
@@ -570,7 +570,6 @@ font-style: inherit;">-bool</span> NO</span></code></pre></div></li>
 <section id="感想" class="level2">
 <h2 class="anchored" data-anchor-id="感想">3. 感想</h2>
 <p>GitHub Actions はまだよく分かってないままなのですが、一旦動くようになってよかったです。</p>
-<p>スライド一覧に関しては Gemini も意外とやるじゃんと思いました。質問しながらコードの不備を指摘すると正しいコードを書いてくれますね。</p>
 
 
 </section>
@@ -874,6 +873,7 @@ font-style: inherit;">-U</span> postgres</span>
 background-color: null;
 font-style: inherit;">CREATE</span> DATABASE db_name<span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">;</span></span>
 <span id="cb1-7"><span class="ex" style="color: null;
 background-color: null;
@@ -882,6 +882,7 @@ font-style: inherit;">\c</span> db_name</span>
 background-color: null;
 font-style: inherit;">CREATE</span> SCHEMA sc_name<span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">;</span></span></code></pre></div>
 
 
@@ -1131,6 +1132,7 @@ font-style: inherit;">"</span></span></code></pre></div>
 background-color: null;
 font-style: inherit;">version</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="dv" style="color: #AD0000;
@@ -1140,11 +1142,13 @@ font-style: inherit;">2</span></span>
 background-color: null;
 font-style: inherit;">root-markers</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb4-3"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">  </span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> .git/</span></span>
@@ -1152,6 +1156,7 @@ font-style: inherit;"> .git/</span></span>
 background-color: null;
 font-style: inherit;">lint-debounce</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> 1s</span></span>
@@ -1160,6 +1165,7 @@ font-style: inherit;"> 1s</span></span>
 background-color: null;
 font-style: inherit;">tools</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb4-7"><span class="at" style="color: #657422;
 background-color: null;
@@ -1167,6 +1173,7 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sh-shellcheck</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ot" style="color: #003B4F;
@@ -1178,6 +1185,7 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">lint-command</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -1189,6 +1197,7 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">lint-source</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -1200,11 +1209,13 @@ font-style: inherit;">    </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">lint-formats</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb4-11"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -1214,6 +1225,7 @@ font-style: inherit;">'%f:%l:%c: %trror: %m'</span></span>
 background-color: null;
 font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -1223,6 +1235,7 @@ font-style: inherit;">'%f:%l:%c: %tarning: %m'</span></span>
 background-color: null;
 font-style: inherit;">      </span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="st" style="color: #20794D;
@@ -1233,6 +1246,7 @@ font-style: inherit;">'%f:%l:%c: %tote: %m'</span></span>
 background-color: null;
 font-style: inherit;">languages</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb4-16"><span class="at" style="color: #657422;
 background-color: null;
@@ -1240,17 +1254,20 @@ font-style: inherit;">  </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">sh</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span></span>
 <span id="cb4-17"><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">    </span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">-</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">&lt;&lt;</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">:</span><span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;"> </span><span class="ot" style="color: #003B4F;
@@ -1262,6 +1279,7 @@ font-style: inherit;">*sh-shellcheck</span></span></code></pre></div>
 <p>プラグインマネージャー <a href="https://github.com/Shougo/dein.vim">dein.vim</a> や <a href="https://github.com/Shougo/dpp.vim">dpp.vim</a> などで採用されている TOML ファイルでのプラグイン設定箇所を抽出しました。遅延起動設定はお好みで。</p>
 <div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb5-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[[plugins]]</span></span>
 <span id="cb5-2"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -1292,6 +1310,7 @@ font-style: inherit;">]</span></span>
 <span id="cb5-4"></span>
 <span id="cb5-5"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[[plugins]]</span></span>
 <span id="cb5-6"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -1359,6 +1378,7 @@ font-style: inherit;">'''</span></span></code></pre></div>
 <p>Vim 同様に TOML ファイルの記述を抽出しました。こちらも遅延起動設定はお好みで。</p>
 <div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb6-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[[plugins]]</span></span>
 <span id="cb6-2"><span class="dt" style="color: #AD0000;
 background-color: null;
