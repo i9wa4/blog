@@ -1,0 +1,10 @@
+---
+title:  "Embulk の仕様調査"
+author: i9wa4
+date:
+categories: embulk
+---
+
+こんにちは。i9wa4 です。
+
+Embulk の仕様を詳しく調べはじめたのでぼちぼち記事にしてみようかと思います。
