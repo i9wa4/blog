@@ -7,6 +7,13 @@
     "text": "名前\ni9wa4 (いくわよ)\n\n\n職種\nデータエンジニア / MLOps エンジニア\n\n\n好きなエディタ\nVim\n\n\n好きなお酒\nサントリー山崎"
   },
   {
+    "objectID": "drafts/xxxx-xx-xx-tips.html",
+    "href": "drafts/xxxx-xx-xx-tips.html",
+    "title": "自分用 Tips まとめ",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。"
+  },
+  {
     "objectID": "drafts/2024-01-28-looking-for-a-new-job.html",
     "href": "drafts/2024-01-28-looking-for-a-new-job.html",
     "title": "転職活動を始めました",
@@ -26,6 +33,13 @@
     "title": "転職活動を始めました",
     "section": "2. 今後の予定",
     "text": "2. 今後の予定\n人生はあまりにも短いので迷っている場合ではありません。即断即決の精神で、今年 (2024年) 4月からは新しい会社で笑って過ごしたいと思っています。ただ、選考や退職交渉があるので延びるかもしれませんね。"
+  },
+  {
+    "objectID": "drafts/xxxx-xx-xx-embulk-specification.html",
+    "href": "drafts/xxxx-xx-xx-embulk-specification.html",
+    "title": "Embulk の仕様調査",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\nEmbulk の仕様を詳しく調べはじめたのでぼちぼち記事にしてみようかと思います。"
   },
   {
     "objectID": "index.html",
@@ -455,11 +469,25 @@
     "text": "3. ディストリビューションのアンインストール\n\nPowerShell or コマンドプロンプトを開きます。\nインストール済みのディストリビューションを表示します。\nwsl --list\n不要なディストリビューションをアンインストールします。\nwsl --unregister Ubuntu-22.04"
   },
   {
-    "objectID": "drafts/2024-xx-xx-embulk-specification.html",
-    "href": "drafts/2024-xx-xx-embulk-specification.html",
-    "title": "Embulk の仕様調査",
+    "objectID": "drafts/xxxx-xx-xx-vim-local-setting.html",
+    "href": "drafts/xxxx-xx-xx-vim-local-setting.html",
+    "title": "i9wa4's blog",
     "section": "",
-    "text": "こんにちは。i9wa4 です。\nEmbulk の仕様を詳しく調べはじめたのでぼちぼち記事にしてみようかと思います。"
+    "text": "こんにちは。i9wa4 です。"
+  },
+  {
+    "objectID": "drafts/xxxx-xx-xx-minecraft-bedrock-server.html",
+    "href": "drafts/xxxx-xx-xx-minecraft-bedrock-server.html",
+    "title": "i9wa4's blog",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。"
+  },
+  {
+    "objectID": "drafts/xxxx-xx-xx-vim-steps.html",
+    "href": "drafts/xxxx-xx-xx-vim-steps.html",
+    "title": "i9wa4's blog",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。"
   },
   {
     "objectID": "drafts/2024-03-24-resignation.html",
