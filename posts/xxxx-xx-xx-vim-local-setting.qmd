@@ -3,6 +3,7 @@ title:  ""
 author: i9wa4
 date:   2024-07-07 23:16:15 +0900
 categories: [vim]
+draft: true
 ---
 
 こんにちは。i9wa4 です。

@@ -3,6 +3,7 @@ title:  "Embulk の仕様調査"
 author: i9wa4
 date:   2024-07-06 16:22:03 +0900
 categories: embulk
+draft: true
 ---
 
 こんにちは。i9wa4 です。

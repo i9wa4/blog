@@ -3,6 +3,7 @@ title:  "転職活動を始めました"
 author: i9wa4
 date:   2024-01-28 00:34:12 +0900
 categories: diary
+draft: true
 ---
 
 こんにちは。i9wa4 です。
