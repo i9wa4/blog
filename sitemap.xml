@@ -2,102 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://i9wa4.github.io/blog/about.html</loc>
-    <lastmod>2024-07-07T14:20:16.469Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/drafts/xxxx-xx-xx-tips.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/drafts/2024-01-28-looking-for-a-new-job.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/drafts/xxxx-xx-xx-embulk-specification.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/index.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-06-28-systemd-user.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-06-17-purchased-gadgets.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-02-04-posgresql-tips.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-01-02-jelyll-adjust.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-01-01-init.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-03-26-setup-ds100knock.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-05-04-get-git-branch-name.vim.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-01-28-git-tips.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-01-02-vim-plugin-mnh.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-05-05-deploy-quarto.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-01-28-microsoft-office-tips.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-06-17-setup-mac.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-01-27-setup-efm-langserver.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-02-04-chrome-tips.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
-  </url>
-  <url>
-    <loc>https://i9wa4.github.io/blog/posts/2024-06-17-gcloud-command-tips.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
+    <lastmod>2024-07-07T17:41:17.943Z</lastmod>
   </url>
   <url>
     <loc>https://i9wa4.github.io/blog/posts/2024-03-25-setup-wsl2.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
   </url>
   <url>
-    <loc>https://i9wa4.github.io/blog/drafts/xxxx-xx-xx-vim-local-setting.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
+    <loc>https://i9wa4.github.io/blog/posts/2024-06-17-purchased-gadgets.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
   </url>
   <url>
-    <loc>https://i9wa4.github.io/blog/drafts/xxxx-xx-xx-minecraft-bedrock-server.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
+    <loc>https://i9wa4.github.io/blog/posts/2024-02-04-chrome-tips.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
   </url>
   <url>
-    <loc>https://i9wa4.github.io/blog/drafts/xxxx-xx-xx-vim-steps.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
+    <loc>https://i9wa4.github.io/blog/posts/2024-06-17-setup-mac.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
   </url>
   <url>
-    <loc>https://i9wa4.github.io/blog/drafts/2024-03-24-resignation.html</loc>
-    <lastmod>2024-07-07T14:20:16.473Z</lastmod>
+    <loc>https://i9wa4.github.io/blog/posts/2024-01-28-microsoft-office-tips.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/posts/2024-05-05-deploy-quarto.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/posts/2024-05-04-get-git-branch-name.vim.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/posts/2024-01-28-git-tips.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/posts/2024-01-02-vim-plugin-mnh.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/posts/2024-03-26-setup-ds100knock.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/posts/2024-01-01-init.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/posts/2024-01-02-jelyll-adjust.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/posts/2024-01-27-setup-efm-langserver.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/posts/2024-02-04-posgresql-tips.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/posts/2024-06-17-gcloud-command-tips.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/posts/2024-06-28-systemd-user.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
+  </url>
+  <url>
+    <loc>https://i9wa4.github.io/blog/index.html</loc>
+    <lastmod>2024-07-07T17:41:17.947Z</lastmod>
   </url>
 </urlset>
