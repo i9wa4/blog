@@ -8,7 +8,7 @@ website:
   navbar:
     left:
       - href: "https://i9wa4.github.io"
-        text: Top
+        text: Main
       - href: "https://i9wa4.github.io/i9wa4"
         text: About
   page-footer:
