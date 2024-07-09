@@ -9,7 +9,7 @@
 <link>https://i9wa4.github.io/blog/</link>
 <atom:link href="https://i9wa4.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.5.53</generator>
+<generator>quarto-1.5.54</generator>
 <lastBuildDate>Thu, 27 Jun 2024 16:56:32 GMT</lastBuildDate>
 <item>
   <title>systemd がユーザー権限でも使える</title>
