@@ -214,7 +214,7 @@ Table&nbsp;1: 購入ガジェット一覧
 <thead>
 <tr class="header">
 <th>購入日</th>
-<th>ブランド</th>
+<th>メーカー</th>
 <th>製品名</th>
 </tr>
 </thead>
@@ -286,7 +286,7 @@ Table&nbsp;1: 購入ガジェット一覧
 </tr>
 <tr class="even">
 <td>2024-07-07</td>
-<td>ラムダッシュ</td>
+<td>Panasonic</td>
 <td><a href="https://panasonic.jp/shaver/products/ES-PV3A.html">ラムダッシュ パームイン ES-PV3A</a></td>
 </tr>
 </tbody>
