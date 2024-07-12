@@ -12,6 +12,7 @@ categories: dev
 スライドをできるだけ Git で管理したいので Markdown をスライドに変換する方向性で色々なツールを比較検討していて、 Quarto (<https://quarto.org/>) に決めました。
 
 .qmd ファイルという見慣れないファイルを利用しますが、利点としては以下ですね。
+
 - 環境構築が pip で完了する
 - VS Code で開くと Jupyter Notebook っぽくセルを実行できる
 
