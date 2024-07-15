@@ -32,6 +32,7 @@ website:
   twitter-card:
     creator: "@i9wa4_"
     site: "@i9wa4_"
+    image: "assets/common/icon_hhkb2.jpg"
   open-graph: true
 
 format:
