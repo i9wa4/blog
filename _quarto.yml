@@ -24,7 +24,6 @@ format:
     toc-depth: 2
     toc-title: "TOC"
     toc-location: right
-    page-layout: full
 
 date-format: iso
 theme: flatly
