@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "i9wa4's blog",
     "section": "",
-    "text": "Embulk の仕様調査\n\n\n\n\n\n\nembulk\n\n\n\n\n\n\n2099-12-31\n\n\n\n\n\n\n\nUbuntu マシン上での Minecraft 統合版サーバー構築手順\n\n\n\n\n\n\ndev\n\n\nminecraft\n\n\n\n\n\n\n2099-12-31\n\n\n\n\n\n\n\nVim step\n\n\n\n\n\n\nvim\n\n\n\n\n\n\n2099-12-31\n\n\n\n\n\n\n\nVim でリポジトリのローカル設定を行う\n\n\n\n\n\n\nvim\n\n\n\n\n\n\n2099-12-31\n\n\n\n\n\n\n\n技術系 Tips まとめ\n\n\n\n\n\n\ntips\n\n\n\n\n\n\n2024-07-15\n\n\n\n\n\n\n\nsystemd がユーザー権限でも使える\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-06-28\n\n\n\n\n\n\n\n購入したガジェットの紹介\n\n\n\n\n\n\ngadget\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nMac 環境構築手順\n\n\n\n\n\n\nmac\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-05-05\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\ndev\n\n\nvim\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-26\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\n転職活動終了！\n\n\n\n\n\n\ndiary\n\n\n\n\n\n\n2024-03-24\n\n\n\n\n\n\n\n転職活動を始めました\n\n\n\n\n\n\ndiary\n\n\n\n\n\n\n2024-01-28\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\njekyll\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\ndiary\n\n\n\n\n\n\n2024-01-01\n\n\n\n\n\n\nNo matching items"
+    "text": "技術系 Tips まとめ\n\n\n\n\n\n\ntips\n\n\n\n\n\n\n2024-07-15\n\n\n\n\n\n\n\nsystemd がユーザー権限でも使える\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-06-28\n\n\n\n\n\n\n\n購入したガジェットの紹介\n\n\n\n\n\n\ngadget\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nMac 環境構築手順\n\n\n\n\n\n\nmac\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-05-05\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\ndev\n\n\nvim\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-26\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\njekyll\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\ndiary\n\n\n\n\n\n\n2024-01-01\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2024-06-17-purchased-gadgets.html",
@@ -98,34 +98,6 @@
     "text": "6. 感想\nLinter をインストールできていれば出力形式を見て自力で Language Server として組み込める……素晴らしいですね！\nLinter は手動でインストールして設定ファイルを管理しておくのが結局一番分かりやすいなと実感しているのですが、その状態で簡単に Vim/Neovim に反映できる efm-langserver はかなり有り難いです。"
   },
   {
-    "objectID": "posts/2024-03-24-resignation.html",
-    "href": "posts/2024-03-24-resignation.html",
-    "title": "転職活動終了！",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。\n先日転職活動を開始 しておりましたが、2/29に転職活動を終えて、3/31退職、4/1入社のスケジュールで動いてます。\n近況を簡単に報告できればと思います。"
-  },
-  {
-    "objectID": "posts/2024-03-24-resignation.html#転職活動結果",
-    "href": "posts/2024-03-24-resignation.html#転職活動結果",
-    "title": "転職活動終了！",
-    "section": "1. 転職活動結果",
-    "text": "1. 転職活動結果\n5社受けて1社は書類選考落ち、4社から内定を頂きました。\n自分はそこまでスキルも経験値もありませんが、データエンジニアは不足しているので結構引く手が多かったのかなと思いますね。"
-  },
-  {
-    "objectID": "posts/2024-03-24-resignation.html#退職について",
-    "href": "posts/2024-03-24-resignation.html#退職について",
-    "title": "転職活動終了！",
-    "section": "2. 退職について",
-    "text": "2. 退職について\n今の時代当たり前だと思いますが特に引き留めもなくスムーズに進みました。\nSESの形で勤務していたので自社での引き継ぎ作業はほとんどなく、客先での引き継ぎ中心に3月末まで作業を行います。\n客先の社員さんと仲良くなって連絡先を交換できたのが嬉しかったですね。\nこの先も付き合いが続けられるといいなぁ。"
-  },
-  {
-    "objectID": "posts/2024-03-24-resignation.html#転職先について",
-    "href": "posts/2024-03-24-resignation.html#転職先について",
-    "title": "転職活動終了！",
-    "section": "3. 転職先について",
-    "text": "3. 転職先について\n様々な点を考慮し今の自分が得られる経験を最大化できる会社に決めることができたかなと思います。\n数年後にデータエンジニア (サブ的に MLOps エンジニア) としての存在感を高めつつマネジメント経験もそれなりに積めれば嬉しいです。"
-  },
-  {
     "objectID": "posts/2024-06-28-systemd-user.html",
     "href": "posts/2024-06-28-systemd-user.html",
     "title": "systemd がユーザー権限でも使える",
@@ -152,13 +124,6 @@
     "title": "systemd がユーザー権限でも使える",
     "section": "3. 参考リンク",
     "text": "3. 参考リンク\n\nsystemd/ユーザー - ArchWiki"
-  },
-  {
-    "objectID": "posts/xxxx-xx-xx-embulk-specification.html",
-    "href": "posts/xxxx-xx-xx-embulk-specification.html",
-    "title": "Embulk の仕様調査",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。\nEmbulk の仕様を詳しく調べはじめたのでぼちぼち記事にしてみようかと思います。"
   },
   {
     "objectID": "posts/2024-01-02-vim-plugin-mnh.html",
@@ -201,13 +166,6 @@
     "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
     "section": "5. 感想",
     "text": "5. 感想\n今も毎日使っているプラグインなので「無いんだったら作ればいい」精神でフッ軽に作れたことを嬉しく思ってます。\n今後も必要なものは自分で作っていたいですね。"
-  },
-  {
-    "objectID": "posts/xxxx-xx-xx-vim-steps.html",
-    "href": "posts/xxxx-xx-xx-vim-steps.html",
-    "title": "Vim step",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。"
   },
   {
     "objectID": "posts/2024-01-01-init.html",
@@ -348,41 +306,6 @@
     "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
     "section": "5. 感想",
     "text": "5. 感想\n\n必要最低限の機能は実装できたので割と満足です。\n見た目をちゃんと調整しようとすると HTML や CSS の調整が必要になってきますが、あんまりやりたくないので当面このままでいきます。"
-  },
-  {
-    "objectID": "posts/xxxx-xx-xx-minecraft-bedrock-server.html",
-    "href": "posts/xxxx-xx-xx-minecraft-bedrock-server.html",
-    "title": "Ubuntu マシン上での Minecraft 統合版サーバー構築手順",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。"
-  },
-  {
-    "objectID": "posts/xxxx-xx-xx-vim-local-setting.html",
-    "href": "posts/xxxx-xx-xx-vim-local-setting.html",
-    "title": "Vim でリポジトリのローカル設定を行う",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。"
-  },
-  {
-    "objectID": "posts/2024-01-28-looking-for-a-new-job.html",
-    "href": "posts/2024-01-28-looking-for-a-new-job.html",
-    "title": "転職活動を始めました",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。\n今年 (2024年) 1月中旬から転職活動を始めたので今の気持ちを書き残しておきます。"
-  },
-  {
-    "objectID": "posts/2024-01-28-looking-for-a-new-job.html#転職活動を始めた理由",
-    "href": "posts/2024-01-28-looking-for-a-new-job.html#転職活動を始めた理由",
-    "title": "転職活動を始めました",
-    "section": "1. 転職活動を始めた理由",
-    "text": "1. 転職活動を始めた理由\n転職活動に至った理由は以下です。\n\n今の働き方を評価されずモチベーションを維持できない\n成長できる環境を選びたい\n\n\n1.1. 今の働き方を評価されずモチベーションを維持できない\n私は機械学習基盤での業務経験が社内では一番長くなりました。会社の方針として機械学習基盤を含めた一気通貫のデータ分析ソリューション提供を目指しているので一定の評価を期待していましたが、実際は未経験で入社した当初と2年後の現在で給与は変わらず据え置きです。\nというのも会社の歴史的経緯から評価制度が営業マン・リーダー経験豊富な人材優遇なものとなっているためです。技術面での経験蓄積や社内還元は相対的に加点が小さいんですね。これではモチベーション維持が難しいです。\n安易に退職したくはなかったので評価制度の問題点を上長や社長に直接伝えてましたが、変える気はないようでした。 せっかくたくさん採用した中堅エンジニアの退職者が増えている最大の要因がこの評価制度だと個人的に思っています。しかも評価制度に迎合した働き方をして昇進したとて昇給幅が小さいです。これでは割に合わないですね。\n\n\n1.2. 成長できる環境を選びたい\nもう一つの理由としては、成長できる環境を選ぶ重要性を痛感したことです。\nvim-jp というエンジニアコミュニティで優秀な方々が日々議論している様子を見て、たまには自分も参加して、という関わりを楽しむようになって2年近く経ちました。たったそれだけで自分の技術力はグンと引き上げられています。やはりエンジニアにとって環境は大事ですね。\nこれだけ聞くと優秀な人材の多い会社に対するテイカーではないかと勘違いされてしまいそうですが、 自分のことを良いと思って採用してくれた会社にとっても伸び代が大きい方が嬉しい のではないでしょうか。"
-  },
-  {
-    "objectID": "posts/2024-01-28-looking-for-a-new-job.html#今後の予定",
-    "href": "posts/2024-01-28-looking-for-a-new-job.html#今後の予定",
-    "title": "転職活動を始めました",
-    "section": "2. 今後の予定",
-    "text": "2. 今後の予定\n人生はあまりにも短いので迷っている場合ではありません。即断即決の精神で、今年 (2024年) 4月からは新しい会社で笑って過ごしたいと思っています。ただ、選考や退職交渉があるので延びるかもしれませんね。"
   },
   {
     "objectID": "posts/2024-06-17-setup-mac.html",
