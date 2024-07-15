@@ -13,7 +13,7 @@ categories: [tips]
 
 ## 1. Git
 
-```sh
+```{.sh}
 # よく使うコマンド
 git add -n .
 git log --graph
@@ -31,9 +31,9 @@ git remote add origin url
 git clone url
 ```
 
-## 3. PostgreSQL
+## 2. PostgreSQL
 
-```sh
+```{.sh}
 # 起動～データベースへのアクセス
 pg_ctl restart
 psql -U postgres -d db_name
@@ -45,9 +45,9 @@ CREATE DATABASE db_name;
 CREATE SCHEMA sc_name;
 ```
 
-## 4. Google Cloud CLI (gcloud CLI)
+## 3. Google Cloud CLI (gcloud CLI)
 
-```sh
+```{.sh}
 # keyfile 登録からテーブル確認まで
 gcloud auth activate-service-account --key-file ***.json
 gcloud auth list
@@ -57,14 +57,14 @@ bq --project_id=aaaaa show dataset.table_name
 bq --project_id=aaaaa head dataset.table_name -n 5
 ```
 
-```sh
+```{.sh}
 # ログイン
 gcloud auth login
 ```
 
-## 5. Google Chrome
+## 4. Google Chrome
 
-### 5.1. 検索エンジン設定
+### 4.1. 検索エンジン設定
 
 - Google 日本語検索
     - `https://www.google.com/search?q=%s`
@@ -75,21 +75,21 @@ gcloud auth login
 - DuckDuckGo 英語検索
     - `https://duckduckgo.com/?q=%s&kl=us-en&kz=-1&kav=1&kaf=1&k1=-1&ia=web`
 
-## 6. Excel
+## 5. Excel
 
-### 6.1. Excel VBA
+### 5.1. Excel VBA
 
 - アドイン追加先
     - `%USERPROFILE%\AppData\Roaming\Microsoft\AddIns`
 
-### 6.2. Excel 関数
+### 5.2. Excel 関数
 
 - シート名を記載したセルB2を利用したハイパーリンク作成
     - `=HYPERLINK("#'"&B2&"'!$A$1",B2)`
 
-## 7. Word
+## 6. Word
 
-### 7.1. Normal.dotm 作成
+### 6.1. Normal.dotm 作成
 
 1. `%APPDATA%\Microsoft\Templates\Normal.dotm` 削除
 1. デザインを作成し既定に設定する

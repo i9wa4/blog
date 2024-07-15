@@ -1,6 +1,6 @@
 ---
 title: "Embulk の仕様調査"
-date: 2024-07-06 16:22:03 +0900
+date: 2099-12-31
 date-modified: last-modified
 categories: [embulk]
 draft: true

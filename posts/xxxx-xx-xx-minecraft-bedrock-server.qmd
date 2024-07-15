@@ -1,6 +1,6 @@
 ---
-title: ""
-date: 2024-07-07 23:16:15 +0900
+title: "Ubuntu マシン上での Minecraft 統合版サーバー構築手順"
+date: 2099-12-31
 date-modified: last-modified
 categories: [dev, minecraft]
 draft: true

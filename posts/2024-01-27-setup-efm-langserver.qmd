@@ -25,7 +25,7 @@ Ubuntu 22.04 (WSL2) でのインストール手順を記載しておきます。
 
 Go 言語を [Go Wiki: Ubuntu - The Go Programming Language](https://go.dev/wiki/Ubuntu) に従ってインストールします。
 
-```sh
+```{.sh}
 sudo add-apt-repository -y ppa:longsleep/golang-backports
 sudo apt update
 sudo apt install -y golang-go
@@ -33,13 +33,13 @@ sudo apt install -y golang-go
 
 efm-langserver を [GitHub - mattn/efm-langserver: General purpose Language Server](https://github.com/mattn/efm-langserver#installation) に従ってインストールします。
 
-```sh
+```{.sh}
 go install github.com/mattn/efm-langserver@latest
 ```
 
 `~/.profile` などに以下を追記して PATH を通しておきます。
 
-```sh
+```{.sh}
 export PATH="${HOME}"/go/bin:"${PATH}"
 ```
 
@@ -49,7 +49,7 @@ efm-langserver 用設定ファイル `$XDG_CONFIG_HOME/efm-langserver/config.yam
 
 [README](https://github.com/mattn/efm-langserver#example-for-configyaml) を参考に shellcheck を使うための設定のみ抽出したものが以下です。
 
-```yaml
+```{.yaml}
 version: 2
 root-markers:
   - .git/
@@ -73,7 +73,7 @@ languages:
 
 プラグインマネージャー [dein.vim](https://github.com/Shougo/dein.vim) や [dpp.vim](https://github.com/Shougo/dpp.vim) などで採用されている TOML ファイルでのプラグイン設定箇所を抽出しました。遅延起動設定はお好みで。
 
-```toml
+```{.toml}
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 on_event = ['VimEnter']
@@ -97,7 +97,7 @@ let g:lsp_settings = {
 
 Vim 同様に TOML ファイルの記述を抽出しました。こちらも遅延起動設定はお好みで。
 
-```toml
+```{.toml}
 [[plugins]]
 repo = 'neovim/nvim-lspconfig'
 on_event = ['VimEnter']
