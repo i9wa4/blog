@@ -13,7 +13,6 @@
 <lastBuildDate>Thu, 27 Jun 2024 16:56:32 GMT</lastBuildDate>
 <item>
   <title>systemd がユーザー権限でも使える</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-06-28-systemd-user.html</link>
   <description><![CDATA[ 
 
@@ -128,7 +127,6 @@ font-style: inherit;">--user</span> start mbs-backup.timer</span></code></pre></
 </item>
 <item>
   <title>Google Cloud CLI メモ</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-06-17-gcloud-command-tips.html</link>
   <description><![CDATA[ 
 
@@ -195,7 +193,6 @@ font-style: inherit;">gcloud</span> auth login</span></code></pre></div>
 </item>
 <item>
   <title>購入したガジェットの紹介</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-06-17-purchased-gadgets.html</link>
   <description><![CDATA[ 
 
@@ -304,7 +301,6 @@ Table&nbsp;1: 購入ガジェット一覧
 </item>
 <item>
   <title>Mac 環境構築手順</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-06-17-setup-mac.html</link>
   <description><![CDATA[ 
 
@@ -552,7 +548,6 @@ font-style: inherit;">-bool</span> NO</span></code></pre></div></li>
 </item>
 <item>
   <title>Quarto で作ったスライドを GitHub Pages にデプロイする</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-05-05-deploy-quarto.html</link>
   <description><![CDATA[ 
 
@@ -591,7 +586,6 @@ font-style: inherit;">-bool</span> NO</span></code></pre></div></li>
 </item>
 <item>
   <title>Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-05-04-get-git-branch-name.vim.html</link>
   <description><![CDATA[ 
 
@@ -747,7 +741,6 @@ echo "現在のブランチ: " . branch</code></pre>
 </item>
 <item>
   <title>データサイエンス100本ノックの実行環境構築 (WSL2)</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-03-26-setup-ds100knock.html</link>
   <description><![CDATA[ 
 
@@ -767,7 +760,6 @@ echo "現在のブランチ: " . branch</code></pre>
 </item>
 <item>
   <title>WSL2 のセットアップ</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-03-25-setup-wsl2.html</link>
   <description><![CDATA[ 
 
@@ -848,7 +840,6 @@ font-style: inherit;">04</span></span></code></pre></div></li>
 </item>
 <item>
   <title>PostgreSQL 向け Tips</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-02-04-posgresql-tips.html</link>
   <description><![CDATA[ 
 
@@ -905,7 +896,6 @@ font-style: inherit;">;</span></span></code></pre></div>
 </item>
 <item>
   <title>Google Chrome 向け Tips</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-02-04-chrome-tips.html</link>
   <description><![CDATA[ 
 
@@ -945,7 +935,6 @@ font-style: inherit;">;</span></span></code></pre></div>
 </item>
 <item>
   <title>Git 向け Tips</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-01-28-git-tips.html</link>
   <description><![CDATA[ 
 
@@ -1014,7 +1003,6 @@ font-style: inherit;">git</span> clone url</span></code></pre></div>
 </item>
 <item>
   <title>Microsoft Office 向け Tips</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-01-28-microsoft-office-tips.html</link>
   <description><![CDATA[ 
 
@@ -1074,7 +1062,6 @@ font-style: inherit;">git</span> clone url</span></code></pre></div>
 </item>
 <item>
   <title>efm-langserver を Vim/Neovim で利用する</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-01-27-setup-efm-langserver.html</link>
   <description><![CDATA[ 
 
@@ -1449,7 +1436,6 @@ font-style: inherit;">'''</span></span></code></pre></div>
 </item>
 <item>
   <title>自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-01-02-vim-plugin-mnh.html</link>
   <description><![CDATA[ 
 
@@ -1506,7 +1492,6 @@ font-style: inherit;">'''</span></span></code></pre></div>
 </item>
 <item>
   <title>GitHub Pages (Jekyll) blog のタグ追加対応</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-01-02-jelyll-adjust.html</link>
   <description><![CDATA[ 
 
@@ -1589,7 +1574,6 @@ font-style: inherit;">'''</span></span></code></pre></div>
 </item>
 <item>
   <title>Initial Post</title>
-  <dc:creator>i9wa4 </dc:creator>
   <link>https://i9wa4.github.io/blog/posts/2024-01-01-init.html</link>
   <description><![CDATA[ 
 
