@@ -2,11 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/2024-07-15-technical-tips.html",
-      "/posts/xxxx-xx-xx-vim-steps.html",
-      "/posts/xxxx-xx-xx-minecraft-bedrock-server.html",
-      "/posts/xxxx-xx-xx-vim-local-setting.html",
       "/posts/xxxx-xx-xx-embulk-specification.html",
+      "/posts/xxxx-xx-xx-minecraft-bedrock-server.html",
+      "/posts/xxxx-xx-xx-vim-steps.html",
+      "/posts/xxxx-xx-xx-vim-local-setting.html",
+      "/posts/2024-07-15-technical-tips.html",
       "/posts/2024-06-28-systemd-user.html",
       "/posts/2024-06-17-purchased-gadgets.html",
       "/posts/2024-06-17-setup-mac.html",
