@@ -2,6 +2,11 @@ project:
   type: website
   output-dir: "docs"
 
+date-format: iso
+theme:
+  light: flatly
+  dark: darkly
+
 website:
   title: "i9wa4's blog"
   site-url: "https://i9wa4.github.io/blog/"
@@ -19,6 +24,10 @@ website:
         href: "https://x.com/i9wa4_"
       - icon: rss
         href: "index.xml"
+  twitter-card:
+    creator: "@i9wa4_"
+    site: "@i9wa4_"
+  open-graph: true
 
 format:
   html:
@@ -26,6 +35,3 @@ format:
     toc-depth: 2
     toc-title: "TOC"
     toc-location: right
-
-date-format: iso
-theme: flatly
