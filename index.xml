@@ -24,45 +24,147 @@
 <p>分量が増えてきた分野は別記事に切り出すかもしれません。</p>
 <section id="git" class="level2">
 <h2 class="anchored" data-anchor-id="git">1. Git</h2>
-<pre class="{sh}"><code># よく使うコマンド
-git add -n .
-git log --graph
-git diff --name-only HEAD HEAD~2
-git diff ID1 ID2 filename
-git difftool ID1 ID2
-git show ID
-
-git reflog
-git rebase
-
-# リモートリポジトリ作成
-git init --bare --shared
-git remote add origin url
-git clone url</code></pre>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># よく使うコマンド</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> add <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-n</span> .</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> log <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--graph</span></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> diff <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--name-only</span> HEAD HEAD~2</span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> diff ID1 ID2 filename</span>
+<span id="cb1-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> difftool ID1 ID2</span>
+<span id="cb1-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> show ID</span>
+<span id="cb1-8"></span>
+<span id="cb1-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> reflog</span>
+<span id="cb1-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> rebase</span>
+<span id="cb1-11"></span>
+<span id="cb1-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># リモートリポジトリ作成</span></span>
+<span id="cb1-13"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> init <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--bare</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--shared</span></span>
+<span id="cb1-14"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> remote add origin url</span>
+<span id="cb1-15"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> clone url</span></code></pre></div>
 </section>
 <section id="postgresql" class="level2">
 <h2 class="anchored" data-anchor-id="postgresql">3. PostgreSQL</h2>
-<pre class="{sh}"><code># 起動～データベースへのアクセス
-pg_ctl restart
-psql -U postgres -d db_name
-
-pg_ctl restart
-psql -U postgres
-CREATE DATABASE db_name;
-\c db_name
-CREATE SCHEMA sc_name;</code></pre>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># 起動～データベースへのアクセス</span></span>
+<span id="cb2-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">pg_ctl</span> restart</span>
+<span id="cb2-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">psql</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-U</span> postgres <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-d</span> db_name</span>
+<span id="cb2-4"></span>
+<span id="cb2-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">pg_ctl</span> restart</span>
+<span id="cb2-6"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">psql</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-U</span> postgres</span>
+<span id="cb2-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">CREATE</span> DATABASE db_name<span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">;</span></span>
+<span id="cb2-8"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">\c</span> db_name</span>
+<span id="cb2-9"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">CREATE</span> SCHEMA sc_name<span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">;</span></span></code></pre></div>
 </section>
 <section id="google-cloud-cli-gcloud-cli" class="level2">
 <h2 class="anchored" data-anchor-id="google-cloud-cli-gcloud-cli">4. Google Cloud CLI (gcloud CLI)</h2>
-<pre class="{sh}"><code># keyfile 登録からテーブル確認まで
-gcloud auth activate-service-account --key-file ***.json
-gcloud auth list
-gcloud set account ***
-bq --project_id=aaaaa ls dataset
-bq --project_id=aaaaa show dataset.table_name
-bq --project_id=aaaaa head dataset.table_name -n 5</code></pre>
-<pre class="{sh}"><code># ログイン
-gcloud auth login</code></pre>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># keyfile 登録からテーブル確認まで</span></span>
+<span id="cb3-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gcloud</span> auth activate-service-account <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--key-file</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">***</span>.json</span>
+<span id="cb3-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gcloud</span> auth list</span>
+<span id="cb3-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gcloud</span> set account <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">***</span></span>
+<span id="cb3-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">bq</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--project_id</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>aaaaa ls dataset</span>
+<span id="cb3-6"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">bq</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--project_id</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>aaaaa show dataset.table_name</span>
+<span id="cb3-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">bq</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--project_id</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>aaaaa head dataset.table_name <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-n</span> 5</span></code></pre></div>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ログイン</span></span>
+<span id="cb4-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">gcloud</span> auth login</span></code></pre></div>
 </section>
 <section id="google-chrome" class="level2">
 <h2 class="anchored" data-anchor-id="google-chrome">5. Google Chrome</h2>
