@@ -1,7 +1,7 @@
 ---
-title:  "Git 向け Tips"
-author: i9wa4
-date:   2024-01-28 23:50:31 +0900
+title: "Git 向け Tips"
+date: 2024-01-28 23:50:31 +0900
+date-modified: last-modified
 categories: [tips]
 ---
 

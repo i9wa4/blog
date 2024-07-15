@@ -1,7 +1,7 @@
 ---
-title:  "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた"
-author: i9wa4
-date:   2024-05-04 04:07:04 +0900
+title: "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた"
+date: 2024-05-04 04:07:04 +0900
+date-modified: last-modified
 categories: [dev, vim]
 ---
 

@@ -1,7 +1,7 @@
 ---
-title:  "PostgreSQL 向け Tips"
-author: i9wa4
-date:   2024-02-04 15:50:10 +0900
+title: "PostgreSQL 向け Tips"
+date: 2024-02-04 15:50:10 +0900
+date-modified: last-modified
 categories: [tips]
 ---
 

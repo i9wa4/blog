@@ -1,6 +1,5 @@
 ---
 title: "Initial Post"
-author: i9wa4
 date: 2024-01-01 03:28:12 +0900
 date-modified: last-modified
 categories: [diary]
