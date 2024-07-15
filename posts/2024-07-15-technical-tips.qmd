@@ -1,9 +1,8 @@
 ---
 title: "技術系 Tips まとめ"
-date: 2024-07-07 23:16:15 +0900
+date: 2024-07-15 16:15:11 +0900
 date-modified: last-modified
 categories: [tips]
-draft: true
 ---
 
 こんにちは。i9wa4 です。
