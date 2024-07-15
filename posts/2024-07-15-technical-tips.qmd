@@ -13,7 +13,7 @@ categories: [tips]
 
 ## 1. Git
 
-```{sh}
+```sh
 # よく使うコマンド
 git add -n .
 git log --graph
@@ -33,7 +33,7 @@ git clone url
 
 ## 3. PostgreSQL
 
-```{sh}
+```sh
 # 起動～データベースへのアクセス
 pg_ctl restart
 psql -U postgres -d db_name
@@ -47,7 +47,7 @@ CREATE SCHEMA sc_name;
 
 ## 4. Google Cloud CLI (gcloud CLI)
 
-```{sh}
+```sh
 # keyfile 登録からテーブル確認まで
 gcloud auth activate-service-account --key-file ***.json
 gcloud auth list
@@ -57,7 +57,7 @@ bq --project_id=aaaaa show dataset.table_name
 bq --project_id=aaaaa head dataset.table_name -n 5
 ```
 
-```{sh}
+```sh
 # ログイン
 gcloud auth login
 ```
