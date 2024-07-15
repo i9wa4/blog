@@ -158,7 +158,7 @@
     "href": "posts/2024-01-02-jelyll-adjust.html",
     "title": "GitHub Pages (Jekyll) blog のタグ追加対応",
     "section": "",
-    "text": "こんにちは。i9wa4 です。\nブログを作ったので少しだけ機能と見た目を手入れしてみました。"
+    "text": "[2024-07-15 追記] ブログは Jekyll から Quarto に切り替えたため下記内容はブログに反映されなくなっています。\nこんにちは。i9wa4 です。\nブログを作ったので少しだけ機能と見た目を手入れしてみました。"
   },
   {
     "objectID": "posts/2024-01-02-jelyll-adjust.html#調整前",
