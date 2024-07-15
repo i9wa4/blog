@@ -1,6 +1,6 @@
 ---
 title: "技術系 Tips まとめ"
-date: 2024-07-15 16:09:43 +0900
+date: 2024-07-07 23:16:15 +0900
 date-modified: last-modified
 categories: [tips]
 draft: true
@@ -8,7 +8,7 @@ draft: true
 
 こんにちは。i9wa4 です。
 
-たまに使うけど忘れてしまうような技術系の Tips まとめ記事です。
+たまに使うけど忘れてしまうような技術系の小ネタまとめ記事です。
 
 分量が増えてきた分野は別記事に切り出すかもしれません。
 
@@ -32,7 +32,7 @@ git remote add origin url
 git clone url
 ```
 
-## 2. PostgreSQL
+## 3. PostgreSQL
 
 ```{sh}
 # 起動～データベースへのアクセス
@@ -46,7 +46,7 @@ CREATE DATABASE db_name;
 CREATE SCHEMA sc_name;
 ```
 
-## 3. Google Cloud CLI (gcloud CLI)
+## 4. Google Cloud CLI (gcloud CLI)
 
 ```{sh}
 # keyfile 登録からテーブル確認まで
@@ -63,9 +63,9 @@ bq --project_id=aaaaa head dataset.table_name -n 5
 gcloud auth login
 ```
 
-## 4. Google Chrome
+## 5. Google Chrome
 
-### 4.1. 検索エンジン設定
+### 5.1. 検索エンジン設定
 
 - Google 日本語検索
     - `https://www.google.com/search?q=%s`
@@ -76,21 +76,21 @@ gcloud auth login
 - DuckDuckGo 英語検索
     - `https://duckduckgo.com/?q=%s&kl=us-en&kz=-1&kav=1&kaf=1&k1=-1&ia=web`
 
-## 5. Excel
+## 6. Excel
 
-### 5.1. Excel VBA
+### 6.1. Excel VBA
 
 - アドイン追加先
     - `%USERPROFILE%\AppData\Roaming\Microsoft\AddIns`
 
-### 5.2. Excel 関数
+### 6.2. Excel 関数
 
 - シート名を記載したセルB2を利用したハイパーリンク作成
     - `=HYPERLINK("#'"&B2&"'!$A$1",B2)`
 
-## 6. Word
+## 7. Word
 
-### 6.1. Normal.dotm 作成
+### 7.1. Normal.dotm 作成
 
 1. `%APPDATA%\Microsoft\Templates\Normal.dotm` 削除
 1. デザインを作成し既定に設定する

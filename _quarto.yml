@@ -25,6 +25,5 @@ format:
     toc-title: "TOC"
     toc-location: right
 
-# date-format: "YYYY-MM-DD HH:mm:ss"
 date-format: iso
 theme: flatly
