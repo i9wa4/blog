@@ -2,7 +2,7 @@
 title:  "転職活動終了！"
 author: i9wa4
 date:   2024-03-24 22:21:08 +0900
-categories: diary
+categories: [diary]
 draft: true
 ---
 

@@ -2,7 +2,7 @@
 title:  "Git 向け Tips"
 author: i9wa4
 date:   2024-01-28 23:50:31 +0900
-categories: tips
+categories: [tips]
 ---
 
 こんにちは。i9wa4 です。

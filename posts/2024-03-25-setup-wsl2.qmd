@@ -2,7 +2,7 @@
 title:  "WSL2 のセットアップ"
 author: i9wa4
 date:   2024-03-25 23:00:48 +0900
-categories: wsl2
+categories: [wsl2]
 ---
 
 こんにちは。i9wa4 です。

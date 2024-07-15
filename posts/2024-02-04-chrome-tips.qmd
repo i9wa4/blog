@@ -2,7 +2,7 @@
 title:  "Google Chrome 向け Tips"
 author: i9wa4
 date:   2024-02-04 15:47:43 +0900
-categories: tips
+categories: [tips]
 ---
 
 こんにちは。i9wa4 です。

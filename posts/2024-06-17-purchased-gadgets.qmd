@@ -2,7 +2,7 @@
 title:  "購入したガジェットの紹介"
 author: i9wa4
 date:   2024-06-17 12:42:17 +0900
-categories: gadget
+categories: [gadget]
 ---
 
 こんにちは。i9wa4 です。
