@@ -10,7 +10,131 @@
 <atom:link href="https://i9wa4.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.5.54</generator>
-<lastBuildDate>Thu, 27 Jun 2024 16:56:32 GMT</lastBuildDate>
+<lastBuildDate>Mon, 15 Jul 2024 07:15:11 GMT</lastBuildDate>
+<item>
+  <title>技術系 Tips まとめ</title>
+  <link>https://i9wa4.github.io/blog/posts/2024-07-15-technical-tips.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>こんにちは。i9wa4 です。</p>
+<p>たまに使うけど忘れてしまうような技術系の小ネタまとめ記事です。</p>
+<p>分量が増えてきた分野は別記事に切り出すかもしれません。</p>
+<section id="git" class="level2">
+<h2 class="anchored" data-anchor-id="git">1. Git</h2>
+<pre class="{sh}"><code># よく使うコマンド
+git add -n .
+git log --graph
+git diff --name-only HEAD HEAD~2
+git diff ID1 ID2 filename
+git difftool ID1 ID2
+git show ID
+
+git reflog
+git rebase
+
+# リモートリポジトリ作成
+git init --bare --shared
+git remote add origin url
+git clone url</code></pre>
+</section>
+<section id="postgresql" class="level2">
+<h2 class="anchored" data-anchor-id="postgresql">3. PostgreSQL</h2>
+<pre class="{sh}"><code># 起動～データベースへのアクセス
+pg_ctl restart
+psql -U postgres -d db_name
+
+pg_ctl restart
+psql -U postgres
+CREATE DATABASE db_name;
+\c db_name
+CREATE SCHEMA sc_name;</code></pre>
+</section>
+<section id="google-cloud-cli-gcloud-cli" class="level2">
+<h2 class="anchored" data-anchor-id="google-cloud-cli-gcloud-cli">4. Google Cloud CLI (gcloud CLI)</h2>
+<pre class="{sh}"><code># keyfile 登録からテーブル確認まで
+gcloud auth activate-service-account --key-file ***.json
+gcloud auth list
+gcloud set account ***
+bq --project_id=aaaaa ls dataset
+bq --project_id=aaaaa show dataset.table_name
+bq --project_id=aaaaa head dataset.table_name -n 5</code></pre>
+<pre class="{sh}"><code># ログイン
+gcloud auth login</code></pre>
+</section>
+<section id="google-chrome" class="level2">
+<h2 class="anchored" data-anchor-id="google-chrome">5. Google Chrome</h2>
+<section id="検索エンジン設定" class="level3">
+<h3 class="anchored" data-anchor-id="検索エンジン設定">5.1. 検索エンジン設定</h3>
+<ul>
+<li>Google 日本語検索
+<ul>
+<li><code>https://www.google.com/search?q=%s</code></li>
+</ul></li>
+<li>Google 英語検索
+<ul>
+<li><code>https://www.google.com/search?q=%s&amp;gl=us&amp;hl=en&amp;gws_rd=cr&amp;pws=0</code></li>
+</ul></li>
+<li>DuckDuckGo 日本語検索
+<ul>
+<li><code>https://duckduckgo.com/?q=%s&amp;kl=jp-jp&amp;kz=-1&amp;kav=1&amp;kaf=1&amp;k1=-1&amp;ia=web</code></li>
+</ul></li>
+<li>DuckDuckGo 英語検索
+<ul>
+<li><code>https://duckduckgo.com/?q=%s&amp;kl=us-en&amp;kz=-1&amp;kav=1&amp;kaf=1&amp;k1=-1&amp;ia=web</code></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="excel" class="level2">
+<h2 class="anchored" data-anchor-id="excel">6. Excel</h2>
+<section id="excel-vba" class="level3">
+<h3 class="anchored" data-anchor-id="excel-vba">6.1. Excel VBA</h3>
+<ul>
+<li>アドイン追加先
+<ul>
+<li><code>%USERPROFILE%\AppData\Roaming\Microsoft\AddIns</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="excel-関数" class="level3">
+<h3 class="anchored" data-anchor-id="excel-関数">6.2. Excel 関数</h3>
+<ul>
+<li>シート名を記載したセルB2を利用したハイパーリンク作成
+<ul>
+<li><code>=HYPERLINK("#'"&amp;B2&amp;"'!$A$1",B2)</code></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="word" class="level2">
+<h2 class="anchored" data-anchor-id="word">7. Word</h2>
+<section id="normal.dotm-作成" class="level3">
+<h3 class="anchored" data-anchor-id="normal.dotm-作成">7.1. Normal.dotm 作成</h3>
+<ol type="1">
+<li><code>%APPDATA%\Microsoft\Templates\Normal.dotm</code> 削除</li>
+<li>デザインを作成し既定に設定する
+<ul>
+<li>テーマ設定
+<ul>
+<li>見出し: 游ゴシック Arial</li>
+<li>本文: 游ゴシック Medium Arial</li>
+</ul></li>
+<li>アウトライン –&gt; 新しいアウトラインの定義 –&gt; オプション –&gt; レベルと対応付ける見出しスタイル</li>
+</ul></li>
+</ol>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>tips</category>
+  <guid>https://i9wa4.github.io/blog/posts/2024-07-15-technical-tips.html</guid>
+  <pubDate>Mon, 15 Jul 2024 07:15:11 GMT</pubDate>
+</item>
 <item>
   <title>systemd がユーザー権限でも使える</title>
   <link>https://i9wa4.github.io/blog/posts/2024-06-28-systemd-user.html</link>

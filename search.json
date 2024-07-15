@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "i9wa4's blog",
     "section": "",
-    "text": "systemd がユーザー権限でも使える\n\n\n\n\n\n\n\n\n2024-06-28\n\n\n\n\n\n\n\n購入したガジェットの紹介\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nMac 環境構築手順\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\n\n\n2024-05-05\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\n\n\n2024-03-26\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\n\n\n2024-01-01\n\n\n\n\n\n\nNo matching items"
+    "text": "技術系 Tips まとめ\n\n\n\n\n\n\n\n\n2024-07-15\n\n\n\n\n\n\n\nsystemd がユーザー権限でも使える\n\n\n\n\n\n\n\n\n2024-06-28\n\n\n\n\n\n\n\n購入したガジェットの紹介\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nMac 環境構築手順\n\n\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\n\n\n2024-05-05\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\n\n\n2024-03-26\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\n\n\n2024-01-01\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2024-06-17-purchased-gadgets.html",
@@ -215,6 +215,55 @@
     "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
     "section": "3. 完成品",
     "text": "3. 完成品\nGemini と考えたコードが跡形もなくなっている。。なぜ。。\nTODO: 繰り返し呼ばれることを念頭に処理を軽くしたい\nhttps://github.com/i9wa4/get-git-branch-name.vim"
+  },
+  {
+    "objectID": "posts/2024-07-15-technical-tips.html",
+    "href": "posts/2024-07-15-technical-tips.html",
+    "title": "技術系 Tips まとめ",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\nたまに使うけど忘れてしまうような技術系の小ネタまとめ記事です。\n分量が増えてきた分野は別記事に切り出すかもしれません。"
+  },
+  {
+    "objectID": "posts/2024-07-15-technical-tips.html#git",
+    "href": "posts/2024-07-15-technical-tips.html#git",
+    "title": "技術系 Tips まとめ",
+    "section": "1. Git",
+    "text": "1. Git\n# よく使うコマンド\ngit add -n .\ngit log --graph\ngit diff --name-only HEAD HEAD~2\ngit diff ID1 ID2 filename\ngit difftool ID1 ID2\ngit show ID\n\ngit reflog\ngit rebase\n\n# リモートリポジトリ作成\ngit init --bare --shared\ngit remote add origin url\ngit clone url"
+  },
+  {
+    "objectID": "posts/2024-07-15-technical-tips.html#postgresql",
+    "href": "posts/2024-07-15-technical-tips.html#postgresql",
+    "title": "技術系 Tips まとめ",
+    "section": "3. PostgreSQL",
+    "text": "3. PostgreSQL\n# 起動～データベースへのアクセス\npg_ctl restart\npsql -U postgres -d db_name\n\npg_ctl restart\npsql -U postgres\nCREATE DATABASE db_name;\n\\c db_name\nCREATE SCHEMA sc_name;"
+  },
+  {
+    "objectID": "posts/2024-07-15-technical-tips.html#google-cloud-cli-gcloud-cli",
+    "href": "posts/2024-07-15-technical-tips.html#google-cloud-cli-gcloud-cli",
+    "title": "技術系 Tips まとめ",
+    "section": "4. Google Cloud CLI (gcloud CLI)",
+    "text": "4. Google Cloud CLI (gcloud CLI)\n# keyfile 登録からテーブル確認まで\ngcloud auth activate-service-account --key-file ***.json\ngcloud auth list\ngcloud set account ***\nbq --project_id=aaaaa ls dataset\nbq --project_id=aaaaa show dataset.table_name\nbq --project_id=aaaaa head dataset.table_name -n 5\n# ログイン\ngcloud auth login"
+  },
+  {
+    "objectID": "posts/2024-07-15-technical-tips.html#google-chrome",
+    "href": "posts/2024-07-15-technical-tips.html#google-chrome",
+    "title": "技術系 Tips まとめ",
+    "section": "5. Google Chrome",
+    "text": "5. Google Chrome\n\n5.1. 検索エンジン設定\n\nGoogle 日本語検索\n\nhttps://www.google.com/search?q=%s\n\nGoogle 英語検索\n\nhttps://www.google.com/search?q=%s&gl=us&hl=en&gws_rd=cr&pws=0\n\nDuckDuckGo 日本語検索\n\nhttps://duckduckgo.com/?q=%s&kl=jp-jp&kz=-1&kav=1&kaf=1&k1=-1&ia=web\n\nDuckDuckGo 英語検索\n\nhttps://duckduckgo.com/?q=%s&kl=us-en&kz=-1&kav=1&kaf=1&k1=-1&ia=web"
+  },
+  {
+    "objectID": "posts/2024-07-15-technical-tips.html#excel",
+    "href": "posts/2024-07-15-technical-tips.html#excel",
+    "title": "技術系 Tips まとめ",
+    "section": "6. Excel",
+    "text": "6. Excel\n\n6.1. Excel VBA\n\nアドイン追加先\n\n%USERPROFILE%\\AppData\\Roaming\\Microsoft\\AddIns\n\n\n\n\n6.2. Excel 関数\n\nシート名を記載したセルB2を利用したハイパーリンク作成\n\n=HYPERLINK(\"#'\"&B2&\"'!$A$1\",B2)"
+  },
+  {
+    "objectID": "posts/2024-07-15-technical-tips.html#word",
+    "href": "posts/2024-07-15-technical-tips.html#word",
+    "title": "技術系 Tips まとめ",
+    "section": "7. Word",
+    "text": "7. Word\n\n7.1. Normal.dotm 作成\n\n%APPDATA%\\Microsoft\\Templates\\Normal.dotm 削除\nデザインを作成し既定に設定する\n\nテーマ設定\n\n見出し: 游ゴシック Arial\n本文: 游ゴシック Medium Arial\n\nアウトライン –&gt; 新しいアウトラインの定義 –&gt; オプション –&gt; レベルと対応付ける見出しスタイル"
   },
   {
     "objectID": "posts/2024-01-02-jelyll-adjust.html",
