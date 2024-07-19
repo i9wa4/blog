@@ -10,6 +10,8 @@ theme:
 website:
   title: "i9wa4's blog"
   site-url: "https://i9wa4.github.io/blog/"
+  image: "./assets/common/icon_hhkb2.jpg"
+  favicon: "./assets/common/icon_hhkb2.jpg"
   navbar:
     left:
       - href: "https://i9wa4.github.io/i9wa4"
@@ -28,10 +30,7 @@ website:
         href: "https://x.com/i9wa4_"
       - icon: rss
         href: "index.xml"
-  twitter-card:
-    creator: "@i9wa4_"
-    site: "@i9wa4_"
-    image: "assets/common/icon_hhkb2.jpg"
+  twitter-card: true
   open-graph: true
 
 format:
