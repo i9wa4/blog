@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "i9wa4's blog",
     "section": "",
-    "text": "Welcome to i9wa4’s blog!\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n技術系 Tips まとめ\n\n\n\n\n\n\ntips\n\n\n\n\n\n\n2024-07-15\n\n\n\n\n\n\n\nsystemd がユーザー権限でも使える\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-06-28\n\n\n\n\n\n\n\n購入したガジェットの紹介\n\n\n\n\n\n\ngadget\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nMac 環境構築手順\n\n\n\n\n\n\nmac\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-05-05\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\ndev\n\n\nvim\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-26\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\njekyll\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\ndiary\n\n\n\n\n\n\n2024-01-01\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to i9wa4’s blog!\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n自分用 Minecraft メモ\n\n\n\n\n\n\nminecraft\n\n\n\n\n\n\n2024-07-20\n\n\n\n\n\n\n\n技術系 Tips まとめ\n\n\n\n\n\n\ntips\n\n\n\n\n\n\n2024-07-15\n\n\n\n\n\n\n\nsystemd がユーザー権限でも使える\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-06-28\n\n\n\n\n\n\n\n購入したガジェットの紹介\n\n\n\n\n\n\ngadget\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nMac 環境構築手順\n\n\n\n\n\n\nmac\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-05-05\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\ndev\n\n\nvim\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-26\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\njekyll\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\ndiary\n\n\n\n\n\n\n2024-01-01\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2024-06-17-purchased-gadgets.html",
@@ -84,6 +84,132 @@
     "text": "5. 感想\n\n必要最低限の機能は実装できたので割と満足です。\n見た目をちゃんと調整しようとすると HTML や CSS の調整が必要になってきますが、あんまりやりたくないので当面このままでいきます。"
   },
   {
+    "objectID": "posts/xxxx-xx-xx-minecraft-note.html",
+    "href": "posts/xxxx-xx-xx-minecraft-note.html",
+    "title": "自分用 Minecraft メモ",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\nMinecraft の自分用メモを公開しておきます。\n本当に自分用なので説明するつもりは全然ないですがご容赦ください。"
+  },
+  {
+    "objectID": "posts/xxxx-xx-xx-minecraft-note.html#todo",
+    "href": "posts/xxxx-xx-xx-minecraft-note.html#todo",
+    "title": "自分用 Minecraft メモ",
+    "section": "1. TODO",
+    "text": "1. TODO\n\n地下トラップタワー (経験値自動取得)\n倉庫チェスト再設計\n山削り\n苔式骨粉製造機\n襲撃者トラップ@前哨基地 1880 632\n弓作り直し\nエンダーチェスト\nエンダードラゴン\nポーション醸造所\nウーパールーパー"
+  },
+  {
+    "objectID": "posts/xxxx-xx-xx-minecraft-note.html#座標メモ",
+    "href": "posts/xxxx-xx-xx-minecraft-note.html#座標メモ",
+    "title": "自分用 Minecraft メモ",
+    "section": "2. 座標メモ",
+    "text": "2. 座標メモ\n\n\n\nX\nY\nZ\nDescription\n\n\n\n\n-32\n15\n26\nゾンビスポナー\n\n\n112\n59\n8\nゾンビスポナー\n\n\n338\n-28\n-148\nゾンビスポナー"
+  },
+  {
+    "objectID": "posts/xxxx-xx-xx-minecraft-note.html#エンチャント",
+    "href": "posts/xxxx-xx-xx-minecraft-note.html#エンチャント",
+    "title": "自分用 Minecraft メモ",
+    "section": "3. エンチャント",
+    "text": "3. エンチャント\n\n3.1. 防具\n\n共通\n\n修繕I\n耐久力III\nダメージ軽減IV\n\nヘルメット\n\n水中採掘\n水中呼吸III\n\nチェストプレート\nレギンス\n\nスニーク速度上昇\n\nブーツ\n\n水中歩行III\n落下耐性IV\n\n\n\n\n3.2. 武器\n\n共通\n\n修繕I\n耐久力III\n\n剣\n\n火属性II\nドロップ増加III\nノックバックII\nダメージ増加V\n\n弓\n\nフレイム\n射撃ダメージ増加V\nパンチII\n無限\n\nクロスボウ\n\n高速充填III\n貫通IV\n\nトライデント\n\n水性特攻V\n忠誠III\n召雷\n\n\n\n\n3.3. 道具\n\n共通\n\n修繕I\n耐久力III\n効率強化V\n幸運III or シルクタッチ"
+  },
+  {
+    "objectID": "posts/xxxx-xx-xx-minecraft-note.html#村人職業設計",
+    "href": "posts/xxxx-xx-xx-minecraft-note.html#村人職業設計",
+    "title": "自分用 Minecraft メモ",
+    "section": "4. 村人職業設計",
+    "text": "4. 村人職業設計\n\n司書 書見台 (20)\n\nTier1 (10)\n\n修繕I (2)\n耐久力III (2)\n効率強化V (2)\n幸運III (1)\nシルクタッチ (1)\nダメージ軽減IV (2)\n\nTier2 (10)\n\n水中採掘\n水中呼吸III\n水中歩行III\n落下耐性IV\n火属性II\nドロップ増加III\nノックバックII\nダメージ増加V\nフレイム\n射撃ダメージ増加V\n\n\n武器鍛冶 石臼 (1)\n防具鍛冶 溶鉱炉 (2)\n道具鍛冶 鍛冶台 (1+6)\n石工 石切台 ()\n\nクォーツブロック\nテラコッタ\nレンガ"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\n少し前に作った Vim/Neovim プラグインの紹介記事となります。"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#プラグイン概要",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html#プラグイン概要",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
+    "section": "1. プラグイン概要",
+    "text": "1. プラグイン概要\n\nhttps://github.com/i9wa4/markdown-number-header.vim\n\nMarkdown の見出し番号を付ける or 更新するプラグインです。\nDeno と Denops に依存しています。"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#プラグインを作ることになったきっかけ",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html#プラグインを作ることになったきっかけ",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
+    "section": "2. プラグインを作ることになったきっかけ",
+    "text": "2. プラグインを作ることになったきっかけ\nMarkdown All in One という VSCode 拡張の Markdown 見出し番号を付ける機能を Vim でも使いたかったのですが、CLI アプリケーション (Formatter) や Vim プラグインを探しても見つからなかったので自作しようと思い至りました。"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグインとして作ろうと思った理由",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグインとして作ろうと思った理由",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
+    "section": "3. Denops プラグインとして作ろうと思った理由",
+    "text": "3. Denops プラグインとして作ろうと思った理由\nまず、自分が Vim 上でしか使わないため CLI アプリケーションとしてではなく Vim プラグインとして作ろうとは思ってました。\nそして私は Vim 使いなので Vim script で書くか Denops プラグインとして TypeScript で書くかの二択で、楽しそうなので後者を選びました。"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグイン開発体験について",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグイン開発体験について",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
+    "section": "4. Denops プラグイン開発体験について",
+    "text": "4. Denops プラグイン開発体験について\n初めて Denops プラグインを作ったし、しかも TypeScript にも触れたことがなかったのですが意外と困ることは少なかったです。\n核となる見出し番号を振る処理は TypeScript の本領発揮という感じで楽に書けましたね。\nまず以下のドキュメントに従ってチュートリアルを終えて、あとは先人の Denops プラグインのリポジトリを覗いてお作法を学びつつプラグインを完成させました。\n\n参考ページ:\n\nDeno で Vim/Neovim のプラグインを書く (denops.vim) | Zenn\nIntroduction - Denops Documentation (英語版)"
+  },
+  {
+    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#感想",
+    "href": "posts/2024-01-02-vim-plugin-mnh.html#感想",
+    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
+    "section": "5. 感想",
+    "text": "5. 感想\n今も毎日使っているプラグインなので「無いんだったら作ればいい」精神でフッ軽に作れたことを嬉しく思ってます。\n今後も必要なものは自分で作っていたいですね。"
+  },
+  {
+    "objectID": "posts/2024-01-01-init.html",
+    "href": "posts/2024-01-01-init.html",
+    "title": "Initial Post",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\n初投稿になります。"
+  },
+  {
+    "objectID": "posts/2024-01-01-init.html#i9wa4-とは",
+    "href": "posts/2024-01-01-init.html#i9wa4-とは",
+    "title": "Initial Post",
+    "section": "1. i9wa4 とは",
+    "text": "1. i9wa4 とは\n\n読み：いくわよ\n仕事：データエンジニア・MLOpsエンジニア\n\n業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。"
+  },
+  {
+    "objectID": "posts/2024-01-01-init.html#このブログの運用方針",
+    "href": "posts/2024-01-01-init.html#このブログの運用方針",
+    "title": "Initial Post",
+    "section": "2. このブログの運用方針",
+    "text": "2. このブログの運用方針\n\n他サービスに流用するかもしれないけど記事の元データはここで一元管理したい\nこれまで色々書いてきた記事もここに集約していきたい"
+  },
+  {
+    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html",
+    "href": "posts/2024-05-04-get-git-branch-name.vim.html",
+    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。"
+  },
+  {
+    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#経緯",
+    "href": "posts/2024-05-04-get-git-branch-name.vim.html#経緯",
+    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
+    "section": "1. 経緯",
+    "text": "1. 経緯\n私の Vim 設定では操作中のリポジトリのブランチ名を tabline に表示させていて、これは bash-completion に依存した実装となっています。この依存をなくし、ついでに依存をゼロにしようと思ったので Vim script でプラグインを書いてみようと思いました。\n.git ディレクトリを覗けば現在のブランチ名が分かるらしいことは知っていて、以下のリポジトリが自分のやりたいことであるということも知っている状態です。\nhttps://github.com/itchyny/vim-gitbranch\nGemini がどれくらい使えるか試してみたくて、上記リポジトリは見ずに進めてみます。"
+  },
+  {
+    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#gemini-との開発過程",
+    "href": "posts/2024-05-04-get-git-branch-name.vim.html#gemini-との開発過程",
+    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
+    "section": "2. Gemini との開発過程",
+    "text": "2. Gemini との開発過程\nGemini とのやりとりを書き残しておきます。\n\n2.1. .git 探索関数作成\n\n2.1.1. 質問\nVim script で以下の関数を作成してほしいです。\n- あるディレクトリのパスを引数にとり、そこから順に上の階層をたどって、.git ディレクトリがあればそこで探索をやめて.gitディレクトリのパスを戻り値とする。見つからなければ空文字列を返す。\n\n\n2.1.2. 回答\nVim script で .git ディレクトリを探す関数\n\n以下の Vim script は、引数として渡されたディレクトリパスから順に上の階層をたどり、.git ディレクトリを見つけたらそのパスを返します。見つからなければ空文字列を返します。\n\nfunction! FindGitDir(dir)\n  \" 引数がない場合はカレントディレクトリを代入 \"\n  if (empty(a:dir))\n    let dir = expand('%:p')\n  endif\n\n  \" ループフラグを初期化 \"\n  let found = 0\n\n  \" 順に上の階層をたどる \"\n  while (!found && !empty(dir) && dir != '/')\n    \" .git ディレクトリが存在するか確認 \"\n    if (isdirectory(dir . '/.git'))\n      let found = 1\n      let gitdir = dir . '/.git'\n    endif\n\n    \" 上の階層へ移動 \"\n    let dir = expand(dirname(dir))\n  endwhile\n\n  \" 結果を返す \"\n  if (found)\n    return gitdir\n  else\n    return ''\n  endif\nendfunction\n\n\n\n2.2. ブランチ名取得関数作成\n\n2.2.1. 質問\nVim script で以下の関数を作成してほしいです。\n- .gitディレクトリのパスを引数にとり、.gitディレクトリを除いて現在のブランチ名を取得し、それを戻り値とする。\n\n\n2.2.2. 回答\n以下の Vim script は、.git ディレクトリのパスを引数にとり、.git ディレクトリを除いた現在のブランチ名を取得し、それを戻り値とします。\n\nfunction! GetCurrentBranch(gitdir)\n  \" 引数が空の場合、エラーを返す \"\n  if (empty(a:gitdir))\n    error('引数が空です')\n  endif\n\n  \" カレントブランチ名の取得 \"\n  let branch = system('git --git-dir=\"' . a:gitdir . '\" rev-parse --abbrev-ref HEAD')\n\n  \" .git ディレクトリを除いたブランチ名を返す \"\n  return substitute(branch, a:gitdir . '/', '', 'g')\nendfunction\n\n\n2.2.3. 質問\nsystem() を使わず、gitコマンドを使わずに実現させてほしいです。\n\n\n2.2.4. 回答\nVim script で system() や git コマンドを使わずに現在のブランチ名を取得するには、以下の方法があります。\n\n\n1. :echo %b コマンドを使用する\n\nこの方法は、最も簡単でシンプルな方法です。%b 変数は、現在選択されているバッファのブランチ名を表します。\n\n\" 現在のブランチ名をエコーする \"\n:echo %b\n\n\n2. expand('%:p:h') を使って .git/HEAD ファイルを読み込む\n\nこの方法は、より汎用的で、カレントバッファ以外のブランチ名を取得する場合にも使用できます。.git/HEAD ファイルには、現在のブランチ名が格納されています。\n\n\" .git/HEAD ファイルのパスを取得 \"\nlet headfile = expand('%:p:h') . '/.git/HEAD'\n\n\" HEAD ファイルの内容を読み込む \"\nlet headcontent = readfile(headfile)\n\n\" ブランチ名を抽出する \"\nlet branch = match(headcontent, 'ref: refs/heads/(.+)')\n\n\" 結果を確認 \"\necho \"現在のブランチ: \" . branch\n\n\n3. git log の出力を解析する\n\nこの方法は、より詳細なブランチ情報 (コミットハッシュなど) を取得する場合に役立ちます。\nVim Script\n\n\" git log の出力をバッファに読み込む \"\n:redir &gt; /dev/null git log -1\n\n\" ブランチ名を抽出する \"\nlet branch = match(v:buffer['[0]'], 'ref: refs/heads/(.+)')\n\n\" 結果を確認 \"\necho \"現在のブランチ: \" . branch\n回答1が嘘すぎてびっくり。今回は回答2がよさそう。\nこの時点で下記リポジトリを確認してみたところ回答2と同様の手法でブランチ名を取得しているようでした。\nhttps://github.com/itchyny/vim-gitbranch\nここまで分かればあとは動作を確認しながら書けそうです。"
+  },
+  {
+    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#完成品",
+    "href": "posts/2024-05-04-get-git-branch-name.vim.html#完成品",
+    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
+    "section": "3. 完成品",
+    "text": "3. 完成品\nGemini と考えたコードが跡形もなくなっている。。なぜ。。\nTODO: 繰り返し呼ばれることを念頭に処理を軽くしたい\nhttps://github.com/i9wa4/get-git-branch-name.vim"
+  },
+  {
     "objectID": "posts/2024-07-15-technical-tips.html",
     "href": "posts/2024-07-15-technical-tips.html",
     "title": "技術系 Tips まとめ",
@@ -131,97 +257,6 @@
     "title": "技術系 Tips まとめ",
     "section": "6. Word",
     "text": "6. Word\n\n6.1. Normal.dotm 作成\n\n%APPDATA%\\Microsoft\\Templates\\Normal.dotm 削除\nデザインを作成し既定に設定する\n\nテーマ設定\n\n見出し: 游ゴシック Arial\n本文: 游ゴシック Medium Arial\n\nアウトライン –&gt; 新しいアウトラインの定義 –&gt; オプション –&gt; レベルと対応付ける見出しスタイル"
-  },
-  {
-    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html",
-    "href": "posts/2024-05-04-get-git-branch-name.vim.html",
-    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。"
-  },
-  {
-    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#経緯",
-    "href": "posts/2024-05-04-get-git-branch-name.vim.html#経緯",
-    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
-    "section": "1. 経緯",
-    "text": "1. 経緯\n私の Vim 設定では操作中のリポジトリのブランチ名を tabline に表示させていて、これは bash-completion に依存した実装となっています。この依存をなくし、ついでに依存をゼロにしようと思ったので Vim script でプラグインを書いてみようと思いました。\n.git ディレクトリを覗けば現在のブランチ名が分かるらしいことは知っていて、以下のリポジトリが自分のやりたいことであるということも知っている状態です。\nhttps://github.com/itchyny/vim-gitbranch\nGemini がどれくらい使えるか試してみたくて、上記リポジトリは見ずに進めてみます。"
-  },
-  {
-    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#gemini-との開発過程",
-    "href": "posts/2024-05-04-get-git-branch-name.vim.html#gemini-との開発過程",
-    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
-    "section": "2. Gemini との開発過程",
-    "text": "2. Gemini との開発過程\nGemini とのやりとりを書き残しておきます。\n\n2.1. .git 探索関数作成\n\n2.1.1. 質問\nVim script で以下の関数を作成してほしいです。\n- あるディレクトリのパスを引数にとり、そこから順に上の階層をたどって、.git ディレクトリがあればそこで探索をやめて.gitディレクトリのパスを戻り値とする。見つからなければ空文字列を返す。\n\n\n2.1.2. 回答\nVim script で .git ディレクトリを探す関数\n\n以下の Vim script は、引数として渡されたディレクトリパスから順に上の階層をたどり、.git ディレクトリを見つけたらそのパスを返します。見つからなければ空文字列を返します。\n\nfunction! FindGitDir(dir)\n  \" 引数がない場合はカレントディレクトリを代入 \"\n  if (empty(a:dir))\n    let dir = expand('%:p')\n  endif\n\n  \" ループフラグを初期化 \"\n  let found = 0\n\n  \" 順に上の階層をたどる \"\n  while (!found && !empty(dir) && dir != '/')\n    \" .git ディレクトリが存在するか確認 \"\n    if (isdirectory(dir . '/.git'))\n      let found = 1\n      let gitdir = dir . '/.git'\n    endif\n\n    \" 上の階層へ移動 \"\n    let dir = expand(dirname(dir))\n  endwhile\n\n  \" 結果を返す \"\n  if (found)\n    return gitdir\n  else\n    return ''\n  endif\nendfunction\n\n\n\n2.2. ブランチ名取得関数作成\n\n2.2.1. 質問\nVim script で以下の関数を作成してほしいです。\n- .gitディレクトリのパスを引数にとり、.gitディレクトリを除いて現在のブランチ名を取得し、それを戻り値とする。\n\n\n2.2.2. 回答\n以下の Vim script は、.git ディレクトリのパスを引数にとり、.git ディレクトリを除いた現在のブランチ名を取得し、それを戻り値とします。\n\nfunction! GetCurrentBranch(gitdir)\n  \" 引数が空の場合、エラーを返す \"\n  if (empty(a:gitdir))\n    error('引数が空です')\n  endif\n\n  \" カレントブランチ名の取得 \"\n  let branch = system('git --git-dir=\"' . a:gitdir . '\" rev-parse --abbrev-ref HEAD')\n\n  \" .git ディレクトリを除いたブランチ名を返す \"\n  return substitute(branch, a:gitdir . '/', '', 'g')\nendfunction\n\n\n2.2.3. 質問\nsystem() を使わず、gitコマンドを使わずに実現させてほしいです。\n\n\n2.2.4. 回答\nVim script で system() や git コマンドを使わずに現在のブランチ名を取得するには、以下の方法があります。\n\n\n1. :echo %b コマンドを使用する\n\nこの方法は、最も簡単でシンプルな方法です。%b 変数は、現在選択されているバッファのブランチ名を表します。\n\n\" 現在のブランチ名をエコーする \"\n:echo %b\n\n\n2. expand('%:p:h') を使って .git/HEAD ファイルを読み込む\n\nこの方法は、より汎用的で、カレントバッファ以外のブランチ名を取得する場合にも使用できます。.git/HEAD ファイルには、現在のブランチ名が格納されています。\n\n\" .git/HEAD ファイルのパスを取得 \"\nlet headfile = expand('%:p:h') . '/.git/HEAD'\n\n\" HEAD ファイルの内容を読み込む \"\nlet headcontent = readfile(headfile)\n\n\" ブランチ名を抽出する \"\nlet branch = match(headcontent, 'ref: refs/heads/(.+)')\n\n\" 結果を確認 \"\necho \"現在のブランチ: \" . branch\n\n\n3. git log の出力を解析する\n\nこの方法は、より詳細なブランチ情報 (コミットハッシュなど) を取得する場合に役立ちます。\nVim Script\n\n\" git log の出力をバッファに読み込む \"\n:redir &gt; /dev/null git log -1\n\n\" ブランチ名を抽出する \"\nlet branch = match(v:buffer['[0]'], 'ref: refs/heads/(.+)')\n\n\" 結果を確認 \"\necho \"現在のブランチ: \" . branch\n回答1が嘘すぎてびっくり。今回は回答2がよさそう。\nこの時点で下記リポジトリを確認してみたところ回答2と同様の手法でブランチ名を取得しているようでした。\nhttps://github.com/itchyny/vim-gitbranch\nここまで分かればあとは動作を確認しながら書けそうです。"
-  },
-  {
-    "objectID": "posts/2024-05-04-get-git-branch-name.vim.html#完成品",
-    "href": "posts/2024-05-04-get-git-branch-name.vim.html#完成品",
-    "title": "Vim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた",
-    "section": "3. 完成品",
-    "text": "3. 完成品\nGemini と考えたコードが跡形もなくなっている。。なぜ。。\nTODO: 繰り返し呼ばれることを念頭に処理を軽くしたい\nhttps://github.com/i9wa4/get-git-branch-name.vim"
-  },
-  {
-    "objectID": "posts/2024-01-01-init.html",
-    "href": "posts/2024-01-01-init.html",
-    "title": "Initial Post",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。\n初投稿になります。"
-  },
-  {
-    "objectID": "posts/2024-01-01-init.html#i9wa4-とは",
-    "href": "posts/2024-01-01-init.html#i9wa4-とは",
-    "title": "Initial Post",
-    "section": "1. i9wa4 とは",
-    "text": "1. i9wa4 とは\n\n読み：いくわよ\n仕事：データエンジニア・MLOpsエンジニア\n\n業務知識は個人公開が難しいものが多いのでブログでは関係ない話ばかりになりそうです。"
-  },
-  {
-    "objectID": "posts/2024-01-01-init.html#このブログの運用方針",
-    "href": "posts/2024-01-01-init.html#このブログの運用方針",
-    "title": "Initial Post",
-    "section": "2. このブログの運用方針",
-    "text": "2. このブログの運用方針\n\n他サービスに流用するかもしれないけど記事の元データはここで一元管理したい\nこれまで色々書いてきた記事もここに集約していきたい"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "",
-    "text": "こんにちは。i9wa4 です。\n少し前に作った Vim/Neovim プラグインの紹介記事となります。"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#プラグイン概要",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html#プラグイン概要",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "1. プラグイン概要",
-    "text": "1. プラグイン概要\n\nhttps://github.com/i9wa4/markdown-number-header.vim\n\nMarkdown の見出し番号を付ける or 更新するプラグインです。\nDeno と Denops に依存しています。"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#プラグインを作ることになったきっかけ",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html#プラグインを作ることになったきっかけ",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "2. プラグインを作ることになったきっかけ",
-    "text": "2. プラグインを作ることになったきっかけ\nMarkdown All in One という VSCode 拡張の Markdown 見出し番号を付ける機能を Vim でも使いたかったのですが、CLI アプリケーション (Formatter) や Vim プラグインを探しても見つからなかったので自作しようと思い至りました。"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグインとして作ろうと思った理由",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグインとして作ろうと思った理由",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "3. Denops プラグインとして作ろうと思った理由",
-    "text": "3. Denops プラグインとして作ろうと思った理由\nまず、自分が Vim 上でしか使わないため CLI アプリケーションとしてではなく Vim プラグインとして作ろうとは思ってました。\nそして私は Vim 使いなので Vim script で書くか Denops プラグインとして TypeScript で書くかの二択で、楽しそうなので後者を選びました。"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグイン開発体験について",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html#denops-プラグイン開発体験について",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "4. Denops プラグイン開発体験について",
-    "text": "4. Denops プラグイン開発体験について\n初めて Denops プラグインを作ったし、しかも TypeScript にも触れたことがなかったのですが意外と困ることは少なかったです。\n核となる見出し番号を振る処理は TypeScript の本領発揮という感じで楽に書けましたね。\nまず以下のドキュメントに従ってチュートリアルを終えて、あとは先人の Denops プラグインのリポジトリを覗いてお作法を学びつつプラグインを完成させました。\n\n参考ページ:\n\nDeno で Vim/Neovim のプラグインを書く (denops.vim) | Zenn\nIntroduction - Denops Documentation (英語版)"
-  },
-  {
-    "objectID": "posts/2024-01-02-vim-plugin-mnh.html#感想",
-    "href": "posts/2024-01-02-vim-plugin-mnh.html#感想",
-    "title": "自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介",
-    "section": "5. 感想",
-    "text": "5. 感想\n今も毎日使っているプラグインなので「無いんだったら作ればいい」精神でフッ軽に作れたことを嬉しく思ってます。\n今後も必要なものは自分で作っていたいですね。"
   },
   {
     "objectID": "posts/2024-06-28-systemd-user.html",
