@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "i9wa4's blog",
     "section": "",
-    "text": "Welcome to i9wa4’s blog!\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n自分用 Minecraft メモ\n\n\n\n\n\n\ngame\n\n\nminecraft\n\n\n\n\n\n\n2024-07-20\n\n\n\n\n\n\n\n技術系 Tips まとめ\n\n\n\n\n\n\ntips\n\n\n\n\n\n\n2024-07-15\n\n\n\n\n\n\n\nsystemd がユーザー権限でも使える\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-06-28\n\n\n\n\n\n\n\n購入したガジェットの紹介\n\n\n\n\n\n\ngadget\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nMac 環境構築手順\n\n\n\n\n\n\nmac\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-05-05\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\ndev\n\n\nvim\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-26\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\njekyll\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\ndiary\n\n\n\n\n\n\n2024-01-01\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to i9wa4’s blog!\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n\n\n\n\n\n自分用千年戦争アイギスメモ\n\n\n\n\n\n\ngame\n\n\naigis\n\n\n\n\n\n\n2024-07-20\n\n\n\n\n\n\n\n自分用 Minecraft メモ\n\n\n\n\n\n\ngame\n\n\nminecraft\n\n\n\n\n\n\n2024-07-20\n\n\n\n\n\n\n\n技術系 Tips まとめ\n\n\n\n\n\n\ntips\n\n\n\n\n\n\n2024-07-15\n\n\n\n\n\n\n\nsystemd がユーザー権限でも使える\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-06-28\n\n\n\n\n\n\n\n購入したガジェットの紹介\n\n\n\n\n\n\ngadget\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nMac 環境構築手順\n\n\n\n\n\n\nmac\n\n\n\n\n\n\n2024-06-17\n\n\n\n\n\n\n\nQuarto で作ったスライドを GitHub Pages にデプロイする\n\n\n\n\n\n\ndev\n\n\n\n\n\n\n2024-05-05\n\n\n\n\n\n\n\nVim script で Git ブランチ名を取得するプラグインを Gemini を使って書いてみた\n\n\n\n\n\n\ndev\n\n\nvim\n\n\n\n\n\n\n2024-05-04\n\n\n\n\n\n\n\nデータサイエンス100本ノックの実行環境構築 (WSL2)\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-26\n\n\n\n\n\n\n\nWSL2 のセットアップ\n\n\n\n\n\n\nwsl2\n\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n\n\nefm-langserver を Vim/Neovim で利用する\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-27\n\n\n\n\n\n\n\n自作 Vim/Neovim プラグイン markdown-number-header.vim の紹介\n\n\n\n\n\n\nvim\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nGitHub Pages (Jekyll) blog のタグ追加対応\n\n\n\n\n\n\njekyll\n\n\ndev\n\n\n\n\n\n\n2024-01-02\n\n\n\n\n\n\n\nInitial Post\n\n\n\n\n\n\ndiary\n\n\n\n\n\n\n2024-01-01\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2024-05-05-deploy-quarto.html",
@@ -96,6 +96,27 @@
     "title": "Mac 環境構築手順",
     "section": "8. (おまけ) ショートカット集",
     "text": "8. (おまけ) ショートカット集\n\n\n\n\n\n\n\n\nカテゴリ\nショートカット\n説明\n\n\n\n\nウインドウ操作\nCommand + Tab\nアプリケーション切り替え\n\n\nウインドウ操作\nCommand + @\n同一アプリケーションの切り替え\n\n\nウインドウ操作\nCommand + Option + Arrow\nChrome タブ切り替え\n\n\nその他\nCommad + Q\nFinder 終了\n\n\nその他\nCommand + Ctrl + Q\nロック"
+  },
+  {
+    "objectID": "posts/2024-07-20-aigis-note.html",
+    "href": "posts/2024-07-20-aigis-note.html",
+    "title": "自分用千年戦争アイギスメモ",
+    "section": "",
+    "text": "こんにちは。i9wa4 です。\n偶にハマって偶に飽きて辞めるという距離感で遊んでいる千年戦争アイギスのメモです。\n本当に自分用なので説明するつもりは全然ないですがご容赦ください。"
+  },
+  {
+    "objectID": "posts/2024-07-20-aigis-note.html#週次周回",
+    "href": "posts/2024-07-20-aigis-note.html#週次周回",
+    "title": "自分用千年戦争アイギスメモ",
+    "section": "1. 週次周回",
+    "text": "1. 週次周回\n\n\n\n曜日\n対象\n\n\n\n\n月\n刻水晶\n\n\n火\n\n\n\n水\n魔水晶\n\n\n木\n好感度\n\n\n金\n\n\n\n土\n刻水晶, 魔水晶\n\n\n日\n好感度"
+  },
+  {
+    "objectID": "posts/2024-07-20-aigis-note.html#月次の交換先",
+    "href": "posts/2024-07-20-aigis-note.html#月次の交換先",
+    "title": "自分用千年戦争アイギスメモ",
+    "section": "2. 月次の交換先",
+    "text": "2. 月次の交換先\n\n刻水晶 400\n\n白の皇帝 * 4 に交換する\n白の皇帝 信頼度150% Lv20 まで育成して他ユニットの餌にする\n\n魔水晶 900\n\nリングと勲章に交換する\n\n覚醒聖霊ヴィクトワール\n\n統帥結晶ではなく魔水晶で交換する"
   },
   {
     "objectID": "posts/2024-01-02-jelyll-adjust.html",
