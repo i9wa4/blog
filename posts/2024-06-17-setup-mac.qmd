@@ -60,15 +60,6 @@ cf. <https://github.com/i9wa4/dotfiles>
     # あれば書く
     ```
 
-## 5. GitHub
-
-cf. [Mac GitHub SSH接続設定 #初期設定 - Qiita](https://qiita.com/ucan-lab/items/e02f2d3a35f266631f24)
-
-```sh
-ssh -T github.com
-git clone git@github.com:i9wa4/i9wa4
-```
-
 ## 6. AWS
 
 ### 6.1. Okta 経由
