@@ -40,8 +40,12 @@ systemctl --user enable mbs-backup.timer
 
 # timer を実行する
 systemctl --user start mbs-backup.timer
+
+# サーバーの起動時にサービスを立ち上げる
+sudo loginctl enable-linger i9wa4
 ```
 
 ## 3. 参考リンク
 
 - [systemd/ユーザー - ArchWiki](https://wiki.archlinux.jp/index.php/Systemd/ユーザー)
+- [サーバー起動時に非rootユーザーでsystemdを使ってサービスを立ち上げる #systemd - Qiita](https://qiita.com/k0kubun/items/3c94473506e0e370a227)
