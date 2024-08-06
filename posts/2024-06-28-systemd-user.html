@@ -198,7 +198,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2024-08-04</p>
+      <p class="date-modified">2024-08-07</p>
     </div>
   </div>
     
@@ -243,12 +243,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> enable mbs-backup.timer</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># timer を実行する</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> start mbs-backup.timer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> <span class="at">--user</span> start mbs-backup.timer</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># サーバーの起動時にサービスを立ち上げる</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> loginctl enable-linger i9wa4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="参考リンク" class="level2">
 <h2 class="anchored" data-anchor-id="参考リンク">3. 参考リンク</h2>
 <ul>
 <li><a href="https://wiki.archlinux.jp/index.php/Systemd/ユーザー">systemd/ユーザー - ArchWiki</a></li>
+<li><a href="https://qiita.com/k0kubun/items/3c94473506e0e370a227">サーバー起動時に非rootユーザーでsystemdを使ってサービスを立ち上げる #systemd - Qiita</a></li>
 </ul>
 
 
