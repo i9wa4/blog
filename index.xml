@@ -109,9 +109,9 @@
 <section id="todo" class="level2">
 <h2 class="anchored" data-anchor-id="todo">1. TODO</h2>
 <ul class="task-list">
-<li><label><input type="checkbox">羊毛仕分け</label></li>
-<li><label><input type="checkbox">倉庫チェスト再設計</label></li>
 <li><label><input type="checkbox">地下トラップタワー (経験値自動取得)</label></li>
+<li><label><input type="checkbox">倉庫チェスト再設計</label></li>
+<li><label><input type="checkbox">羊毛仕分け</label></li>
 <li><label><input type="checkbox">山削り</label></li>
 <li><label><input type="checkbox">苔式骨粉製造機</label></li>
 <li><label><input type="checkbox">襲撃者トラップ@前哨基地 1880 632</label></li>
