@@ -28,3 +28,4 @@ categories: [gadget]
 | 2024-06-03 | Dell       | [Dell 27 USB-C モニター - S2722DC](https://www.dell.com/ja-jp/shop/dell-27-usb-c-モニター-s2722dc/apd/210-bcde/モニター-モニターアクセサリー) |
 | 2024-06-07 | Logicool   | [C270n HDウェブカメラ](https://www.logicool.co.jp/ja-jp/products/webcams/hd-webcam-c270n.960-001265.html)                                     |
 | 2024-07-07 | Panasonic  | [ラムダッシュ パームイン ES-PV3A](https://panasonic.jp/shaver/products/ES-PV3A.html)                                                          |
+| 2024-08-18 | OMRON      | [体重体組成計 HBF-702T カラダスキャン](https://www.healthcare.omron.co.jp/product/hbf/hbf-702t.html)                                          |
