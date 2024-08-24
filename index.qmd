@@ -1,7 +1,7 @@
 ---
 listing:
   categories: numbered
-  contents: ["posts", "slides"]
+  contents: ["posts"]
   feed: true
   fields: [date, categories, title]
   page-size: 20

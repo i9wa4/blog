@@ -22,6 +22,8 @@ website:
     left:
       - href: "https://i9wa4.github.io/i9wa4"
         text: "About"
+      - href: "https://i9wa4.github.io/blog/slides"
+        text: "Slides"
       - icon: github
         href: "https://github.com/i9wa4"
       - icon: twitter-x
