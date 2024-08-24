@@ -1,5 +1,6 @@
 ---
 title: "技術系 Tips まとめ"
+description: "技術系 Tips まとめ description"
 date: 2024-07-15 16:15:11 +0900
 date-modified: last-modified
 categories: [tips]
