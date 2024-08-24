@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      valueNames: ['listing-date','listing-categories','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -164,6 +164,10 @@ window.Quarto = {
     <a class="nav-link" href="https://i9wa4.github.io/i9wa4"> 
 <span class="menu-text">About</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://i9wa4.github.io/blog/slides"> 
+<span class="menu-text">Slides</span></a>
+  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/i9wa4"> <i class="bi bi-github" role="img">
 </i> 
@@ -186,9 +190,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="slide">slide <span class="quarto-category-count">(2)</span></div><div class="category" data-category="vim-jp">vim-jp <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -217,13 +221,21 @@ window.Quarto = {
   </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="slide,vim-jp" data-listing-date-sort="1706972400000" data-listing-file-modified-sort="1724471739712" data-listing-date-modified-sort="1724471739000" data-listing-reading-time-sort="1" data-listing-word-count-sort="65">
+<div class="quarto-post image-right" data-index="0" data-categories="slide,vim-jp" data-listing-date-sort="1706972400000" data-listing-file-modified-sort="1724472030210" data-listing-date-modified-sort="1724472030000" data-listing-reading-time-sort="1" data-listing-word-count-sort="65">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../slides/20240204-sapporo.vim.html" class="no-external">Sapporo.vim 自己紹介</a>
 </h3>
 <div class="listing-subtitle">
 <a href="../slides/20240204-sapporo.vim.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('slide'); return false;">
+slide
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('vim-jp'); return false;">
+vim-jp
+</div>
 </div>
 </div>
 <div class="metadata">
@@ -234,13 +246,21 @@ window.Quarto = {
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="slide,vim-jp" data-listing-date-sort="1702652400000" data-listing-file-modified-sort="1724471739712" data-listing-date-modified-sort="1724471739000" data-listing-reading-time-sort="1" data-listing-word-count-sort="62">
+<div class="quarto-post image-right" data-index="1" data-categories="slide,vim-jp" data-listing-date-sort="1702652400000" data-listing-file-modified-sort="1724472030210" data-listing-date-modified-sort="1724472030000" data-listing-reading-time-sort="1" data-listing-word-count-sort="62">
 <div class="body">
 <h3 class="no-anchor listing-title">
 <a href="../slides/20231216-sapporo.vim.html" class="no-external">Sapporo.vim 自己紹介</a>
 </h3>
 <div class="listing-subtitle">
 <a href="../slides/20231216-sapporo.vim.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('slide'); return false;">
+slide
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('vim-jp'); return false;">
+vim-jp
+</div>
 </div>
 </div>
 <div class="metadata">
