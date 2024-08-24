@@ -504,7 +504,6 @@ font-style: inherit;">gcloud</span> auth login</span></code></pre></div>
   <category>tips</category>
   <guid>https://i9wa4.github.io/blog/posts/2024-07-15-technical-tips.html</guid>
   <pubDate>Mon, 15 Jul 2024 07:15:11 GMT</pubDate>
-  <media:content url="https://i9wa4.github.io/blog/assets/common/icon_hhkb2.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>systemd がユーザー権限でも使える</title>
