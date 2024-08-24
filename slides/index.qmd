@@ -1,0 +1,12 @@
+---
+listing:
+  contents: ["."]
+  feed: true
+  fields: [date, title]
+  page-size: 20
+  sort-ui: [date]
+  sort: ["date desc", "title"]
+  type: default
+---
+
+Welcome to i9wa4's slides!
