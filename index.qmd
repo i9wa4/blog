@@ -1,4 +1,5 @@
 ---
+title: "Posts"
 listing:
   categories: numbered
   contents: ["posts"]
@@ -9,5 +10,3 @@ listing:
   sort: ["date desc", "title"]
   type: default
 ---
-
-Welcome to i9wa4's blog!
