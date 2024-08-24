@@ -26,6 +26,8 @@ website:
         text: "Posts"
       - href: "https://i9wa4.github.io/blog/slides"
         text: "Slides"
+      - href: "https://i9wa4.github.io/resume"
+        text: "Resume"
       - icon: github
         href: "https://github.com/i9wa4"
       - icon: twitter-x
