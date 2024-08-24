@@ -6,7 +6,7 @@ date-modified: last-modified
 categories: [vim-jp]
 format:
   revealjs:
-    embed-resources: true
+    # embed-resources: true
     incremental: false
     logo: /assets/common/icon_hhkb2.jpg
     slide-level: 2
