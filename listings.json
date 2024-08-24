@@ -1,7 +1,15 @@
 [
   {
+    "listing": "/slides/index.html",
+    "items": [
+      "/slides/20240204-sapporo.vim.html",
+      "/slides/20231216-sapporo.vim.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
+      "/slides/index.html",
       "/posts/2024-07-20-aigis-note.html",
       "/posts/2024-07-20-minecraft-note.html",
       "/posts/2024-07-15-technical-tips.html",
@@ -12,10 +20,12 @@
       "/posts/2024-05-04-get-git-branch-name.vim.html",
       "/posts/2024-03-26-setup-ds100knock.html",
       "/posts/2024-03-25-setup-wsl2.html",
+      "/slides/20240204-sapporo.vim.html",
       "/posts/2024-01-27-setup-efm-langserver.html",
       "/posts/2024-01-02-vim-plugin-mnh.html",
       "/posts/2024-01-02-jelyll-adjust.html",
-      "/posts/2024-01-01-init.html"
+      "/posts/2024-01-01-init.html",
+      "/slides/20231216-sapporo.vim.html"
     ]
   }
 ]

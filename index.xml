@@ -1262,6 +1262,16 @@ font-style: inherit;">-22</span>.04</span></code></pre></div></li>
   <pubDate>Mon, 25 Mar 2024 14:00:48 GMT</pubDate>
 </item>
 <item>
+  <title></title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/slides/20240204-sapporo.vim.html</link>
+  <description><![CDATA[ undefined ]]></description>
+  <category>slide</category>
+  <category>vim-jp</category>
+  <guid>https://i9wa4.github.io/blog/slides/20240204-sapporo.vim.html</guid>
+  <pubDate>Sat, 03 Feb 2024 15:00:00 GMT</pubDate>
+</item>
+<item>
   <title>efm-langserver を Vim/Neovim で利用する</title>
   <link>https://i9wa4.github.io/blog/posts/2024-01-27-setup-efm-langserver.html</link>
   <description><![CDATA[ 
@@ -1808,6 +1818,16 @@ font-style: inherit;">'''</span></span></code></pre></div>
   <category>diary</category>
   <guid>https://i9wa4.github.io/blog/posts/2024-01-01-init.html</guid>
   <pubDate>Sun, 31 Dec 2023 18:28:12 GMT</pubDate>
+</item>
+<item>
+  <title></title>
+  <dc:creator>i9wa4 </dc:creator>
+  <link>https://i9wa4.github.io/blog/slides/20231216-sapporo.vim.html</link>
+  <description><![CDATA[ undefined ]]></description>
+  <category>slide</category>
+  <category>vim-jp</category>
+  <guid>https://i9wa4.github.io/blog/slides/20231216-sapporo.vim.html</guid>
+  <pubDate>Fri, 15 Dec 2023 15:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
