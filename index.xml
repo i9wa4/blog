@@ -1202,8 +1202,8 @@ echo "現在のブランチ: " . branch</code></pre>
 <p><a href="https://learn.microsoft.com/ja-jp/windows/wsl/install#install-wsl-command">WSL のインストール | Microsoft Learn</a> に従います。</p>
 <ol type="1">
 <li>管理者権限で PowerShell or コマンドプロンプトを開きます。</li>
-<li><code>wsl --install</code> を実行します。 <img src="https://i9wa4.github.io/blog/assets/20240325/20240325-setup-wsl2-01.png" class="img-fluid" alt="20240325-setup-wsl2-01"></li>
-<li>以下のように表示されるのでマシンを再起動します。 <img src="https://i9wa4.github.io/blog/assets/20240325/20240325-setup-wsl2-02.png" class="img-fluid" alt="20240325-setup-wsl2-02"></li>
+<li><code>wsl --install</code> を実行します。 <img src="https://i9wa4.github.io/blog/assets/20240325-posts-setup-wsl2/setup-wsl2-01.png" class="img-fluid" alt="20240325-setup-wsl2-01"></li>
+<li>以下のように表示されるのでマシンを再起動します。 <img src="https://i9wa4.github.io/blog/assets/20240325-posts-setup-wsl2/setup-wsl2-02.png" class="img-fluid" alt="20240325-setup-wsl2-02"></li>
 </ol>
 </section>
 <section id="ディストリビューションのインストール" class="level2">
